@@ -9,6 +9,7 @@ import {
 import { SiTypescript } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { RiNextjsFill } from 'react-icons/ri'
+import HabilidadeCard from '@/components/Habilidades/HabilidadeCard'
 
 const habilidades = [
     { nome: 'HTML5', icon: <FaHtml5 size={40} color="#e34c26" /> },
@@ -34,15 +35,11 @@ export default function Habilidades() {
                 <SectionTitle>Habilidades</SectionTitle>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-10">
                     {habilidades.map((item, index) => (
-                        <div key={index} className="
-                            flex flex-col items-center text-center 
-                            bg-purple-800/10 backdrop-blur-sm rounded-xl p-4
-                            transition-transform duration-300 group hover:scale-105 
-                            shadow-[0_0_10px_#ffffff22]
-                        ">
-                            <div className="mb-2 group-hover:brightness-110">{item.icon}</div>
-                            <span className="text-white mt-1 font-medium">{item.nome}</span>
-                        </div>
+                        <HabilidadeCard
+                            key={index}
+                            nome={item.nome}
+                            icon={item.icon}
+                        />
                     ))}
                 </div>
             </div>
