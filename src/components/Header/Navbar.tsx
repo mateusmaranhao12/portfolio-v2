@@ -1,19 +1,42 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 export default function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState<string>('')
 
     const menuItems = [
-        { label: 'Sobre', href: '#sobre' },
-        { label: 'Habilidades', href: '#habilidades' },
-        { label: 'Projetos', href: '#projetos' },
-        { label: 'Experiência', href: '#experiencia' },
-        { label: 'Certificados', href: '#certificados' },
-        { label: 'Contato', href: '#contato' },
+        { label: 'Sobre', href: 'sobre' },
+        { label: 'Habilidades', href: 'habilidades' },
+        { label: 'Projetos', href: 'projetos' },
+        { label: 'Experiência', href: 'experiencia' },
+        { label: 'Certificados', href: 'certificados' },
+        { label: 'Contato', href: 'contato' },
     ]
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id)
+                    }
+                })
+            },
+            {
+                threshold: 0.6,
+            }
+        )
+
+        menuItems.forEach((item) => {
+            const el = document.getElementById(item.href)
+            if (el) observer.observe(el)
+        })
+
+        return () => observer.disconnect()
+    }, [])
 
     return (
 
@@ -35,8 +58,12 @@ export default function Navbar() {
                     {menuItems.map((item) => (
                         <li key={item.label}>
                             <a
-                                href={item.href}
-                                className="relative text-gray-300 font-medium hover:text-yellow-300 transition-colors duration-200"
+                                href={`#${item.href}`}
+                                className={`relative font-medium ransition-colors duration-200 ${
+                                    activeSection === item.href
+                                    ? 'text-yellow-500 cursor-text'
+                                    : 'text-gray-300 hover:text-yellow-300'
+                                }`}
                             >
                                 {item.label}
                                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 hover:w-full"></span>

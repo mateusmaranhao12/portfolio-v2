@@ -1,5 +1,5 @@
 import Navbar from "@/components/Header/Navbar";
-import Sobre from "@/components/Sections/Sobre";
+import Sobre from "@/app/modules/Sobre";
 
 export default function Home() {
   return (
