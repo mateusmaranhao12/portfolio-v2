@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import '../scss/globals.scss';
 import "./globals.css";
+import '../scss/styles.scss';
 
 export const metadata: Metadata = {
   title: "Portfólio - Mateus Maranhão",
@@ -13,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-900 text-white">
+      <body className="bg-purple-950 text-white">
         {children}
       </body>
     </html>
