@@ -1,4 +1,3 @@
-// src/sections/Habilidades.tsx
 import SectionWrapper from '@/components/Common/SectionWrapper'
 import SectionTitle from '@/components/Common/SectionTitle'
 
@@ -35,9 +34,14 @@ export default function Habilidades() {
                 <SectionTitle>Habilidades</SectionTitle>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mt-10">
                     {habilidades.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-center">
-                            <div className="mb-2">{item.icon}</div>
-                            <span className="text-white">{item.nome}</span>
+                        <div key={index} className="
+                            flex flex-col items-center text-center 
+                            bg-purple-800/10 backdrop-blur-sm rounded-xl p-4
+                            transition-transform duration-300 group hover:scale-105 
+                            shadow-[0_0_10px_#ffffff22]
+                        ">
+                            <div className="mb-2 group-hover:brightness-110">{item.icon}</div>
+                            <span className="text-white mt-1 font-medium">{item.nome}</span>
                         </div>
                     ))}
                 </div>

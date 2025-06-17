@@ -9,7 +9,7 @@ export default function ProfileImage() {
                 alt="Mateus Maranhão"
                 width={256}
                 height={256}
-                className="rounded-lg shadow-lg object-cover"
+                className="rounded-lg object-cover shadow-[5px_5px_10px_#ffffff33]"
             />
         </div>
     )
