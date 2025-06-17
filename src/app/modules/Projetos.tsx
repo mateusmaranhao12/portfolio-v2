@@ -55,6 +55,12 @@ const projetos = [
         nome: 'Notifish',
         video: 'notifish',
         texto: 'Um sistema feito em HTML5, CSS3, Bootstrap e JavaScript, o qual facilita o processo de comunicação tomando o papel de um mediador entre você e o WhatsApp'
+    },
+
+    {
+        nome: 'Saude+',
+        video: 'saude+',
+        texto: 'O sistema Saude+ foi a parte prática do meu Trabalho de Conclusão de Curso de Ciências da Computação na Universidade Tiradentes permite com que pacientes agendem suas consultas de forma prática e eficiente, onde o médico e o paciente podem reagendar e desmarcar suas consultas em questão de segundos.'
     }
 ]
 
