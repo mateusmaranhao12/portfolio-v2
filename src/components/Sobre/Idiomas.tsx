@@ -4,7 +4,7 @@ export default function Idiomas() {
             <h3 className="text-xl font-semibold text-yellow-300 mb-2">Idiomas</h3>
             <ul className="list-disc list-inside">
                 <li>Português (Nativo)</li>
-                <li>Inglês (Médio)</li>
+                <li>Inglês (Intermediário)</li>
                 <li>Espanhol (Básico)</li>
             </ul>
         </div>
