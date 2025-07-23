@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
+import DownloadCVButton from "../Common/DownloadButton";
 
 export default function Navbar() {
 
@@ -59,11 +60,10 @@ export default function Navbar() {
                         <li key={item.label}>
                             <a
                                 href={`#${item.href}`}
-                                className={`relative font-medium ransition-colors duration-200 ${
-                                    activeSection === item.href
-                                    ? 'text-yellow-500 cursor-text'
-                                    : 'text-gray-300 hover:text-yellow-300'
-                                }`}
+                                className={`relative font-medium ransition-colors duration-200 ${activeSection === item.href
+                                        ? 'text-yellow-500 cursor-text'
+                                        : 'text-gray-300 hover:text-yellow-300'
+                                    }`}
                             >
                                 {item.label}
                                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 hover:w-full"></span>
@@ -72,24 +72,36 @@ export default function Navbar() {
                     ))}
                 </ul>
 
+                <div className="hidden md:block ml-4">
+                    <DownloadCVButton />
+                </div>
+
             </div>
+            
             {/* Menu Mobile */}
             {isOpen && (
-                <ul className="md:hidden mt-4 flex flex-col gap-4 items-center bg-purple-800 py-4 rounded">
-                    {menuItems.map((item) => (
-                        <li key={item.label}>
-                            <a
-                                href={item.href}
-                                onClick={() => setIsOpen(false)}
-                                className="relative text-gray-200 font-medium hover:text-yellow-300 transition-colors duration-200"
-                            >
-                                {item.label}
-                                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 hover:w-full"></span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <div className="md:hidden mt-4 flex flex-col gap-4 items-center py-4 rounded">
+                    <ul className="flex flex-col gap-4 items-center">
+                        {menuItems.map((item) => (
+                            <li key={item.label}>
+                                <a
+                                    href={`#${item.href}`}
+                                    onClick={() => setIsOpen(false)}
+                                    className="relative text-gray-200 font-medium hover:text-yellow-300 transition-colors duration-200"
+                                >
+                                    {item.label}
+                                    <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 hover:w-full"></span>
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                    {/* Botão de baixar currículo no mobile */}
+                    <div className="mt-2">
+                        <DownloadCVButton />
+                    </div>
+                </div>
             )}
+
         </nav>
     );
 }

@@ -1,6 +1,6 @@
 const objetivos = [
-    'Vaga como Desenvolvedor Web Full-Stack',
-    'Vaga como Desenvolvedor Web Front-end'
+    'Atuar como Desenvolvedor Web Full-Stack',
+    ' Contribuir em projetos como Desenvolvedor Front-end, utilizando tecnologias modernas'
 ]
 export default function Objetivos() {
     return (
