@@ -9,8 +9,7 @@ export default function Sobre() {
 
     const paragrafos = [
         `Olá! Sou <strong class="text-yellow-300">Mateus Nunes Maranhão</strong>, 
-            graduado em <strong class="text-yellow-300">Ciência da Computação</strong> pela <strong class="text-yellow-300">Universidade Tiradentes</strong>. 
-            sede em Aracaju - SE. Sou movido por desafios e apaixonado por desenvolvimento web.`,
+            graduado em <strong class="text-yellow-300">Ciência da Computação</strong> pela <strong class="text-yellow-300">Universidade Tiradentes</strong> em Aracaju - SE. Sou movido por desafios e apaixonado por desenvolvimento web.`,
 
         `Estou em busca de oportunidades na área 
             de <strong class="text-yellow-300">Desenvolvimento Web</strong> ou <strong class="text-yellow-300">Tecnologia da Informação</strong>,
