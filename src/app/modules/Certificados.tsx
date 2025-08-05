@@ -5,19 +5,28 @@ import CertificadoItem from "@/components/Certificados/CertificadoCard"
 const certificados = [
     {
         nome: 'Desenvolvimento Web Completo',
-        imagem: '/imgs/cert_dw_completo.jpg'
+        imagem: '/imgs/cert_dw_completo.jpg',
+        descricao: 'Meu primeiro curso de desenvolvimento Full-Stack realizado em 2021, para aprender e me aprofundar em tecnologias como HTML5, CSS3, JavaScript, MySQL, PHP, Bootstrap, etc.'
     },
     {
         nome: 'Desenvolvimento Web Avançado 2022 com Vue e Vuex',
-        imagem: '/imgs/cert_vue.jpg'
+        imagem: '/imgs/cert_vue.jpg',
+        descricao: 'Curso realizado em 2022, com o objetivo de aprender e aprofundar no VueJS e suas tecnologias como Vuex, vue-router, componentização e animações.'
     },
     {
         nome: 'Wise Up Online – 50 horas',
-        imagem: '/imgs/certificado_wise_up.jpg'
+        imagem: '/imgs/certificado_wise_up.jpg',
+        descricao: 'Curso realizado em 2023 para desenvolver meu inglês.'
     },
     {
         nome: 'React e NextJS do básico ao avançado: Aplicações reais',
-        imagem: '/imgs/certificado_react_nextjs.jpg'
+        imagem: '/imgs/certificado_react_nextjs.jpg',
+        descricao: 'Curso realizado para aprimorar meus conhecimentos em React e NextJS.'
+    },
+    {
+        nome: 'Git e GitHub, do básico ao avançado',
+        imagem: '/imgs/certificado_git_github.jpg',
+        descricao: 'Curso realizado para aprofundar conhecimentos já aplicados em projetos anteriores.'
     }
 ]
 
@@ -32,6 +41,7 @@ export default function Certificados() {
                             key={index}
                             nome={cert.nome}
                             imagem={cert.imagem}
+                            descricao={cert.descricao}
                         />
                     ))}
                 </div>
