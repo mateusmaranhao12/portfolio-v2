@@ -9,7 +9,7 @@ export default function DownloadCVButton() {
             className="inline-flex items-center px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400 transition-all font-semibold"
         >
             <FaDownload className="mr-2" />
-            Baixar Currículo
+            Download CV
         </a>
     );
 }

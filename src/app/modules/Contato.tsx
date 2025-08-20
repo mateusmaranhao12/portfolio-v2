@@ -18,9 +18,9 @@ const contatos = [
     },
     {
         nome: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/mateus-maranhão-24938b230',
+        href: 'https://www.linkedin.com/in/mateusnmaranhao/',
         icon: <FaLinkedin size={28} className='text-blue-500' />,
-        texto: 'linkedin.com/in/mateus-maranhão',
+        texto: 'https://www.linkedin.com/in/mateusnmaranhao/',
     },
     {
         nome: 'GitHub',

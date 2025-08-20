@@ -9,7 +9,7 @@ export default function Me() {
     const paragrafos =
         [
             `Desenvolvedor de sistemas e sites responsivos e funcionais.`,
-            `Experiências com <strong class="text-yellow-300">React.js, Next.js, Vue.js, TypeScript, Tailwind CSS, PHP e MySQL</strong>.`
+            `Focado em construir soluções digitais com qualidade, usabilidade e boas práticas.`
         ]
 
     return (
