@@ -1,6 +1,8 @@
+'use client'
 import SectionWrapper from "@/components/Common/SectionWrapper"
 import SectionTitle from "@/components/Common/SectionTitle"
 import CertificadoItem from "@/components/Certificados/CertificadoCard"
+import { motion } from "framer-motion"
 
 const certificados = [
     {
@@ -35,7 +37,21 @@ export default function Certificados() {
         <SectionWrapper id="certificados">
             <div className="w-full">
                 <SectionTitle>Certificados</SectionTitle>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10">
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mt-10"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 1 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.3,
+                            },
+                        },
+                    }}
+                >
                     {certificados.map((cert, index) => (
                         <CertificadoItem
                             key={index}
@@ -44,7 +60,7 @@ export default function Certificados() {
                             descricao={cert.descricao}
                         />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </SectionWrapper>
     )

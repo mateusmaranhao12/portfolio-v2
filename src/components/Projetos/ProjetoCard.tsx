@@ -29,12 +29,16 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
         .filter(Boolean) as Skill[]
 
     return (
-        <div
+        <motion.div
             className="
             bg-purple-800/10 backdrop-blur-sm p-5 rounded-xl 
             border border-violet-700 hover:shadow-[0_0_15px_#ffffff33] 
-            transition duration-300
-        ">
+            transition duration-300"
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
+        >
             <div className="aspect-video w-full rounded-lg overflow-hidden mb-4">
                 <video
                     src={`/videos/${video}.mp4`}
@@ -75,6 +79,6 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
 
 
             )}
-        </div>
+        </motion.div>
     )
 }

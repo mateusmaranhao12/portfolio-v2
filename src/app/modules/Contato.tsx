@@ -1,7 +1,9 @@
+'use client'
 import SectionWrapper from '@/components/Common/SectionWrapper';
 import SectionTitle from '@/components/Common/SectionTitle';
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 import ContatoItem from '@/components/Contato/ContatoItem';
+import { motion } from 'framer-motion';
 
 const contatos = [
     {
@@ -33,11 +35,17 @@ const contatos = [
 export default function Contato() {
     return (
         <SectionWrapper id='contato'>
-            <div className='w-full'>
+            <motion.div
+                className='w-full'
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 18 }}
+            >
                 <SectionTitle>Contato</SectionTitle>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10'>
                     {contatos.map((contato, index) => (
-                        <ContatoItem 
+                        <ContatoItem
                             key={index}
                             nome={contato.nome}
                             href={contato.href}
@@ -46,7 +54,7 @@ export default function Contato() {
                         />
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </SectionWrapper>
     );
 }
