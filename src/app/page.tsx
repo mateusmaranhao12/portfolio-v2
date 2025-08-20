@@ -5,11 +5,13 @@ import Projetos from "./modules/Projetos";
 import Experiencia from "./modules/Experiencia";
 import Certificados from "./modules/Certificados";
 import Contato from "@/app/modules/Contato";
+import Me from "./modules/Me";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
+      <Me />
       <Sobre />
       <Habilidades />
       <Projetos />

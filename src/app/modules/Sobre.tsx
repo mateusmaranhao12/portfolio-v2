@@ -1,6 +1,5 @@
 import SectionTitle from '@/components/Common/SectionTitle';
 import SectionWrapper from '@/components/Common/SectionWrapper';
-import ProfileImage from '@/components/Images/ProfileImage';
 import Descricao from '@/components/Sobre/Descricao';
 import Idiomas from '@/components/Sobre/Idiomas';
 import Objetivos from '@/components/Sobre/Objetivos';
@@ -19,7 +18,7 @@ export default function Sobre() {
     return (
         <SectionWrapper id='sobre'>
             {/* Texto */}
-            <div className="w-full md:w-2/3 space-y-6" >
+            <div className="w-full space-y-6" >
                 <SectionTitle>
                     Sobre mim
                 </SectionTitle>
@@ -31,9 +30,6 @@ export default function Sobre() {
                     <Objetivos />
                 </div>
             </div>
-
-            {/* Imagem */}
-            < ProfileImage />
         </SectionWrapper>
     );
 }
