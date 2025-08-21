@@ -17,7 +17,7 @@ const experiencias = [
     empresa: 'Workana',
     periodo: 'Desde agosto de 2024',
     descricao:
-      'Atuação como desenvolvedor freelancer na plataforma Workana, com experiência em projetos utilizando React, Vue.js, Tailwind CSS, HTML e Bootstrap.',
+      'Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.',
   },
 ]
 
