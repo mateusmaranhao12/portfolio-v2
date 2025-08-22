@@ -14,9 +14,9 @@ const contatos = [
     },
     {
         nome: 'E-mail',
-        href: 'mailto:mateusnmaranhao@gmail.com',
+        href: 'mailto:mateusnm2003@gmail.com',
         icon: <FaEnvelope size={28} className='text-red-400' />,
-        texto: 'mateusnmaranhao@gmail.com',
+        texto: 'mateusnm2003@gmail.com',
     },
     {
         nome: 'LinkedIn',

@@ -18,8 +18,8 @@ const projetos: Projeto[] = [
     {
         nome: 'Saude+',
         video: 'saude+',
-        texto: 'O sistema Saude+ foi desenvolvido como parte prática do meu Trabalho de Conclusão de Curso em Ciências da Computação pela Universidade Tiradentes. Feito em VueJS, Tailwind CSS, TypeScript, PHP e MySQL, o qual permite que pacientes agendem consultas de forma simples e eficiente, oferecendo recursos para médicos e pacientes reagendarem ou desmarcarem atendimentos em poucos segundos.',
-        skills: ['VueJS', 'TypeScript', 'PHP', 'MySQL', 'Tailwind', 'SCSS', 'Git'],
+        texto: 'O sistema Saude+ foi desenvolvido como parte prática do meu Trabalho de Conclusão de Curso em Ciências da Computação pela Universidade Tiradentes. Feito em Vue.js, Tailwind CSS, TypeScript, PHP e MySQL, o qual permite que pacientes agendem consultas de forma simples e eficiente, oferecendo recursos para médicos e pacientes reagendarem ou desmarcarem atendimentos em poucos segundos.',
+        skills: ['Vue.js', 'TypeScript', 'PHP', 'MySQL', 'Tailwind', 'SCSS', 'Git'],
         categoria: 'Acadêmico'
     },
 
@@ -27,7 +27,7 @@ const projetos: Projeto[] = [
         nome: 'Lions Bertha Lutz',
         video: 'lions',
         texto: 'Um site desenvolvido em React e NextJS para a Lions Bertha Lutz em Aracaju, um projeto feito como meu estágio supervisionado da Universidade Tiradentes. Um site que mostra a história da Lions, as causas (tais como esforços humanitários, juventude, socorro em catástrofes, etc.), e onde permite que o usuário seja um voluntário e possa fazer doações para a empresa.',
-        skills: ['ReactJS', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
+        skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
         categoria: 'Acadêmico'
 
     },
@@ -35,16 +35,16 @@ const projetos: Projeto[] = [
     {
         nome: 'Spotify Clone',
         video: 'spotify_clone',
-        texto: 'Um app tipo Spotify bem dinâmico feito em VueJS e PHP que permite login e cadastro de usuários, e que salvem músicas em suas respectivas playlists.',
-        skills: ['VueJS', 'TypeScript', 'PHP', 'MySQL', 'Bootstrap', 'SCSS', 'Git'],
+        texto: 'Um app tipo Spotify bem dinâmico feito em Vue.js e PHP que permite login e cadastro de usuários, e que salvem músicas em suas respectivas playlists.',
+        skills: ['Vue.js', 'TypeScript', 'PHP', 'MySQL', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal'
     },
 
     {
         nome: 'GitHub Profile',
         video: 'github_profile',
-        texto: 'Um sistema desenvolvido em React.js,TypeScript e SCSS, juntamente com a API do GitHub, o qual permite o usuáriopesquisar o GitHub de usuários, e visualizar alguns de seus projetos já feitos. Projeto feito no curso da udemy de ReactJS e NextJS.',
-        skills: ['ReactJS', 'TypeScript', 'SCSS', 'Git'],
+        texto: 'Um sistema desenvolvido em React.js,TypeScript e SCSS, juntamente com a API do GitHub, o qual permite o usuáriopesquisar o GitHub de usuários, e visualizar alguns de seus projetos já feitos. Projeto feito no curso da udemy de React.js e NextJS.',
+        skills: ['React.js', 'TypeScript', 'SCSS', 'Git'],
         categoria: 'Pessoal'
 
     },
@@ -53,31 +53,39 @@ const projetos: Projeto[] = [
         nome: 'Projeto Ecommerce',
         video: 'projeto_ecommerce',
         texto: 'Um sistema que permite adicionar e remover produtos ao carrinho, como também soma o valor total dos produtos, e podendo assim, realizar a compra.',
-        skills: ['ReactJS', 'TypeScript', 'SCSS', 'Git'],
+        skills: ['React.js', 'TypeScript', 'SCSS', 'Git'],
         categoria: 'Pessoal'
 
     },
 
     {
+        nome: 'Bioohub',
+        video: 'bioohub',
+        texto: 'Um sistema robusto feito em Vue.js, PHP e MySQL que permite que o usuário construa uma biografia completa, podendo adicionar redes sociais, títulos, textos, imagens, vídeos do youtube, etc.',
+        skills: ['Vue.js', 'TypeScript', 'Bootstrap', 'SCSS', 'PHP', 'MySQL', 'Git'],
+        categoria: 'Profissional'
+    },
+
+    {
         nome: 'Inova Option',
         video: 'inova-option',
-        texto: 'O site do Inova Option, feito em VueJS, SCSS e Bootstrap, onde o cliente pode negociar ações, forex e criptomoedas',
-        skills: ['VueJS', 'TypeScript', 'Bootstrap', 'SCSS', 'Git'],
+        texto: 'O site do Inova Option, feito em Vue.js, SCSS e Bootstrap, onde o cliente pode negociar ações, forex e criptomoedas, o sistema conta com animações de transições suaves e componentização em sua organização.',
+        skills: ['Vue.js', 'TypeScript', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Profissional'
     },
 
     {
         nome: 'Maragogi',
         video: 'maragogi',
-        texto: 'Um projeto front-end feito em VueJS que mostra detalhes sobre Maragogi - AL',
-        skills: ['VueJS', 'JavaScript', 'Bootstrap', 'SCSS', 'Git'],
+        texto: 'Um projeto front-end feito em Vue.js que mostra detalhes sobre Maragogi - AL',
+        skills: ['Vue.js', 'JavaScript', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal'
     },
 
     {
         nome: 'Pluug-ai Sistema',
         video: 'pluug_ai_sistema',
-        texto: 'O front-end estático do sistema da Pluug-ai feito em HTML5, CSS3, Bootstrap e JavaScript',
+        texto: 'O front-end estático do sistema da Pluug-ai feito em HTML5, CSS3, Bootstrap e JavaScript, o qual contribuiu para um sistema completo e funcional posteriormente.',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
         categoria: 'Profissional'
     },
@@ -86,7 +94,7 @@ const projetos: Projeto[] = [
         nome: 'Turbo Digital',
         video: 'turbo_digital',
         texto: 'O site do Turbo Digital, feito em React, NextJS e Tailwind, onde ensina como se posicionar, criar conteúdo e vender com estratégia!',
-        skills: ['ReactJS', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
+        skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
         categoria: 'Profissional'
     },
 
@@ -94,8 +102,8 @@ const projetos: Projeto[] = [
     {
         nome: 'Itália Tour',
         video: 'italia_tour',
-        texto: 'Um projeto feito em VueJS e em NodeJS com TypeScript que permite agendar passeios pela Itália (Ex: Roma, Veneza, Milão)',
-        skills: ['VueJS', 'TypeScript', 'NodeJS', 'Bootstrap', 'SCSS', 'Git'],
+        texto: 'Um projeto feito em Vue.js e em NodeJS com TypeScript que permite agendar passeios pela Itália (Ex: Roma, Veneza, Milão)',
+        skills: ['Vue.js', 'TypeScript', 'NodeJS', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal'
     },
 
