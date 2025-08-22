@@ -1,7 +1,7 @@
 'use client'
 import { allSkills, Skill } from "@/components/Common/Skills"
 import { motion } from "framer-motion"
-import { FaGithub, FaGlobe, FaLock, FaServer } from "react-icons/fa"
+import { FaGithub, FaLock, FaServer } from "react-icons/fa"
 import { Button } from '../Common/Button'
 
 type ProjetoCardProps = {
