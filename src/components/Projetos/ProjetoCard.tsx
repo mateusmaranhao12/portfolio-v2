@@ -1,12 +1,18 @@
 'use client'
 import { allSkills, Skill } from "@/components/Common/Skills"
 import { motion } from "framer-motion"
+import { FaGithub, FaGlobe, FaLock, FaServer } from "react-icons/fa"
+import { Button } from '../Common/Button'
 
 type ProjetoCardProps = {
     nome: string
     video: string
     texto: string
     skills?: string[]
+    githubFrontendUrl?: string
+    githubBackendUrl?: string
+    repoPrivado?: boolean
+    backendPrivado?: boolean
 }
 
 const container = {
@@ -22,11 +28,25 @@ const item = {
     visible: { opacity: 1, y: 0 }
 }
 
-export default function ProjetoCard({ nome, video, texto, skills = [] }: ProjetoCardProps) {
+export default function ProjetoCard({
+    nome,
+    video,
+    texto,
+    skills = [],
+    githubFrontendUrl,
+    githubBackendUrl,
+    repoPrivado,
+    backendPrivado,
+}: ProjetoCardProps) {
 
     const skillObjs: Skill[] = skills
         .map((s) => allSkills.find((sk) => sk.nome === s))
         .filter(Boolean) as Skill[]
+
+    const mostrarSeloRepoPrivado = !!repoPrivado
+    const mostrarBtnFront = !!githubFrontendUrl && !repoPrivado
+    const mostrarBtnBack = !!githubBackendUrl && !repoPrivado
+    const mostrarSeloBackPrivado = !!backendPrivado && !repoPrivado
 
     return (
         <motion.div
@@ -54,7 +74,7 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
 
             {skillObjs.length > 0 && (
                 <motion.div
-                    className="mt-auto flex flex-wrap justify-center md:justify-start gap-1"
+                    className="mt-auto flex flex-wrap justify-center md:justify-start gap-2"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
@@ -76,9 +96,50 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
                     ))}
 
                 </motion.div>
-
-
             )}
+
+            <motion.div
+                className="mt-5 flex gap-2"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.2 }}
+            >
+
+                {mostrarBtnFront && (
+                    <Button
+                        label="Ver no GitHub"
+                        href={githubFrontendUrl}
+                        icon={<FaGithub className="text-2xl" />}
+                        variant="black"
+                    />
+                )}
+
+                {mostrarBtnBack && (
+                    <Button
+                        label="Ver no GitHub (Back-end)"
+                        href={githubBackendUrl}
+                        icon={<FaServer />}
+                        variant="black"
+                    />
+                )}
+
+                {mostrarSeloBackPrivado && (
+                    <Button
+                        label="Back-end privado"
+                        icon={<FaLock />}
+                        disabled
+                    />
+                )}
+
+                {mostrarSeloRepoPrivado && (
+                    <Button
+                        label="Código privado"
+                        icon={<FaLock />}
+                        disabled
+                    />
+                )}
+            </motion.div>
         </motion.div>
     )
 }
