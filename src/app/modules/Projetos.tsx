@@ -33,8 +33,8 @@ const projetos: Projeto[] = [
     /*{
         nome: 'Lions Bertha Lutz',
         video: 'lions',
-        texto: 'Um site desenvolvido em React e NextJS para a Lions Bertha Lutz em Aracaju, um projeto feito em grupo como nosso estágio supervisionado da Universidade Tiradentes. Um site que mostra a história da Lions, as causas (tais como esforços humanitários, juventude, socorro em catástrofes, etc.), e onde permite que o usuário seja um voluntário e possa fazer doações para a empresa.',
-        skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
+        texto: 'Um site desenvolvido em React e Next.js para a Lions Bertha Lutz em Aracaju, um projeto feito em grupo como nosso estágio supervisionado da Universidade Tiradentes. Um site que mostra a história da Lions, as causas (tais como esforços humanitários, juventude, socorro em catástrofes, etc.), e onde permite que o usuário seja um voluntário e possa fazer doações para a empresa.',
+        skills: ['React.js', 'TypeScript', 'Next.js', 'Tailwind', 'Git'],
         categoria: 'Acadêmico',
         repoPrivado: true
     }, */
@@ -51,8 +51,8 @@ const projetos: Projeto[] = [
     {
         nome: 'GitHub Profile',
         video: 'github_profile',
-        texto: 'Um sistema desenvolvido em React.js,TypeScript e SCSS, juntamente com a API do GitHub, o qual permite o usuáriopesquisar o GitHub de usuários, e visualizar alguns de seus projetos já feitos. Projeto feito no curso da udemy de React.js e NextJS.',
-        skills: ['React.js', 'TypeScript', 'SCSS', 'Git'],
+        texto: 'Um sistema desenvolvido no curso de React.js e Next.js, juntamente com a API do GitHub, o qual permite o usuário pesquisar o GitHub de usuários, e visualizar alguns de seus projetos já feitos. Projeto feito no curso da udemy de React.js e Next.js.',
+        skills: ['React.js', 'TypeScript', 'SCSS', 'Git', 'Next.js'],
         categoria: 'Pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/github-remote'
 
@@ -61,7 +61,7 @@ const projetos: Projeto[] = [
     {
         nome: 'Projeto Ecommerce',
         video: 'projeto_ecommerce',
-        texto: 'Um sistema que permite adicionar e remover produtos ao carrinho, como também soma o valor total dos produtos, e podendo assim, realizar a compra.',
+        texto: 'Um sistema desenvolvido no curso de React.js e Next.js, o qual permite adicionar e remover produtos ao carrinho, como também soma o valor total dos produtos, e podendo assim, simular a realização da compra.',
         skills: ['React.js', 'TypeScript', 'SCSS', 'Git'],
         categoria: 'Pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/project-ecommerce'
@@ -109,8 +109,8 @@ const projetos: Projeto[] = [
     {
         nome: 'Turbo Digital',
         video: 'turbo_digital',
-        texto: 'O site do Turbo Digital, feito em React, NextJS e Tailwind, onde ensina como se posicionar, criar conteúdo e vender com estratégia!',
-        skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
+        texto: 'O site do Turbo Digital, feito em React, Next.js e Tailwind, onde ensina como se posicionar, criar conteúdo e vender com estratégia!',
+        skills: ['React.js', 'TypeScript', 'Next.js', 'Tailwind', 'Git'],
         categoria: 'Profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/turbo_digital',
         demoUrl: 'https://ruizmidias.com.br/mentoria-turbo-digital/'

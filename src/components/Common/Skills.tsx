@@ -17,7 +17,7 @@ export const frontEndSkills: Skill[] = [
     { nome: 'TypeScript', icon: <SiTypescript size={40} color='#3178c6' /> },
     { nome: 'Vue.js', icon: <FaVuejs size={40} color='#41b883' /> },
     { nome: 'React.js', icon: <FaReact size={40} color='#61dafb' /> },
-    { nome: 'NextJS', icon: <RiNextjsFill size={40} color='#ffffff' /> },
+    { nome: 'Next.js', icon: <RiNextjsFill size={40} color='#ffffff' /> },
     { nome: 'SCSS', icon: <FaSass size={40} color='#cc6699' /> },
     { nome: 'Bootstrap', icon: <FaBootstrap size={40} color='#7952b3' /> },
     { nome: 'Tailwind', icon: <SiTailwindcss size={40} color='#008cffff' /> },
