@@ -17,7 +17,7 @@ export default function ProfileImage() {
                 alt="Mateus Maranhão"
                 width={256}
                 height={256}
-                className="rounded-full object-cover shadow-[5px_5px_10px_#ffffff33] border-4 border-yellow-300"
+                className="rounded-full object-cover shadow-[5px_5px_10px_#ffffff33] border-4 border-yellow-500"
             />
         </motion.div>
     )

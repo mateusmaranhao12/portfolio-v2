@@ -18,7 +18,7 @@ export default function CertificadoItem({ nome, imagem, descricao }: Certificado
         <motion.div
             variants={itemVariants}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="bg-purple-800/10 border border-purple-700 rounded-xl p-4 backdrop-blur-sm hover:shadow-[0_0_15px_#ffffff22] transition"
+            className="bg-purple-800/10 border border-purple-800/20 rounded-xl p-4 backdrop-blur-sm hover:shadow-[0_0_15px_#ffffff22] transition"
         >
             <div className="w-full overflow-hidden rounded-lg mb-3">
                 <Image

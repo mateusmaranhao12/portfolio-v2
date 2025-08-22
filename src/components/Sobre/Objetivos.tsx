@@ -13,7 +13,7 @@ export default function Objetivos() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
         >
-            <h3 className="text-xl font-semibold text-yellow-300 mb-2">Objetivos</h3>
+            <h3 className="text-xl font-semibold text-yellow-500 mb-2">Objetivos</h3>
             <ul className="list-disc list-inside">
                 {objetivos.map((objetivo, index) => (
                     <li key={index}>{objetivo}</li>

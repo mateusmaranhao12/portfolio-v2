@@ -22,7 +22,7 @@ const contatos = [
         nome: 'LinkedIn',
         href: 'https://www.linkedin.com/in/mateusnmaranhao/',
         icon: <FaLinkedin size={28} className='text-blue-500' />,
-        texto: 'https://www.linkedin.com/in/mateusnmaranhao/',
+        texto: 'linkedin.com/in/mateusnmaranhao',
     },
     {
         nome: 'GitHub',

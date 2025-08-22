@@ -34,7 +34,7 @@ const certificados = [
 
 export default function Certificados() {
     return (
-        <SectionWrapper id="certificados">
+        <SectionWrapper id="certificados" className="bg-purple-950">
             <div className="w-full">
                 <SectionTitle>Certificados</SectionTitle>
                 <motion.div

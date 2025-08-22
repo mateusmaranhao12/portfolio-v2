@@ -52,7 +52,7 @@ export default function ProjetoCard({
         <motion.div
             className="h-full flex flex-col
             bg-purple-800/10 backdrop-blur-sm p-5 rounded-xl 
-            border border-violet-700 hover:shadow-[0_0_15px_#ffffff33] 
+            border border-purple-800/20 hover:shadow-[0_0_15px_#ffffff33] 
             transition duration-300"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -69,7 +69,7 @@ export default function ProjetoCard({
                 </video>
             </div>
 
-            <h3 className="text-xl font-bold text-yellow-300 mb-2">{nome}</h3>
+            <h3 className="text-xl font-bold text-yellow-500 mb-2">{nome}</h3>
             <p className="text-white text-sm leading-relaxed">{texto}</p>
 
             {skillObjs.length > 0 && (
