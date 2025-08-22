@@ -16,6 +16,7 @@ type Projeto = {
     githubBackendUrl?: string
     repoPrivado?: boolean
     backendPrivado?: boolean
+    demoUrl?: string
 }
 
 const projetos: Projeto[] = [
@@ -29,19 +30,19 @@ const projetos: Projeto[] = [
         backendPrivado: true
     },
 
-    {
+    /*{
         nome: 'Lions Bertha Lutz',
         video: 'lions',
-        texto: 'Um site desenvolvido em React e NextJS para a Lions Bertha Lutz em Aracaju, um projeto feito como meu estágio supervisionado da Universidade Tiradentes. Um site que mostra a história da Lions, as causas (tais como esforços humanitários, juventude, socorro em catástrofes, etc.), e onde permite que o usuário seja um voluntário e possa fazer doações para a empresa.',
+        texto: 'Um site desenvolvido em React e NextJS para a Lions Bertha Lutz em Aracaju, um projeto feito em grupo como nosso estágio supervisionado da Universidade Tiradentes. Um site que mostra a história da Lions, as causas (tais como esforços humanitários, juventude, socorro em catástrofes, etc.), e onde permite que o usuário seja um voluntário e possa fazer doações para a empresa.',
         skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
         categoria: 'Acadêmico',
         repoPrivado: true
-    },
+    }, */
 
     {
         nome: 'Spotify Clone',
         video: 'spotify_clone',
-        texto: 'Um app tipo Spotify bem dinâmico feito em Vue.js e PHP que permite login e cadastro de usuários, e que salvem músicas em suas respectivas playlists.',
+        texto: 'Projeto pessoal desenvolvido em Vue.js e PHP para praticar autenticação de usuários e gerenciamento de playlists, com foco em CRUD e integração front-end/back-end.',
         skills: ['Vue.js', 'TypeScript', 'PHP', 'MySQL', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/spotify_clone',
@@ -82,13 +83,14 @@ const projetos: Projeto[] = [
         texto: 'O site do Inova Option, feito em Vue.js, SCSS e Bootstrap, onde o cliente pode negociar ações, forex e criptomoedas, o sistema conta com animações de transições suaves e componentização em sua organização.',
         skills: ['Vue.js', 'TypeScript', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/inovaoption'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/inovaoption',
+        demoUrl: 'https://inovaoption.vercel.app/'
     },
 
     {
         nome: 'Maragogi',
         video: 'maragogi',
-        texto: 'Um projeto front-end feito em Vue.js que mostra detalhes sobre Maragogi - AL',
+        texto: 'Um projeto pessoal feito em Vue.js que mostra detalhes sobre Maragogi - AL',
         skills: ['Vue.js', 'JavaScript', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/maragogi_vue'
@@ -100,7 +102,8 @@ const projetos: Projeto[] = [
         texto: 'O front-end estático do sistema da Pluug-ai feito em HTML5, CSS3, Bootstrap e JavaScript, o qual contribuiu para um sistema completo e funcional posteriormente.',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/pluug.ai_v2'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/pluug.ai_v2',
+        demoUrl: 'https://pluug-ai-v2.vercel.app/'
     },
 
     {
@@ -109,14 +112,15 @@ const projetos: Projeto[] = [
         texto: 'O site do Turbo Digital, feito em React, NextJS e Tailwind, onde ensina como se posicionar, criar conteúdo e vender com estratégia!',
         skills: ['React.js', 'TypeScript', 'NextJS', 'Tailwind', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/turbo_digital'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/turbo_digital',
+        demoUrl: 'https://ruizmidias.com.br/mentoria-turbo-digital/'
     },
 
 
     {
         nome: 'Itália Tour',
         video: 'italia_tour',
-        texto: 'Um projeto feito em Vue.js e em NodeJS com TypeScript que permite agendar passeios pela Itália (Ex: Roma, Veneza, Milão)',
+        texto: 'Projeto pessoal desenvolvido em Vue.js e Node.js com TypeScript, focado em praticar rotas, formulários e integração com back-end para simular o agendamento de passeios.',
         skills: ['Vue.js', 'TypeScript', 'NodeJS', 'Bootstrap', 'SCSS', 'Git'],
         categoria: 'Pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/italia_tour'
@@ -128,7 +132,8 @@ const projetos: Projeto[] = [
         texto: 'Um projeto feito em HTML5, CSS3, Bootstrap e JavaScript, que mostra detalhes sobre Umuarama',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/umuarama'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/umuarama',
+        demoUrl: 'https://umuarama.vercel.app/'
     },
 
     {
@@ -137,7 +142,8 @@ const projetos: Projeto[] = [
         texto: 'Um portal de notícias feito em HTML5, CSS3, Bootstrap e JavaScript',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/eder-luiz-noticias'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/eder-luiz-noticias',
+        demoUrl: 'https://eder-luiz-noticias.vercel.app/'
     },
 
     {
@@ -146,7 +152,8 @@ const projetos: Projeto[] = [
         texto: 'Um sistema feito em HTML5, CSS3, Bootstrap e JavaScript, o qual facilita o processo de comunicação tomando o papel de um mediador entre você e o WhatsApp',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
         categoria: 'Profissional',
-        githubFrontendUrl: 'https://github.com/mateusmaranhao12/notifish'
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/notifish',
+        demoUrl: 'https://notifish.vercel.app/'
     },
 
 ]
@@ -198,6 +205,7 @@ export default function Projetos() {
                                             githubBackendUrl={projeto.githubBackendUrl}
                                             repoPrivado={projeto.repoPrivado}
                                             backendPrivado={projeto.backendPrivado}
+                                            demoUrl={projeto.demoUrl}
                                         />
                                     ))}
                                 </div>

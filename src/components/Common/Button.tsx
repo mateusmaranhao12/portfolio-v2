@@ -5,7 +5,7 @@ type ButtonProps = {
     href?: string
     icon?: ReactNode
     disabled?: boolean
-    variant?: "default" | "black"
+    variant?: "default" | "black" | "demo"
 }
 
 export function Button({
@@ -24,6 +24,8 @@ export function Button({
             "text-white bg-black hover:bg-white/10",
         disabled:
             "border border-white/15 text-white/60 cursor-not-allowed bg-transparent",
+        demo:
+            "border border-yellow-500 text-yellow-500 bg-transparent hover:bg-yellow-500 hover:text-black",
     }
 
     const classes = disabled ? variants.disabled : variants[variant]

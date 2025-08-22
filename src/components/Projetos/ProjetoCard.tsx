@@ -1,7 +1,7 @@
 'use client'
 import { allSkills, Skill } from "@/components/Common/Skills"
 import { motion } from "framer-motion"
-import { FaGithub, FaLock, FaServer } from "react-icons/fa"
+import { FaGithub, FaGlobe, FaLock, FaServer } from "react-icons/fa"
 import { Button } from '../Common/Button'
 
 type ProjetoCardProps = {
@@ -13,6 +13,7 @@ type ProjetoCardProps = {
     githubBackendUrl?: string
     repoPrivado?: boolean
     backendPrivado?: boolean
+    demoUrl?: string
 }
 
 const container = {
@@ -37,6 +38,7 @@ export default function ProjetoCard({
     githubBackendUrl,
     repoPrivado,
     backendPrivado,
+    demoUrl
 }: ProjetoCardProps) {
 
     const skillObjs: Skill[] = skills
@@ -121,6 +123,15 @@ export default function ProjetoCard({
                         href={githubBackendUrl}
                         icon={<FaServer />}
                         variant="black"
+                    />
+                )}
+
+                {demoUrl && (
+                    <Button
+                        label="Demo"
+                        href={demoUrl}
+                        icon={<FaGlobe />}
+                        variant="demo"
                     />
                 )}
 
