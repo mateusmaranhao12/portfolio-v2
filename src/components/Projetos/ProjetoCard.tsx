@@ -30,12 +30,12 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
 
     return (
         <motion.div
-            className="
+            className="h-full flex flex-col
             bg-purple-800/10 backdrop-blur-sm p-5 rounded-xl 
             border border-violet-700 hover:shadow-[0_0_15px_#ffffff33] 
             transition duration-300"
-            initial={{ opacity: 0}}
-            whileInView={{ opacity: 1}}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.9, ease: "easeInOut" }}
         >
@@ -54,7 +54,7 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
 
             {skillObjs.length > 0 && (
                 <motion.div
-                    className="flex flex-wrap gap-2"
+                    className="mt-auto flex flex-wrap justify-center md:justify-start gap-1"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
@@ -68,7 +68,7 @@ export default function ProjetoCard({ nome, video, texto, skills = [] }: Projeto
                             whileHover={{ scale: 1.05, y: -2 }}
                             transition={{ type: "spring", stiffness: 300, damping: 18 }}
                             title={s.nome}
-                            className="flex items-center gap-1 px-2 py-1 text-xs text-white"
+                            className="flex items-center mt-2 gap-1 px-2 py-1 text-xs text-white"
                         >
                             {s.icon}
                             <span className="hidden sm:inline">{s.nome}</span>
