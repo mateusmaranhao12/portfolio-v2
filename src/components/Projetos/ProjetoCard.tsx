@@ -67,7 +67,7 @@ export default function ProjetoCard({
                     controls
                     className="w-full h-full object-cover"
                 >
-                    Seu navegador não suporta vídeo.
+                    Seu navegador não suporta vídeo!
                 </video>
             </div>
 
