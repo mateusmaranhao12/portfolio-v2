@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const formacoesAcademicas = [
     'Ciência da Computação - Universidade Tiradentes, Aracaju/SE (2021 - 2025)',
-    'Pós-graduação em Arquitetura de Software (2025 - presente)'
+    'Pós-graduação em Arquitetura de Software - FACUMINAS (2025 - presente)'
 ]
 export default function Objetivos() {
     return (
