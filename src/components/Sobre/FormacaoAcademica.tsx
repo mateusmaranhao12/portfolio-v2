@@ -1,9 +1,9 @@
 'use client'
 import { motion } from "framer-motion";
 
-const objetivos = [
-    'Atuar como Desenvolvedor Web Full-Stack',
-    'Contribuir em projetos como Desenvolvedor Front-end, utilizando tecnologias modernas'
+const formacoesAcademicas = [
+    'Ciência da Computação - Universidade Tiradentes, Aracaju/SE (2021 - 2025)',
+    'Pós-graduação em Arquitetura de Software (2025 - presente)'
 ]
 export default function Objetivos() {
     return (
@@ -13,10 +13,10 @@ export default function Objetivos() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
         >
-            <h3 className="text-xl font-semibold text-yellow-500 mb-2">Objetivos</h3>
+            <h3 className="text-xl font-semibold text-yellow-500 mb-2">Formação Acadêmica</h3>
             <ul className="list-disc pl-4">
-                {objetivos.map((objetivo, index) => (
-                    <li key={index} className="pl-1">{objetivo}</li>
+                {formacoesAcademicas.map((formacao, index) => (
+                    <li key={index} className="pl-1">{formacao}</li>
                 ))}
             </ul>
         </motion.div>

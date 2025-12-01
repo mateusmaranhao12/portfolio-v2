@@ -1,6 +1,7 @@
 import SectionTitle from '@/components/Common/SectionTitle';
 import SectionWrapper from '@/components/Common/SectionWrapper';
 import Descricao from '@/components/Sobre/Descricao';
+import FormacaoAcademica from '@/components/Sobre/FormacaoAcademica';
 import Idiomas from '@/components/Sobre/Idiomas';
 import Objetivos from '@/components/Sobre/Objetivos';
 
@@ -26,6 +27,7 @@ export default function Sobre() {
                 <Descricao paragrafos={paragrafos} />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                    <FormacaoAcademica />
                     <Idiomas />
                     <Objetivos />
                 </div>
