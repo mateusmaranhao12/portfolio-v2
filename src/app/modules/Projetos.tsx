@@ -156,6 +156,16 @@ const projetos: Projeto[] = [
         demoUrl: 'https://notifish.vercel.app/'
     },
 
+    {
+        nome: 'Atmos Powered',
+        video: 'atmos',
+        texto: 'Website da Atmos Powered implementado em HTML, CSS, Boostrap e JavaScript',
+        skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
+        categoria: 'Profissional',
+        githubFrontendUrl: 'https://github.com/mateusmaranhao12/atmos',
+        demoUrl: 'https://atmos-rosy.vercel.app/'
+    }
+
 ]
 
 const grupos = projetos.reduce<Record<Categoria, Projeto[]>>(
