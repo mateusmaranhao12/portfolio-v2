@@ -14,8 +14,8 @@ export default function Home() {
       <Me />
       <Sobre />
       <Habilidades />
-      <Projetos />
       <Experiencia />
+      <Projetos />
       <Certificados />
       <Contato />
     </div>

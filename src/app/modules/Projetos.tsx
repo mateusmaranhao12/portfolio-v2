@@ -180,7 +180,7 @@ const ordem: Categoria[] = ['Profissional', 'Acadêmico', 'Pessoal']
 
 export default function Projetos() {
     return (
-        <SectionWrapper id="projetos" className="bg-purple-950">
+        <SectionWrapper id="projetos">
             <div className="w-full min-h-screen">
                 <SectionTitle>Projetos</SectionTitle>
 

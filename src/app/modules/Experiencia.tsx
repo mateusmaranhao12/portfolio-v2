@@ -15,15 +15,22 @@ const experiencias = [
   {
     cargo: 'Desenvolvedor Free-lancer',
     empresa: 'Workana',
-    periodo: 'Desde agosto de 2024',
+    periodo: 'Ago 2024 - Dez 2025',
     descricao:
       'Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.',
+  },
+  {
+    cargo: 'Desenvolvedor Júnior',
+    empresa: 'Líder Mão de Obra LTDA',
+    periodo: 'Jan 2026 - Presente',
+    descricao:
+      'Atuação como Desenvolvedor Júnior em demandas de TI, alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda.',
   },
 ]
 
 export default function Experiencia() {
   return (
-    <SectionWrapper id="experiencia">
+    <SectionWrapper id="experiencia" className='bg-purple-950'>
       <div className="w-full">
         <SectionTitle>Experiência</SectionTitle>
         <motion.div
