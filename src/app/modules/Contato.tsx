@@ -10,7 +10,7 @@ const contatos = [
         nome: 'WhatsApp',
         href: 'https://wa.me/5579991762846',
         icon: <FaWhatsapp size={28} className='text-green-400' />,
-        texto: '+55 (79) 99176-2846',
+        texto: 'Entre em contato diretamente comigo via WhatsApp',
     },
     {
         nome: 'E-mail',
@@ -22,13 +22,13 @@ const contatos = [
         nome: 'LinkedIn',
         href: 'https://www.linkedin.com/in/mateusnmaranhao/',
         icon: <FaLinkedin size={28} className='text-blue-500' />,
-        texto: 'linkedin.com/in/mateusnmaranhao',
+        texto: 'Conecte-se comigo no LinkedIn agora mesmo!',
     },
     {
         nome: 'GitHub',
         href: 'https://github.com/mateusmaranhao12',
         icon: <FaGithub size={28} className='text-white' />,
-        texto: 'github.com/mateusmaranhao12',
+        texto: 'Venha conferir meus projetos e contribuições no GitHub!',
     },
 ];
 
@@ -43,6 +43,7 @@ export default function Contato() {
                 transition={{ type: "spring", stiffness: 300, damping: 18 }}
             >
                 <SectionTitle>Contato</SectionTitle>
+                <p className='text-slate-400 text-start mt-2'>Fique à vontade para entrar em contato comigo através dos links abaixo!</p>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10'>
                     {contatos.map((contato, index) => (
                         <ContatoItem
