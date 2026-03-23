@@ -44,7 +44,7 @@ export default function Contato() {
             >
                 <SectionTitle>Contato</SectionTitle>
                 <p className='text-slate-400 text-start mt-2'>Fique à vontade para entrar em contato comigo através dos links abaixo!</p>
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-20'>
                     {contatos.map((contato, index) => (
                         <ContatoItem
                             key={index}
