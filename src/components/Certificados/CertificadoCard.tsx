@@ -30,7 +30,7 @@ export default function CertificadoItem({ nome, imagem, descricao }: Certificado
                 />
             </div>
             <p className="text-yellow-500 text-start text-xl font-bold">{nome}</p>
-            <p className="text-white text-start text-sm font-light">{descricao}</p>
+            <p className="text-slate-300 text-start text-sm font-light">{descricao}</p>
         </motion.div>
     )
 }

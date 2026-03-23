@@ -38,7 +38,7 @@ export default function HabilidadeCard({ nome, icon }: HabilidadeCardProps) {
       </motion.div>
 
       <motion.span
-        className="text-white font-medium"
+        className="text-slate-300 font-medium"
         variants={item}
         transition={{ duration: 0.4, delay: 0.1 }}
       >

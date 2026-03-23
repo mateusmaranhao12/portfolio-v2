@@ -72,7 +72,7 @@ export default function ProjetoCard({
             </div>
 
             <h3 className="text-xl font-bold text-yellow-500 mb-2">{nome}</h3>
-            <p className="text-white text-sm leading-relaxed">{texto}</p>
+            <p className="text-slate-300 text-sm leading-relaxed">{texto}</p>
 
             {skillObjs.length > 0 && (
                 <motion.div

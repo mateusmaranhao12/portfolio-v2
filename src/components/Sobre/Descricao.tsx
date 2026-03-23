@@ -12,7 +12,7 @@ export default function Descricao({ paragrafos }: DescricaoProps) {
       {paragrafos.map((texto, index) => (
         <motion.p
           key={index}
-          className="text-lg leading-relaxed"
+          className="text-lg leading-relaxed text-slate-300"
           dangerouslySetInnerHTML={{ __html: texto }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
