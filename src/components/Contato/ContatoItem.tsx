@@ -16,7 +16,7 @@ export default function ContatoItem({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-start gap-1 bg-purple-800/10 border border-purple-800/20 p-4 rounded-xl hover:shadow-[0_0_15px_#ffffff22] hover:bg-purple-400/20 hover:scale-[1.02] transition"
+      className="flex flex-col items-start gap-1 bg-purple-800/10 border-l-3 border-l-yellow-500 border border-purple-900/20 p-4 rounded-xl hover:shadow-[0_0_15px_#ffffff22] hover:bg-purple-400/20 hover:scale-[1.02] transition"
     >
       <div className="flex gap-2 mb-2">
         <div className="shrink-0">{icon}</div>
