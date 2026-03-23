@@ -10,7 +10,7 @@ const experiencias = [
     empresa: "Líder Mão de Obra LTDA",
     periodo: "Jan 2026 - Presente",
     descricao:
-      "Atuação como Desenvolvedor Júnior em demandas de TI, alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda.",
+      "Alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda, atuo como Desenvolvedor Full-Stack utilizando tecnologias como Vue.js, Tailwind CSS, PHP e MySQL. Uma das minhas atuações inclui o desenvolvimento de um sistema completo de gestão de senhas/tickets para o evento municipal \"Tamo Junto\", incluindo geração de senhas, painéis de atendimento, filas em tempo real e integrações para mais de 80 serviços.",
   },
   {
     cargo: "Desenvolvedor Free-lancer",
