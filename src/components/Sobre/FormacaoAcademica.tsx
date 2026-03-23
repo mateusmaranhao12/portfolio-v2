@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const formacoesAcademicas = [
     'Ciência da Computação - Universidade Tiradentes, Aracaju/SE (2021 - 2025)',
-    'Pós-graduação em Arquitetura de Software - FACUMINAS (2025 - presente)'
+    'Pós-graduado em Arquitetura de Software - FACUMINAS'
 ]
-export default function Objetivos() {
+export default function FormacaoAcademica() {
     return (
         <motion.div
             initial={{ opacity: 0, y: 40 }}

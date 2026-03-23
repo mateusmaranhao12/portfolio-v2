@@ -22,10 +22,10 @@ export default function Sobre() {
 
                 <Descricao paragrafos={paragrafos} />
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 pb-20">
                     <FormacaoAcademica />
                     <Idiomas />
-                    <Objetivos />
+                    {/* <Objetivos /> */}
                 </div>
             </div>
         </SectionWrapper>

@@ -1,36 +1,36 @@
-'use client'
-import SectionWrapper from '@/components/Common/SectionWrapper'
-import SectionTitle from '@/components/Common/SectionTitle'
-import ExperienciaItem from '@/components/Experiencia/ExperienciaItem'
-import { motion } from 'framer-motion'
+"use client";
+import SectionWrapper from "@/components/Common/SectionWrapper";
+import SectionTitle from "@/components/Common/SectionTitle";
+import ExperienciaItem from "@/components/Experiencia/ExperienciaItem";
+import { motion } from "framer-motion";
 
 const experiencias = [
   {
-    cargo: 'Estagiário na área de TI',
-    empresa: 'Imprensa Oficial de Sergipe / Serviços Gráficos de Sergipe',
-    periodo: 'Mai 2023 - Mai 2024',
+    cargo: "Desenvolvedor Júnior",
+    empresa: "Líder Mão de Obra LTDA",
+    periodo: "Jan 2026 - Presente",
     descricao:
-      'Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.',
+      "Atuação como Desenvolvedor Júnior em demandas de TI, alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda.",
   },
   {
-    cargo: 'Desenvolvedor Free-lancer',
-    empresa: 'Workana',
-    periodo: 'Ago 2024 - Dez 2025',
+    cargo: "Desenvolvedor Free-lancer",
+    empresa: "Workana",
+    periodo: "Ago 2024 - Dez 2025",
     descricao:
-      'Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.',
+      "Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.",
   },
   {
-    cargo: 'Desenvolvedor Júnior',
-    empresa: 'Líder Mão de Obra LTDA',
-    periodo: 'Jan 2026 - Presente',
+    cargo: "Estagiário na área de TI",
+    empresa: "Imprensa Oficial de Sergipe / Serviços Gráficos de Sergipe",
+    periodo: "Mai 2023 - Mai 2024",
     descricao:
-      'Atuação como Desenvolvedor Júnior em demandas de TI, alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda.',
+      "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
   },
-]
+];
 
 export default function Experiencia() {
   return (
-    <SectionWrapper id="experiencia" className='bg-purple-950'>
+    <SectionWrapper id="experiencia" className="bg-purple-950">
       <div className="w-full">
         <SectionTitle>Experiência</SectionTitle>
         <motion.div
@@ -55,7 +55,7 @@ export default function Experiencia() {
                 hidden: { opacity: 0 },
                 visible: { opacity: 1 },
               }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
             >
               <ExperienciaItem
                 cargo={exp.cargo}
@@ -68,5 +68,5 @@ export default function Experiencia() {
         </motion.div>
       </div>
     </SectionWrapper>
-  )
+  );
 }

@@ -2,8 +2,7 @@
 import { motion } from "framer-motion";
 
 const objetivos = [
-    'Atuar como Desenvolvedor Web Full-Stack',
-    'Contribuir em projetos como Desenvolvedor Front-end, utilizando tecnologias modernas'
+    'Atuar como Desenvolvedor Web Full-Stack'
 ]
 export default function Objetivos() {
     return (
