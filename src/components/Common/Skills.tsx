@@ -20,7 +20,7 @@ export const frontEndSkills: Skill[] = [
     { nome: 'Next.js', icon: <RiNextjsFill size={40} color='#ffffff' /> },
     { nome: 'SCSS', icon: <FaSass size={40} color='#cc6699' /> },
     { nome: 'Bootstrap', icon: <FaBootstrap size={40} color='#7952b3' /> },
-    { nome: 'Tailwind', icon: <SiTailwindcss size={40} color='#008cffff' /> },
+    { nome: 'Tailwind CSS', icon: <SiTailwindcss size={40} color='#008cffff' /> },
 ]
 
 export const backEndSkills: Skill[] = [
