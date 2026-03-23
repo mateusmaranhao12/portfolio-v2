@@ -93,7 +93,7 @@ export default function ProjetoCard({
                             className="flex items-center mt-2 gap-1 px-2 py-1 text-xs text-white"
                         >
                             {s.icon}
-                            <span className="hidden sm:inline">{s.nome}</span>
+                            {/*<span className="hidden sm:inline">{s.nome}</span> */}
                         </motion.span>
                     ))}
 
