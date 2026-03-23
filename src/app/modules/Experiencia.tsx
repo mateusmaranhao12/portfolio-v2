@@ -21,7 +21,7 @@ const experiencias = [
   },
   {
     cargo: "Estagiário na área de TI",
-    empresa: "Imprensa Oficial de Sergipe / Serviços Gráficos de Sergipe",
+    empresa: "Imprensa Oficial de Sergipe",
     periodo: "Mai 2023 - Mai 2024",
     descricao:
       "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
