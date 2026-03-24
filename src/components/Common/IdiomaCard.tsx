@@ -5,16 +5,25 @@ type IdiomaCardProps = {
   nivel: string;
   detalhe?: string;
   className?: string;
+  isDark: boolean;
 };
 
-export default function IdiomaCard({ idioma, nivel, detalhe, className = "" }: IdiomaCardProps) {
+export default function IdiomaCard({
+  idioma,
+  nivel,
+  detalhe,
+  className = "",
+  isDark,
+}: IdiomaCardProps) {
   return (
     <li
-      className={`bg-purple-950/10 border border-l-3 border-l-yellow-500 border-purple-900/20 rounded-xl p-5 backdrop-blur-sm hover:shadow-[0_0_15px_#ffffff22] transition mb-4 mt-4 ${className}`}
+      className={`border border-l-3 ${isDark ? "bg-purple-950/10 border-l-yellow-500 border-purple-900/20 hover:shadow-[0_0_15px_#ffffff22]" : "bg-white border-l-purple-500 border-slate-500/20 hover:shadow-[0_0_15px_#00000022]"} rounded-xl p-5 backdrop-blur-sm transition mb-4 mt-4 ${className}`}
     >
-      <p className="text-white font-medium">{idioma}</p>
-      <p className="text-sm text-purple-200/80 mt-2">{nivel}</p>
-      {detalhe ? <p className="text-sm text-yellow-400 mt-2">{detalhe}</p> : null}
+      <p className={`font-medium ${isDark ? "text-white" : "text-black"}`}>{idioma}</p>
+      <p className={`text-sm mt-2 ${isDark ? "text-purple-200/80" : "text-slate-700/80"}`}>{nivel}</p>
+      {detalhe ? (
+        <p className={`text-sm mt-2 ${isDark ? "text-yellow-400" : "text-purple-500"}`}>{detalhe}</p>
+      ) : null}
     </li>
   );
 }

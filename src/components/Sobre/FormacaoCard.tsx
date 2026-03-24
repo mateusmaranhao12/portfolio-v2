@@ -15,7 +15,7 @@ export default function FormacaoCard({
 }) {
   return (
     <li
-      className={`border border-l-3 ${isDark ? "bg-purple-950/10 border-l-yellow-500 border-purple-900/20" : "bg-white border-l-purple-500 border-slate-500/20"} rounded-xl p-6 backdrop-blur-sm hover:shadow-[0_0_15px_#ffffff22] transition mb-4 mt-4`}
+      className={`border border-l-3 ${isDark ? "bg-purple-950/10 border-l-yellow-500 border-purple-900/20 hover:shadow-[0_0_15px_#ffffff22]" : "bg-white border-l-purple-500 border-slate-500/20 hover:shadow-[0_0_15px_#00000022]"} rounded-xl p-6 backdrop-blur-sm transition mb-4 mt-4`}
     >
       <p
         className={`text-sm ${isDark ? "text-yellow-400" : "text-purple-500"} font-bold tracking-wide uppercase`}
