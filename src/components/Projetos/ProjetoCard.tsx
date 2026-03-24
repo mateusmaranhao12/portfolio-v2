@@ -1,8 +1,9 @@
-'use client'
-import { allSkills, Skill } from "@/components/Common/Skills"
+"use client"
+import { getAllSkills, Skill } from "@/components/Common/Skills"
 import { motion } from "framer-motion"
 import { FaGithub, FaGlobe, FaLock, FaServer } from "react-icons/fa"
 import { Button } from '../Common/Button'
+import { useTheme } from '@/components/theme/theme'
 
 type ProjetoCardProps = {
     nome: string
@@ -40,6 +41,9 @@ export default function ProjetoCard({
     backendPrivado,
     demoUrl
 }: ProjetoCardProps) {
+
+    const { isDark } = useTheme();
+    const allSkills = getAllSkills(isDark ?? false)
 
     const skillObjs: Skill[] = skills
         .map((s) => allSkills.find((sk) => sk.nome === s))
