@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 
 const THEME_KEY = "theme";
@@ -5,13 +6,8 @@ const THEME_KEY = "theme";
 /// Aplica o tema e salva a preferência no localStorage
 export function applyTheme(isDark: boolean) {
   try {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem(THEME_KEY, "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem(THEME_KEY, "light");
-    }
+    // Persist preference only. Visual changes are applied by ThemeProvider.
+    localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
     // Notifica outros listeners na mesma janela
     try {
       window.dispatchEvent(new CustomEvent("theme-change", { detail: { isDark } }));

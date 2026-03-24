@@ -1,18 +1,22 @@
-'use client'
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { useTheme } from "../theme/theme";
 
 type DescricaoProps = {
-  paragrafos: string[]
-}
+  paragrafos: string[];
+};
 
 export default function Descricao({ paragrafos }: DescricaoProps) {
+  
+  const { isDark } = useTheme();
+
   return (
     <div className="space-y-6">
       {paragrafos.map((texto, index) => (
         <motion.p
           key={index}
-          className="text-lg leading-relaxed text-slate-300"
+          className={`text-lg leading-relaxed ${isDark ? "text-slate-300" : "text-gray-800"}`}
           dangerouslySetInnerHTML={{ __html: texto }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -21,5 +25,5 @@ export default function Descricao({ paragrafos }: DescricaoProps) {
         />
       ))}
     </div>
-  )
+  );
 }
