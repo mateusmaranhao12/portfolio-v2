@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import FormacaoCard from "./FormacaoCard";
+import { useTheme } from "../theme/theme";
 
 const formacoesAcademicas = [
   {
@@ -19,6 +20,7 @@ const formacoesAcademicas = [
   },
 ];
 export default function FormacaoAcademica() {
+  const { isDark } = useTheme();
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -26,7 +28,9 @@ export default function FormacaoAcademica() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
     >
-      <h3 className="text-xl font-semibold border-l-4 pl-4 border-yellow-500 text-white mb-2">
+      <h3
+        className={`text-xl font-semibold border-l-4 pl-4 ${isDark ? "border-yellow-500 text-white" : "border-purple-500 text-black"} mb-2`}
+      >
         Formação Acadêmica
       </h3>
       <ul className="pl-4">
@@ -38,6 +42,7 @@ export default function FormacaoAcademica() {
             data={formacao.data}
             local={formacao.local}
             formacao={formacao.formacao}
+            isDark={isDark ?? false}
           />
         ))}
       </ul>

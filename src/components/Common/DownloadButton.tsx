@@ -1,20 +1,25 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
-import { FaDownload } from "react-icons/fa"
+import { FaDownload } from "react-icons/fa";
+import { useTheme } from "../theme/theme";
 
 export default function DownloadCVButton() {
-    return (
-        <motion.a
-            href="/curriculo_mateus_maranhao.pdf"
-            download
-            className="inline-flex items-center px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400 transition-all font-semibold"
-            initial={{ opacity: 0}}
-            whileInView={{ opacity: 1}}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
-            <FaDownload className="mr-2" />
-            Download CV
-        </motion.a>
-    );
+  const { isDark, toggleTheme } = useTheme();
+
+  if (isDark === null) return null;
+
+  return (
+    <motion.a
+      href="/curriculo_mateus_maranhao.pdf"
+      download
+      className={`inline-flex items-center px-4 py-2 ${isDark ? "bg-yellow-500 text-black hover:bg-yellow-400" : "bg-purple-500 text-white hover:bg-purple-400"} rounded transition-all font-semibold`}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeInOut" }}
+    >
+      <FaDownload className="mr-2" />
+      Download CV
+    </motion.a>
+  );
 }
