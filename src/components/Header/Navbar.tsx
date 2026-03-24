@@ -72,9 +72,10 @@ export default function Navbar() {
           Mateus Maranhão
         </motion.h1>
 
-        {/* Botao mobile + ThemeIcon ao lado */}
+        {/* Botao mobile + ThemeIcon ao lado + LanguageSelect */}
         <div className="hidden max-[1024px]:flex items-center gap-2">
           <ThemeIcon />
+          <LanguageSelect />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
             onClick={() => setIsOpen(!isOpen)}
