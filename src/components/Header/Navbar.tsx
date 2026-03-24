@@ -4,6 +4,7 @@ import { MouseEvent, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import DownloadCVButton from "../Common/DownloadButton";
 import ThemeIcon from "../theme/ThemeIcon";
+import LanguageSelect from "../Common/LanguageSelect";
 import { useTheme } from "../theme/theme";
 
 export default function Navbar() {
@@ -73,6 +74,7 @@ export default function Navbar() {
 
         {/* Botao mobile + ThemeIcon ao lado */}
         <div className="md:hidden flex items-center gap-2">
+          <LanguageSelect />
           <ThemeIcon />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
@@ -121,6 +123,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <DownloadCVButton />
+          <LanguageSelect />
           <ThemeIcon />
         </div>
       </div>
