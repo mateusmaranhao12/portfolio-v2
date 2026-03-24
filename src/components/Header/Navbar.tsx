@@ -72,14 +72,17 @@ export default function Navbar() {
           Mateus Maranhão
         </motion.h1>
 
-        {/* Botao mobile */}
-        <button
-          className={`md:hidden text-2xl ${dark ? "text-white" : "text-gray-800"}`}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
+        {/* Botao mobile + ThemeIcon ao lado */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeIcon />
+          <button
+            className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
 
         {/* Menu desktop */}
         <motion.ul
@@ -157,8 +160,8 @@ export default function Navbar() {
             ))}
           </motion.ul>
 
-          {/* Botão de baixar currículo no mobile */}
-          <div className="mt-2">
+          {/* Botão de baixar currículo no mobile*/}
+          <div className="mt-2 flex gap-4">
             <DownloadCVButton />
           </div>
         </motion.div>
