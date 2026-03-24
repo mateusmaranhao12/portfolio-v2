@@ -1,24 +1,46 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
+import FormacaoCard from "./FormacaoCard";
 
 const formacoesAcademicas = [
-    'Ciência da Computação - Universidade Tiradentes, Aracaju/SE (2021 - 2025)',
-    'Pós-graduado em Arquitetura de Software - FACUMINAS'
-]
+  {
+    curso: "Ciência da Computação",
+    universidade: "Universidade Tiradentes",
+    formacao: "Bacharelado",
+    data: "2021.1 - 2025.1",
+    local: "Aracaju - SE",
+  },
+  {
+    curso: "Arquitetura de Software",
+    universidade: "Facuminas",
+    formacao: "Pós-graduação",
+    data: "2025.2 - 2026.1",
+    local: "Remoto",
+  },
+];
 export default function FormacaoAcademica() {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
-        >
-            <h3 className="text-xl font-semibold text-yellow-500 mb-2">Formação Acadêmica</h3>
-            <ul className="list-disc pl-4">
-                {formacoesAcademicas.map((formacao, index) => (
-                    <li key={index} className="pl-1">{formacao}</li>
-                ))}
-            </ul>
-        </motion.div>
-    )
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
+    >
+      <h3 className="text-xl font-semibold border-l-4 pl-4 border-yellow-500 text-white mb-2">
+        Formação Acadêmica
+      </h3>
+      <ul className="pl-4">
+        {formacoesAcademicas.map((formacao, index) => (
+          <FormacaoCard
+            key={index}
+            curso={formacao.curso}
+            universidade={formacao.universidade}
+            data={formacao.data}
+            local={formacao.local}
+            formacao={formacao.formacao}
+          />
+        ))}
+      </ul>
+    </motion.div>
+  );
 }
