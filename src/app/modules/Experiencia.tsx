@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/Common/SectionWrapper";
 import SectionTitle from "@/components/Common/SectionTitle";
 import ExperienciaItem from "@/components/Experiencia/ExperienciaItem";
 import { motion } from "framer-motion";
+import { useTheme } from "@/components/theme/theme";
 
 const experiencias = [
   {
@@ -29,8 +30,9 @@ const experiencias = [
 ];
 
 export default function Experiencia() {
+  const { isDark } = useTheme();
   return (
-    <SectionWrapper id="experiencia" className="bg-purple-950">
+    <SectionWrapper id="experiencia" className={isDark ? "bg-purple-950" : "bg-slate-100"}>
       <div className="w-full">
         <SectionTitle>Experiência</SectionTitle>
         <motion.div
@@ -62,6 +64,7 @@ export default function Experiencia() {
                 empresa={exp.empresa}
                 periodo={exp.periodo}
                 descricao={exp.descricao}
+                isDark={isDark ?? false}
               />
             </motion.div>
           ))}
