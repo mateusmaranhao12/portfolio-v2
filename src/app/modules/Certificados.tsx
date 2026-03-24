@@ -3,6 +3,7 @@ import SectionWrapper from "@/components/Common/SectionWrapper"
 import SectionTitle from "@/components/Common/SectionTitle"
 import CertificadoItem from "@/components/Certificados/CertificadoCard"
 import { motion } from "framer-motion"
+import { useTheme } from "@/components/theme/theme"
 
 const certificados = [
     {
@@ -33,8 +34,9 @@ const certificados = [
 ]
 
 export default function Certificados() {
+    const { isDark } = useTheme();
     return (
-        <SectionWrapper id="certificados" className="bg-purple-950">
+        <SectionWrapper id="certificados" className={isDark ? "bg-purple-950" : "bg-slate-100"}>
             <div className="w-full">
                 <SectionTitle>Certificados</SectionTitle>
                 <motion.div
@@ -58,6 +60,7 @@ export default function Certificados() {
                             nome={cert.nome}
                             imagem={cert.imagem}
                             descricao={cert.descricao}
+                            isDark={isDark ?? false}
                         />
                     ))}
                 </motion.div>
