@@ -73,8 +73,7 @@ export default function Navbar() {
         </motion.h1>
 
         {/* Botao mobile + ThemeIcon ao lado */}
-        <div className="md:hidden flex items-center gap-2">
-          <LanguageSelect />
+        <div className="hidden max-[1024px]:flex items-center gap-2">
           <ThemeIcon />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
@@ -87,7 +86,7 @@ export default function Navbar() {
 
         {/* Menu desktop */}
         <motion.ul
-          className="hidden md:flex gap-6"
+          className="hidden min-[1025px]:flex gap-6"
           initial="hidden"
           animate="visible"
         >
@@ -121,7 +120,7 @@ export default function Navbar() {
           ))}
         </motion.ul>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden min-[1025px]:flex items-center gap-4">
           <DownloadCVButton />
           <LanguageSelect />
           <ThemeIcon />
@@ -131,7 +130,7 @@ export default function Navbar() {
       {/* Menu Mobile */}
       {isOpen && (
         <motion.div
-          className={`md:hidden mt-4 flex flex-col gap-4 items-center py-4 rounded ${dark ? "bg-purple-950 text-white" : "bg-white text-gray-800"}`}
+          className={`min-[1025px]:hidden mt-4 flex flex-col gap-4 items-center py-4 rounded ${dark ? "bg-purple-950 text-white" : "bg-white text-gray-800"}`}
           initial="hidden"
           animate="visible"
         >
