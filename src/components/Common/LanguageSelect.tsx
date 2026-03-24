@@ -1,33 +1,37 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "../theme/theme";
-
-type Lang = "pt" | "en";
+import {
+  getInitialLang,
+  getLanguageButtonClasses,
+  getLanguageMenuClasses,
+  getLanguageOptionClasses,
+  Lang,
+  LANGUAGE_OPTIONS,
+  persistLang,
+} from "../../app/translate/tradutor";
 
 export default function LanguageSelect({
   onChange,
 }: {
   onChange?: (lang: Lang) => void;
 }) {
+
+  //tema selecionado
   const { isDark } = useTheme();
-  const [lang, setLang] = useState<Lang>(() => {
-    try {
-      const v = localStorage.getItem("lang");
-      return v === "en" ? "en" : "pt";
-    } catch {
-      return "pt";
-    }
-  });
+
+  //estado do idioma selecionado e controle de abertura do menu
+  const [lang, setLang] = useState<Lang>(getInitialLang);
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
+  //efeito para persistir o idioma selecionado e notificar o componente pai
   useEffect(() => {
-    try {
-      localStorage.setItem("lang", lang);
-    } catch {}
+    persistLang(lang);
     onChange?.(lang);
   }, [lang, onChange]);
 
+  //efeito para fechar o menu ao clicar fora do componente
   useEffect(() => {
     function onDoc(e: MouseEvent) {
       if (!ref.current) return;
@@ -38,8 +42,10 @@ export default function LanguageSelect({
     return () => document.removeEventListener("click", onDoc);
   }, []);
 
-  const btnClasses = `text-sm rounded px-2 py-1 flex items-center gap-2 border ${isDark ? "bg-purple-950 text-white border-gray-700" : "bg-white text-gray-800 border-gray-300"}`;
-  const menuClasses = `absolute right-0 mt-2 w-20 rounded shadow z-50 ${isDark ? "bg-purple-950 text-white border border-gray-700" : "bg-white text-gray-800 border border-gray-200"}`;
+  //obtenção das classes CSS para os componentes, adaptando-se ao tema claro ou escuro
+  const btnClasses = getLanguageButtonClasses(isDark);
+  const menuClasses = getLanguageMenuClasses(isDark);
+  const optionClasses = getLanguageOptionClasses(isDark);
 
   return (
     <div className="relative" ref={ref}>
@@ -67,26 +73,19 @@ export default function LanguageSelect({
 
       {open && (
         <div role="listbox" className={menuClasses}>
-          <button
-            role="option"
-            onClick={() => {
-              setLang("pt");
-              setOpen(false);
-            }}
-            className={`w-full text-left px-3 py-2 hover:bg-opacity-10 ${isDark ? "hover:bg-white/10" : "hover:bg-gray-100"}`}
-          >
-            PT
-          </button>
-          <button
-            role="option"
-            onClick={() => {
-              setLang("en");
-              setOpen(false);
-            }}
-            className={`w-full text-left px-3 py-2 hover:bg-opacity-10 ${isDark ? "hover:bg-white/10" : "hover:bg-gray-100"}`}
-          >
-            EN
-          </button>
+          {LANGUAGE_OPTIONS.map((option) => (
+            <button
+              key={option}
+              role="option"
+              onClick={() => {
+                setLang(option);
+                setOpen(false);
+              }}
+              className={optionClasses}
+            >
+              {option.toUpperCase()}
+            </button>
+          ))}
         </div>
       )}
     </div>
