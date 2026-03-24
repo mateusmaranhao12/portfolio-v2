@@ -3,6 +3,7 @@ import { useEffect, useState, MouseEvent } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import DownloadCVButton from "../Common/DownloadButton";
 import { motion } from "framer-motion";
+import ThemeIcon from "../theme/ThemeIcon";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
@@ -108,8 +109,9 @@ export default function Navbar() {
                     ))}
                 </motion.ul>
 
-                <div className="hidden md:block ml-4">
+                <div className="hidden md:flex items-center gap-4">
                     <DownloadCVButton />
+                    <ThemeIcon />
                 </div>
             </div>
 
