@@ -21,15 +21,28 @@ export default function LanguageSelect({
   const { isDark } = useTheme();
 
   //estado do idioma selecionado e controle de abertura do menu
-  const [lang, setLang] = useState<Lang>(getInitialLang);
+  // iniciar com um valor estável para evitar mismatches durante SSR
+  const [lang, setLang] = useState<Lang>("pt");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const [hydrated, setHydrated] = useState(false);
+
+  //ler valor persistido apenas no cliente após montagem e marcar como hidratado
+  useEffect(() => {
+    try {
+      const v = localStorage.getItem("lang");
+      if (v === "en" || v === "pt") setLang(v);
+    } catch {}
+    setHydrated(true);
+  }, []);
 
   //efeito para persistir o idioma selecionado e notificar o componente pai
+  //executa apenas depois que o componente estiver hidratado no cliente
   useEffect(() => {
+    if (!hydrated) return;
     persistLang(lang);
     onChange?.(lang);
-  }, [lang, onChange]);
+  }, [lang, onChange, hydrated]);
 
   //efeito para fechar o menu ao clicar fora do componente
   useEffect(() => {

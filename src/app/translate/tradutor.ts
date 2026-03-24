@@ -21,6 +21,7 @@ export function getInitialLang(): Lang {
 export function persistLang(lang: Lang): void {
 	try {
 		localStorage.setItem(LANG_STORAGE_KEY, lang);
+        console.log(`Idioma persistido: ${lang}`);
 	} catch {}
 }
 
