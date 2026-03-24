@@ -65,9 +65,8 @@ export default function Navbar() {
         <motion.h1
           className="text-xl font-bold"
           initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.9, ease: "easeInOut" }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           Mateus Maranhão
         </motion.h1>
