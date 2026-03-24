@@ -104,10 +104,10 @@ export default function Navbar() {
                 onClick={(e) => handleSmoothScroll(e, item.href)}
                 className={`relative font-medium transition-colors duration-200 ${
                   activeSection === item.href
-                    ? "text-yellow-500 cursor-text"
+                    ? dark ? "text-yellow-500 cursor-text" : "text-purple-500 cursor-text"
                     : dark
                       ? "text-gray-300 hover:text-yellow-300"
-                      : "text-gray-700 hover:text-yellow-500"
+                      : "text-gray-700 hover:text-purple-500"
                 }`}
               >
                 {item.label}
@@ -147,7 +147,7 @@ export default function Navbar() {
                   href={`#${item.href}`}
                   onClick={() => setIsOpen(false)}
                   className={`relative font-medium transition-colors duration-200 ${
-                    dark ? "text-gray-300 hover:text-yellow-300" : "text-gray-700 hover:text-yellow-500"
+                    dark ? "text-gray-300 hover:text-yellow-300" : "text-gray-700 hover:text-purple-500"
                   }`}
                 >
                   {item.label}
