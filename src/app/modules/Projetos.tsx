@@ -3,6 +3,7 @@ import SectionTitle from "@/components/Common/SectionTitle"
 import SectionWrapper from "@/components/Common/SectionWrapper"
 import ProjetoCard from "@/components/Projetos/ProjetoCard"
 import { motion } from "framer-motion"
+import { useTheme } from "@/components/theme/theme"
 
 type Categoria = 'Profissional' | 'Acadêmico' | 'Pessoal'
 
@@ -179,6 +180,7 @@ const grupos = projetos.reduce<Record<Categoria, Projeto[]>>(
 const ordem: Categoria[] = ['Profissional', 'Acadêmico', 'Pessoal']
 
 export default function Projetos() {
+    const { isDark } = useTheme();
     return (
         <SectionWrapper id="projetos">
             <div className="w-full min-h-screen">
@@ -192,7 +194,7 @@ export default function Projetos() {
                         return (
                             <section key={cat}>
                                 <motion.h3
-                                    className="text-lg md:text-xl font-semibold text-purple-300 mb-2"
+                                    className={`text-lg md:text-xl font-semibold mb-2 ${isDark ? "text-purple-300" : "text-slate-700"}`}
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true, amount: 0.3 }}
