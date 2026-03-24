@@ -12,12 +12,12 @@ export default function ThemeIcon() {
       aria-label={isDark ? "Ativar tema claro" : "Ativar tema escuro"}
       title={isDark ? "Tema claro" : "Tema escuro"}
       onClick={toggleTheme}
-      className="p-2 rounded-md hover:bg-white/5 transition"
+      className={`p-2 rounded-md ${isDark ? "hover:bg-white/5" : "hover:bg-gray-200"} transition`}
     >
       {isDark ? (
         <FiSun className="w-5 h-5 text-yellow-400" />
       ) : (
-        <FiMoon className="w-5 h-5 text-purple-200" />
+        <FiMoon className="w-5 h-5 text-gray-900" />
       )}
     </button>
   );
