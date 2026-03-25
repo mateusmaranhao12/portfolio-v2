@@ -9,7 +9,7 @@ import Footer from "./modules/Footer";
 import Habilidades from "./modules/Habilidades";
 import Me from "./modules/Me";
 import Projetos from "./modules/Projetos";
-import { Lang, getInitialLang } from "@/app/translate/tradutor";
+import { Lang } from "@/app/translate/tradutor";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>("pt");
@@ -26,7 +26,7 @@ export default function Home() {
     <div>
       <Navbar lang={lang} setLang={setLang} />
       <Me lang={lang} />
-      <Sobre />
+      <Sobre lang={lang} />
       <Habilidades />
       <Experiencia />
       <Projetos />
