@@ -68,9 +68,32 @@ export const translations = {
     title_highlight: "first",
 
     //sobre mim
-	sobre_titulo: "Sobre mim",
+    sobre_titulo: "Sobre mim",
     sobre_paragrafo_1:
       'Olá! Sou <strong class="text-yellow-500">Mateus Nunes Maranhão</strong>, sou <strong class="text-yellow-500">desenvolvedor Full-Stack </strong>, graduado em <strong class="text-yellow-500">Ciência da Computação</strong> pela <strong class="text-yellow-500">Universidade Tiradentes</strong> em Aracaju - SE. Movido por desafios e apaixonado por desenvolvimento web, atuo com tecnologias como React.js, Next.js, Vue.js, Node.js, TypeScript e PHP.',
+
+    //formacao academica
+    formacao_titulo: "Formação Acadêmica",
+    formacao_curso_1: "Ciência da Computação",
+    formacao_universidade_1: "Universidade Tiradentes",
+    formacao_formacao_1: "Bacharelado",
+    formacao_data_1: "2021.1 - 2025.1",
+    formacao_local_1: "Aracaju - SE",
+    formacao_curso_2: "Arquitetura de Software",
+    formacao_universidade_2: "Facuminas",
+    formacao_formacao_2: "Pós-graduação",
+    formacao_data_2: "2025.2 - 2026.1",
+    formacao_local_2: "Remoto",
+
+    //idiomas
+    idiomas_titulo: "Idiomas",
+    idioma_1: "Português",
+    idioma_2: "Inglês",
+    idioma_3: "Espanhol",
+    nivel_nativo: "Nativo",
+    nivel_intermediario: "Intermediário",
+    nivel_basico: "Básico",
+    detalhe_leitura_tecnica: "Leitura técnica",
   },
   en: {
     //navbar
@@ -102,8 +125,31 @@ export const translations = {
     title_highlight: "second",
 
     //about me
-	sobre_titulo: "About me",
+    sobre_titulo: "About me",
     sobre_paragrafo_1:
       'Hello! I\'m <strong class="text-yellow-500">Mateus Nunes Maranhão</strong>, I\'m a <strong class="text-yellow-500">Full-Stack Developer </strong>, graduated in <strong class="text-yellow-500">Computer Science</strong> from <strong class="text-yellow-500">Universidade Tiradentes</strong> in Aracaju - SE, in Brazil. Driven by challenges and passionate about web development, I work with technologies like React.js, Next.js, Vue.js, Node.js, TypeScript, and PHP.',
+
+    //academic background
+    formacao_titulo: "Academic Background",
+    formacao_curso_1: "Computer Science",
+    formacao_universidade_1: "Universidade Tiradentes",
+    formacao_formacao_1: "Bachelor's Degree",
+    formacao_data_1: "2021.1 - 2025.1",
+    formacao_local_1: "Aracaju - SE, Brazil",
+    formacao_curso_2: "Software Architecture",
+    formacao_universidade_2: "Facuminas",
+    formacao_formacao_2: "Postgraduate",
+    formacao_data_2: "2025.2 - 2026.1",
+    formacao_local_2: "Remote",
+
+    //languages
+    idiomas_titulo: "Languages",
+    idioma_1: "Portuguese",
+    idioma_2: "English",
+    idioma_3: "Spanish",
+    nivel_nativo: "Native",
+    nivel_intermediario: "Intermediate",
+    nivel_basico: "Basic",
+    detalhe_leitura_tecnica: "Technical reading",
   },
 } as const;

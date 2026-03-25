@@ -25,8 +25,8 @@ export default function Sobre({ lang }: { lang?: Lang }) {
         <Descricao paragrafos={paragrafos} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 pb-20">
-          <FormacaoAcademica />
-          <Idiomas />
+          <FormacaoAcademica lang={lang} />
+          <Idiomas lang={lang} />
           {/* <Objetivos /> */}
         </div>
       </div>

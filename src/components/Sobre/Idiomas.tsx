@@ -2,15 +2,18 @@
 import { motion } from "framer-motion";
 import IdiomaCard from "../Common/IdiomaCard";
 import { useTheme } from "../theme/theme";
+import { translations, Lang } from "@/app/translate/tradutor";
 
-const idiomas = [
-    { idioma: 'Português', nivel: 'Nativo', detalhe: '' },
-    { idioma: 'Inglês', nivel: 'Intermediário', detalhe: 'Leitura técnica' },
-    { idioma: 'Espanhol', nivel: 'Básico', detalhe: '' },
-];
-
-export default function Idiomas() {
+export default function Idiomas({ lang }: { lang?: Lang }) {
     const { isDark } = useTheme();
+    const currentLang = lang ?? "pt";
+    const t = translations[currentLang as Lang] as any;
+
+    const idiomas = [
+        { idioma: `${t.idioma_1}`, nivel: `${t.nivel_nativo}`, detalhe: '' },
+        { idioma: `${t.idioma_2}`, nivel: `${t.nivel_intermediario}`, detalhe: `${t.detalhe_leitura_tecnica}` },
+        { idioma: `${t.idioma_3}`, nivel: `${t.nivel_basico}`, detalhe: '' },
+    ];
 
     return (
         <motion.div
@@ -20,7 +23,7 @@ export default function Idiomas() {
             transition={{ type: 'spring', stiffness: 300, damping: 18, delay: 0.5 }}
         >
             <h3 className={`text-xl font-semibold border-l-4 pl-4 ${isDark ? "border-yellow-500 text-white" : "border-purple-500 text-black"} mb-2`}>
-                Idiomas
+                {t.idiomas_titulo}
             </h3>
             <ul className="pl-4">
                 {idiomas.map((item, idx) => (
