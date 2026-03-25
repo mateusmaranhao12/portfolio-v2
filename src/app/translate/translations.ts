@@ -132,7 +132,18 @@ export const translations = {
     certificado_react_nextjs_desc: "Curso realizado para aprimorar meus conhecimentos em React e NextJS.",
     certificado_git_github_desc: "Curso realizado para aprofundar conhecimentos já aplicados em projetos anteriores.",
 
-},
+    //contatos
+    contato_titulo: "Contato",
+    contato_texto: "Fique à vontade para entrar em contato comigo através dos links abaixo!",
+    contato_email: "E-mail",
+    contato_whatsapp: "WhatsApp",
+    contato_linkedin: "LinkedIn",
+    contato_github: "GitHub",
+    contato_email_texto: "mateusnm2003@gmail.com",
+    contato_whatsapp_texto: "Entre em contato diretamente comigo via WhatsApp",
+    contato_linkedin_texto: "Conecte-se comigo no LinkedIn agora mesmo!",
+    contato_github_texto: "Venha conferir meus projetos e contribuições no GitHub!",
+  },
 
   en: {
     //navbar
@@ -266,5 +277,17 @@ export const translations = {
     certificado_wise_up_desc: "Course taken in 2023 to develop my English skills.",
     certificado_react_nextjs_desc: "Course taken to improve my knowledge in React and NextJS.",
     certificado_git_github_desc: "Course taken to deepen knowledge already applied in previous projects.",
+
+    //contacts
+    contato_titulo: "Contact",
+    contato_texto: "Feel free to get in touch with me through the links below!",
+    contato_email: "E-mail",
+    contato_whatsapp: "WhatsApp",
+    contato_linkedin: "LinkedIn",
+    contato_github: "GitHub",
+    contato_email_texto: "mateusnm2003@gmail.com",
+    contato_whatsapp_texto: "Get in touch with me directly via WhatsApp",
+    contato_linkedin_texto: "Connect with me on LinkedIn now!",
+    contato_github_texto: "Check out my projects and contributions on GitHub!",
   },
 } as const;
