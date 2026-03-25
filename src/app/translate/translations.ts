@@ -143,6 +143,9 @@ export const translations = {
     contato_whatsapp_texto: "Entre em contato diretamente comigo via WhatsApp",
     contato_linkedin_texto: "Conecte-se comigo no LinkedIn agora mesmo!",
     contato_github_texto: "Venha conferir meus projetos e contribuições no GitHub!",
+
+    //footer
+    footer_direitos_reservados: "Todos os direitos reservados.",
   },
 
   en: {
@@ -289,5 +292,8 @@ export const translations = {
     contato_whatsapp_texto: "Get in touch with me directly via WhatsApp",
     contato_linkedin_texto: "Connect with me on LinkedIn now!",
     contato_github_texto: "Check out my projects and contributions on GitHub!",
+
+    //footer
+    footer_direitos_reservados: "All rights reserved.",
   },
 } as const;
