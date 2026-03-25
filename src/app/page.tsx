@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Contato from "@/app/modules/Contato";
 import Sobre from "@/app/modules/Sobre";
 import Navbar from "@/components/Header/Navbar";
@@ -12,7 +12,15 @@ import Projetos from "./modules/Projetos";
 import { Lang, getInitialLang } from "@/app/translate/tradutor";
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>(() => getInitialLang());
+  const [lang, setLang] = useState<Lang>("pt");
+
+  // read persisted lang on client after mount to avoid SSR mismatch
+  useEffect(() => {
+    try {
+      const v = localStorage.getItem("lang");
+      if (v === "en" || v === "pt") setLang(v as Lang);
+    } catch {}
+  }, []);
 
   return (
     <div>

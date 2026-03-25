@@ -6,7 +6,7 @@ import DownloadCVButton from "../Common/DownloadButton";
 import ThemeIcon from "../theme/ThemeIcon";
 import LanguageSelect from "../Common/LanguageSelect";
 import { useTheme } from "../theme/theme";
-import { Lang, translations, getInitialLang } from "@/app/translate/tradutor";
+import { Lang, translations } from "@/app/translate/tradutor";
 
 type NavbarProps = {
   lang?: Lang;
@@ -15,7 +15,7 @@ type NavbarProps = {
 
 export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarProps) {
 
-  const [internalLang, setInternalLang] = useState<Lang>(() => getInitialLang());
+  const [internalLang, setInternalLang] = useState<Lang>("pt");
 
   const currentLang = langProp ?? internalLang;
   const setLang = setLangProp ?? setInternalLang;

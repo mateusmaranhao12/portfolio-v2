@@ -24,7 +24,7 @@ export default function LanguageSelect({
 
   //estado do idioma selecionado e controle de abertura do menu
   // iniciar com um valor estável para evitar mismatches durante SSR
-  const [lang, setLang] = useState<Lang>(() => getInitialLang());
+  const [lang, setLang] = useState<Lang>("pt");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const [hydrated, setHydrated] = useState(false);
@@ -33,7 +33,7 @@ export default function LanguageSelect({
   useEffect(() => {
     try {
       const v = localStorage.getItem("lang");
-      if (v === "en" || v === "pt") setLang(v);
+      if (v === "en" || v === "pt") setLang(v as Lang);
     } catch {}
     setHydrated(true);
   }, []);
@@ -43,7 +43,9 @@ export default function LanguageSelect({
   useEffect(() => {
     if (!hydrated) return;
     persistLang(lang);
-    onChange?.(lang);
+    // se for controlado, notificar o pai apenas em ação explícita do usuário para evitar loops de atualização.
+    // se value for undefined, significa que o componente é controlado externamente, então notificamos o pai da mudança.
+    if (value === undefined) onChange?.(lang);
   }, [lang, onChange, hydrated]);
 
   // sincroniza quando o valor controlado mudar
@@ -102,6 +104,8 @@ export default function LanguageSelect({
               onClick={() => {
                 setLang(option);
                 setOpen(false);
+                // If controlled, directly notify parent of user action.
+                if (value !== undefined) onChange?.(option);
               }}
               className={optionClasses}
             >

@@ -15,7 +15,7 @@ export default function TituloPrincipal({ lang }: Props) {
 }
 
 function TranslatedTitle({ lang, isDark }: { lang?: Lang; isDark: boolean | null }) {
-    const currentLang = lang ?? getInitialLang();
+    const currentLang = lang ?? "pt";
     const t = translations[currentLang as Lang] as any;
 
     // decide qual parte do título deve ser destacada com base na tradução
