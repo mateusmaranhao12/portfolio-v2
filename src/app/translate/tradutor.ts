@@ -99,6 +99,21 @@ export const translations = {
 	habilidades_titulo: "Habilidades",
 	banco_de_dados: "Banco de dados",
 	ferramentas: "Ferramentas",
+
+	//Experiência
+	experiencia_titulo: "Experiência",
+	experiencia_cargo_1: "Desenvolvedor Júnior",
+	experiencia_empresa_1: "Líder Mão de Obra LTDA",
+	experiencia_periodo_1: "Jan 2026 - Presente",
+	experiencia_descricao_1: "Alocado em secretaria da Prefeitura Municipal de Aracaju por meio da Líder Locação de Mão de Obra Ltda, atuo como Desenvolvedor Full-Stack utilizando tecnologias como Vue.js, Tailwind CSS, PHP e MySQL. Uma das minhas atuações inclui na participação do desenvolvimento de um sistema completo de gestão de senhas/tickets para o evento municipal \"Tamo Junto\", incluindo geração de senhas, painéis de atendimento, filas em tempo real e integrações para mais de 80 serviços.",
+	experiencia_cargo_2: "Desenvolvedor Free-lancer",
+	experiencia_empresa_2: "Workana",
+	experiencia_periodo_2: "Ago 2024 - Dez 2025",
+	experiencia_descricao_2: "Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.",
+	experiencia_cargo_3: "Estagiário na área de TI",
+	experiencia_empresa_3: "Imprensa Oficial de Sergipe",
+	experiencia_periodo_3: "Mai 2023 - Mai 2024",
+	experiencia_descricao_3: "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
   },
 
   en: {
@@ -162,5 +177,21 @@ export const translations = {
 	habilidades_titulo: "Skills",
 	banco_de_dados: "Databases",
 	ferramentas: "Tools",
+
+	//Experience
+	experiencia_titulo: "Experience",
+	experiencia_cargo_1: "Junior Developer",
+	experiencia_empresa_1: "Líder Mão de Obra LTDA",
+	experiencia_periodo_1: "Jan 2026 - Present",
+	experiencia_descricao_1: "Allocated in the secretariat of the Aracaju City Hall through Líder Locação de Mão de Obra Ltda, I work as a Full-Stack Developer using technologies such as Vue.js, Tailwind CSS, PHP, and MySQL. One of my roles includes participating in the development of a complete password/ticket management system for the municipal event \"Tamo Junto\", including password generation, service panels, real-time queues, and integrations for over 80 services.",
+	experiencia_cargo_2: "Freelance Developer",
+	experiencia_empresa_2: "Workana",
+	experiencia_periodo_2: "Aug 2024 - Dec 2025",
+	experiencia_descricao_2: "As a freelance developer on the Workana platform, I created various landing pages using HTML5, CSS3, and Bootstrap, as well as more complex and functional systems using VueJS, PHP, and MySQL. I also developed modern and componentized websites using ReactJS, NextJS, and Tailwind CSS.",
+	experiencia_cargo_3: "IT Intern",
+	experiencia_empresa_3: "Imprensa Oficial de Sergipe",
+	experiencia_periodo_3: "May 2023 - May 2024",
+	experiencia_descricao_3: "Performed activities related to the field, such as digitizing the Official Gazette and binarizing the archive. Developed software to convert scanned images of the gazettes into text, enabling searches within these gazettes through the software itself.",
+
   },
 } as const;

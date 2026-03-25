@@ -28,7 +28,7 @@ export default function Home() {
       <Me lang={lang} />
       <Sobre lang={lang} />
       <Habilidades lang={lang} />
-      <Experiencia />
+      <Experiencia lang={lang} />
       <Projetos />
       <Certificados />
       <Contato />
