@@ -30,9 +30,9 @@ export default function Home() {
       <Habilidades lang={lang} />
       <Experiencia lang={lang} />
       <Projetos lang={lang} />
-      <Certificados />
-      <Contato />
-      <Footer />
+      <Certificados lang={lang} />
+      <Contato lang={lang} />
+      <Footer lang={lang} />
     </div>
   );
 }

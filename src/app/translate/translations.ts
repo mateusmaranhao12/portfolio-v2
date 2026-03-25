@@ -118,7 +118,21 @@ export const translations = {
     projeto_btn_demo: "Demo",
     projeto_btn_backend_privado: "Back-end privado",
     projeto_btn_codigo_privado: "Código privado",
-  },
+
+    //certificados
+    certificados_titulo: "Certificados",
+    certificado_dw_completo: "Desenvolvimento Web Completo",
+    certificado_vue: "Desenvolvimento Web Avançado 2022 com Vue e Vuex",
+    certificado_wise_up: "Wise Up Online – 50 horas",
+    certificado_react_nextjs: "React e NextJS do básico ao avançado: Aplicações reais",
+    certificado_git_github: "Git e GitHub, do básico ao avançado",
+    certificado_dw_completo_desc: "Meu primeiro curso de desenvolvimento Full-Stack realizado em 2021, para aprender e me aprofundar em tecnologias como HTML5, CSS3, JavaScript, MySQL, PHP, Bootstrap, etc.",
+    certificado_vue_desc: "Curso realizado em 2022, com o objetivo de aprender e aprofundar no VueJS e suas tecnologias como Vuex, vue-router, componentização e animações.",
+    certificado_wise_up_desc: "Curso realizado em 2023 para desenvolver meu inglês.",
+    certificado_react_nextjs_desc: "Curso realizado para aprimorar meus conhecimentos em React e NextJS.",
+    certificado_git_github_desc: "Curso realizado para aprofundar conhecimentos já aplicados em projetos anteriores.",
+
+},
 
   en: {
     //navbar
@@ -239,5 +253,18 @@ export const translations = {
     projeto_btn_demo: "Demo",
     projeto_btn_backend_privado: "Private back-end",
     projeto_btn_codigo_privado: "Private code",
+
+    //certificates
+    certificados_titulo: "Certificates",
+    certificado_dw_completo: "Complete Web Development",
+    certificado_vue: "Advanced Web Development 2022 with Vue and Vuex",
+    certificado_wise_up: "Wise Up Online – 50 hours",
+    certificado_react_nextjs: "React and NextJS from basic to advanced: Real applications",
+    certificado_git_github: "Git and GitHub, from basic to advanced",
+    certificado_dw_completo_desc: "My first Full-Stack development course taken in 2021, to learn and deepen my knowledge in technologies like HTML5, CSS3, JavaScript, MySQL, PHP, Bootstrap, etc.",
+    certificado_vue_desc: "Course taken in 2022, with the goal of learning and deepening knowledge in VueJS and its technologies like Vuex, vue-router, componentization, and animations.",
+    certificado_wise_up_desc: "Course taken in 2023 to develop my English skills.",
+    certificado_react_nextjs_desc: "Course taken to improve my knowledge in React and NextJS.",
+    certificado_git_github_desc: "Course taken to deepen knowledge already applied in previous projects.",
   },
 } as const;
