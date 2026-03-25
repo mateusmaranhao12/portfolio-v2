@@ -120,7 +120,7 @@ export const pt = {
 	certificados_titulo: "Certificados",
 	certificado_dw_completo: "Desenvolvimento Web Completo",
 	certificado_vue: "Desenvolvimento Web Avançado 2022 com Vue e Vuex",
-	certificado_wise_up: "Wise Up Online – 50 horas",
+	certificado_wise_up: "Wise Up Online - 50 horas",
 	certificado_react_nextjs:
 		"React e NextJS do básico ao avançado: Aplicações reais",
 	certificado_git_github: "Git e GitHub, do básico ao avançado",
