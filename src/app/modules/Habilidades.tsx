@@ -5,15 +5,19 @@ import HabilidadeCard from '@/components/Habilidades/HabilidadeCard'
 import { getSkillsByCategory } from '@/components/Common/Skills'
 import { motion } from 'framer-motion';
 import { useTheme } from '@/components/theme/theme';
+import { Lang, translations } from '../translate/tradutor'
 
-export default function Habilidades() {
+export default function Habilidades({ lang }: { lang?: Lang }) {
     const { isDark } = useTheme();
+    const currentLang = lang ?? "pt";
+    const t = translations[currentLang as Lang] as any;
+
     return (
         <SectionWrapper id="habilidades">
             <div className="w-full">
-                <SectionTitle>Habilidades</SectionTitle>
+                <SectionTitle>{t.habilidades_titulo}</SectionTitle>
 
-                {Object.entries(getSkillsByCategory(isDark ?? false)).map(([categoria, lista]) => (
+                {Object.entries(getSkillsByCategory(isDark ?? false, currentLang)).map(([categoria, lista]) => (
                     <div key={categoria} className="mb-10">
                         <motion.h3
                             className={`text-lg font-semibold mb-4 mt-4 ${isDark ? "text-yellow-100" : "text-purple-500"}`}

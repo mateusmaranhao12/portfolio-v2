@@ -27,7 +27,7 @@ export default function Home() {
       <Navbar lang={lang} setLang={setLang} />
       <Me lang={lang} />
       <Sobre lang={lang} />
-      <Habilidades />
+      <Habilidades lang={lang} />
       <Experiencia />
       <Projetos />
       <Certificados />

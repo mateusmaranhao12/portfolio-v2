@@ -94,7 +94,13 @@ export const translations = {
     nivel_intermediario: "Intermediário",
     nivel_basico: "Básico",
     detalhe_leitura_tecnica: "Leitura técnica",
+
+	//habilidades
+	habilidades_titulo: "Habilidades",
+	banco_de_dados: "Banco de dados",
+	ferramentas: "Ferramentas",
   },
+
   en: {
     //navbar
     sobre: "About",
@@ -151,5 +157,10 @@ export const translations = {
     nivel_intermediario: "Intermediate",
     nivel_basico: "Basic",
     detalhe_leitura_tecnica: "Technical reading",
+
+	//skills	
+	habilidades_titulo: "Skills",
+	banco_de_dados: "Databases",
+	ferramentas: "Tools",
   },
 } as const;
