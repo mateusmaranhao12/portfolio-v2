@@ -5,13 +5,16 @@ import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import ContatoItem from "@/components/Contato/ContatoItem";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/theme/theme";
+import { translations, Lang } from "@/app/translate/tradutor";
 
-export default function Contato() {
+export default function Contato({ lang }: { lang?: Lang }) {
   const { isDark } = useTheme();
+  const currentLang = lang ?? "pt";
+  const t = translations[currentLang as Lang] as any;
 
   const contatos = [
     {
-      nome: "WhatsApp",
+      nome: `${t.contato_whatsapp}`,
       href: "https://wa.me/5579991762846",
       icon: (
         <FaWhatsapp
@@ -19,31 +22,31 @@ export default function Contato() {
           className={isDark ? "text-green-400" : "text-green-600"}
         />
       ),
-      texto: "Entre em contato diretamente comigo via WhatsApp",
+      texto: `${t.contato_whatsapp_texto}`,
     },
     {
-      nome: "E-mail",
+      nome: `${t.contato_email}`,
       href: "mailto:mateusnm2003@gmail.com",
       icon: (
         <FaEnvelope size={28} className={isDark ? "text-red-400" : "text-red-600"} />
       ),
-      texto: "mateusnm2003@gmail.com",
+      texto: `${t.contato_email_texto}`,
     },
     {
-      nome: "LinkedIn",
+      nome: `${t.contato_linkedin}`,
       href: "https://www.linkedin.com/in/mateusnmaranhao/",
       icon: (
         <FaLinkedin size={28} className={isDark ? "text-blue-400" : "text-blue-600"} />
       ),
-      texto: "Conecte-se comigo no LinkedIn agora mesmo!",
+      texto: `${t.contato_linkedin_texto}`,
     },
     {
-      nome: "GitHub",
+      nome: `${t.contato_github}`,
       href: "https://github.com/mateusmaranhao12",
       icon: (
         <FaGithub size={28} className={isDark ? "text-white" : "text-black"} />
       ),
-      texto: "Venha conferir meus projetos e contribuições no GitHub!",
+      texto: `${t.contato_github_texto}`,
     },
   ];
   return (
@@ -55,12 +58,12 @@ export default function Contato() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ type: "spring", stiffness: 300, damping: 18 }}
       >
-        <SectionTitle>Contato</SectionTitle>
+        <SectionTitle>{t.contato_titulo}</SectionTitle>
         <p
           className={`text-start mt-2 ${isDark ? "text-slate-300" : "text-slate-800"}`}
         >
-          Fique à vontade para entrar em contato comigo através dos links
-          abaixo!
+          {t.contato_texto}
+
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-20">
           {contatos.map((contato, index) => (

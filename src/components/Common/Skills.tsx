@@ -1,12 +1,13 @@
 import {
-    FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact,
-    FaSass, FaBootstrap, FaPhp, FaGitAlt, FaGithub,
-    FaNodeJs
+  FaHtml5, FaCss3Alt, FaJs, FaVuejs, FaReact,
+  FaSass, FaBootstrap, FaPhp, FaGitAlt, FaGithub,
+  FaNodeJs
 } from 'react-icons/fa'
 import { SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { RiNextjsFill } from 'react-icons/ri'
 import { ReactElement } from 'react'
+import { translations, Lang } from '@/app/translate/tradutor'
 
 export type Skill = { nome: string; icon: ReactElement }
 
@@ -14,7 +15,7 @@ function makeIcon(IconComp: any, size = 40, color = '#6b21a8') {
   return <IconComp size={size} color={color} />;
 }
 
-export function getSkillsByCategory(isDark: boolean): Record<string, Skill[]> {
+export function getSkillsByCategory(isDark: boolean, lang: Lang = 'pt'): Record<string, Skill[]> {
   const darkColors = {
     html: '#e34c26',
     css: '#264de4',
@@ -80,20 +81,23 @@ export function getSkillsByCategory(isDark: boolean): Record<string, Skill[]> {
     { nome: 'GitHub', icon: makeIcon(FaGithub, 40, c('github')) },
   ];
 
+  const dbLabel = (translations[lang] as any).banco_de_dados ?? 'Banco de dados'
+  const toolsLabel = (translations[lang] as any).ferramentas ?? 'Ferramentas'
+
   return {
     'Front-end': frontEndSkills,
     'Back-end': backEndSkills,
-    'Banco de dados': dbSkills,
-    'Ferramentas': toolsSkills,
+    [dbLabel]: dbSkills,
+    [toolsLabel]: toolsSkills,
   };
 }
 
-export function getAllSkills(isDark: boolean): Skill[] {
-  const byCat = getSkillsByCategory(isDark);
+export function getAllSkills(isDark: boolean, lang: Lang = 'pt'): Skill[] {
+  const byCat = getSkillsByCategory(isDark, lang);
   return [
     ...byCat['Front-end'],
     ...byCat['Back-end'],
-    ...byCat['Banco de dados'],
-    ...byCat['Ferramentas'],
+    ...byCat[(translations[lang] as any).banco_de_dados ?? 'Banco de dados'],
+    ...byCat[(translations[lang] as any).ferramentas ?? 'Ferramentas'],
   ];
 }

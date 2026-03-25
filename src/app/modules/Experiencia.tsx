@@ -4,37 +4,40 @@ import SectionTitle from "@/components/Common/SectionTitle";
 import ExperienciaItem from "@/components/Experiencia/ExperienciaItem";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/theme/theme";
+import { translations, Lang } from "@/app/translate/tradutor";
 
-const experiencias = [
-  {
-    cargo: "Desenvolvedor Júnior",
-    empresa: "Líder Mão de Obra LTDA",
-    periodo: "Jan 2026 - Presente",
-    descricao:
-      "Alocado em secretaria da Prefeitura de Aracaju por meio da Líder Locação de Mão de Obra Ltda, atuo como Desenvolvedor Full-Stack utilizando tecnologias como Vue.js, Tailwind CSS, PHP e MySQL. Uma das minhas atuações inclui na participação do desenvolvimento de um sistema completo de gestão de senhas/tickets para o evento municipal \"Tamo Junto\", incluindo geração de senhas, painéis de atendimento, filas em tempo real e integrações para mais de 80 serviços.",
-  },
-  {
-    cargo: "Desenvolvedor Free-lancer",
-    empresa: "Workana",
-    periodo: "Ago 2024 - Dez 2025",
-    descricao:
-      "Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.",
-  },
-  {
-    cargo: "Estagiário na área de TI",
-    empresa: "Imprensa Oficial de Sergipe",
-    periodo: "Mai 2023 - Mai 2024",
-    descricao:
-      "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
-  },
-];
-
-export default function Experiencia() {
+export default function Experiencia({ lang }: { lang?: Lang }) {
   const { isDark } = useTheme();
+  const currentLang = lang ?? "pt";
+  const t = translations[currentLang as Lang] as any;
+  const experiencias = [
+    {
+      cargo: `${t.experiencia_cargo_1}`,
+      empresa: `${t.experiencia_empresa_1}`,
+      periodo: `${t.experiencia_periodo_1}`,
+      descricao: `${t.experiencia_descricao_1}`,
+    },
+    {
+      cargo: `${t.experiencia_cargo_2}`,
+      empresa: `${t.experiencia_empresa_2}`,
+      periodo: `${t.experiencia_periodo_2}`,
+      descricao: `${t.experiencia_descricao_2}`,
+    },
+    {
+      cargo: `${t.experiencia_cargo_3}`,
+      empresa: `${t.experiencia_empresa_3}`,
+      periodo: `${t.experiencia_periodo_3}`,
+      descricao: `${t.experiencia_descricao_3}`,
+    },
+  ];
+
   return (
-    <SectionWrapper id="experiencia" className={isDark ? "bg-purple-950" : "bg-slate-100"}>
+    <SectionWrapper
+      id="experiencia"
+      className={isDark ? "bg-purple-950" : "bg-slate-100"}
+    >
       <div className="w-full">
-        <SectionTitle>Experiência</SectionTitle>
+        <SectionTitle>{t.experiencia_titulo}</SectionTitle>
         <motion.div
           className="flex flex-col gap-8 mt-10"
           initial="hidden"

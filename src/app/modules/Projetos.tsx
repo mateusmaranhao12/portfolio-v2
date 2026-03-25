@@ -4,13 +4,14 @@ import SectionWrapper from "@/components/Common/SectionWrapper"
 import ProjetoCard from "@/components/Projetos/ProjetoCard"
 import { motion } from "framer-motion"
 import { useTheme } from "@/components/theme/theme"
+import { translations, Lang } from "@/app/translate/tradutor"
 
-type Categoria = 'Profissional' | 'Acadêmico' | 'Pessoal'
+type Categoria = 'profissional' | 'academico' | 'pessoal'
 
 type Projeto = {
     nome: string
     video: string
-    texto: string
+    textoKey: string
     skills?: string[]
     categoria: Categoria
     githubFrontendUrl?: string
@@ -24,9 +25,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Saude+',
         video: 'saude+',
-        texto: 'O sistema Saude+ foi desenvolvido como parte prática do meu Trabalho de Conclusão de Curso em Ciências da Computação pela Universidade Tiradentes. Feito em Vue.js, Tailwind CSS, TypeScript, PHP e MySQL, o qual permite que pacientes agendem consultas de forma simples e eficiente, oferecendo recursos para médicos e pacientes reagendarem ou desmarcarem atendimentos em poucos segundos.',
+        textoKey: 'projeto_saude_mais_texto',
         skills: ['Vue.js', 'TypeScript', 'PHP', 'MySQL', 'Tailwind', 'SCSS', 'Git'],
-        categoria: 'Acadêmico',
+        categoria: 'academico',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/tcc_unit_frontend',
         backendPrivado: true
     },
@@ -43,18 +44,18 @@ const projetos: Projeto[] = [
     {
         nome: 'Spotify Clone',
         video: 'spotify_clone',
-        texto: 'Projeto pessoal desenvolvido em Vue.js e PHP para praticar autenticação de usuários e gerenciamento de playlists, com foco em CRUD e integração front-end/back-end.',
+        textoKey: 'projeto_spotify_clone_texto',
         skills: ['Vue.js', 'TypeScript', 'PHP', 'MySQL', 'Bootstrap', 'SCSS', 'Git'],
-        categoria: 'Pessoal',
+        categoria: 'pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/spotify_clone',
     },
 
     {
         nome: 'GitHub Profile',
         video: 'github_profile',
-        texto: 'Um sistema desenvolvido no curso de React.js e Next.js, juntamente com a API do GitHub, o qual permite o usuário pesquisar o GitHub de usuários, e visualizar alguns de seus projetos já feitos. Projeto feito no curso da udemy de React.js e Next.js.',
+        textoKey: 'projeto_github_profile_texto',
         skills: ['React.js', 'TypeScript', 'SCSS', 'Git', 'Next.js'],
-        categoria: 'Pessoal',
+        categoria: 'pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/github-remote'
 
     },
@@ -62,18 +63,18 @@ const projetos: Projeto[] = [
     {
         nome: 'Projeto Ecommerce',
         video: 'projeto_ecommerce',
-        texto: 'Um sistema desenvolvido no curso de React.js e Next.js, o qual permite adicionar e remover produtos ao carrinho, como também soma o valor total dos produtos, e podendo assim, simular a realização da compra.',
+        textoKey: 'projeto_ecommerce_texto',
         skills: ['React.js', 'TypeScript', 'SCSS', 'Git'],
-        categoria: 'Pessoal',
+        categoria: 'pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/project-ecommerce'
     },
 
     {
         nome: 'Bioohub',
         video: 'bioohub',
-        texto: 'Um sistema robusto feito em Vue.js, PHP e MySQL que permite que o usuário construa uma biografia completa, podendo adicionar redes sociais, títulos, textos, imagens, vídeos do youtube, etc.',
+        textoKey: 'projeto_bioohub_texto',
         skills: ['Vue.js', 'TypeScript', 'Bootstrap', 'SCSS', 'PHP', 'MySQL', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/bioohub_frontend',
         backendPrivado: true
     },
@@ -81,9 +82,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Inova Option',
         video: 'inova-option',
-        texto: 'O site do Inova Option, feito em Vue.js, SCSS e Bootstrap, onde o cliente pode negociar ações, forex e criptomoedas, o sistema conta com animações de transições suaves e componentização em sua organização.',
+        textoKey: 'projeto_inova_option_texto',
         skills: ['Vue.js', 'TypeScript', 'Bootstrap', 'SCSS', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/inovaoption',
         demoUrl: 'https://inovaoption.vercel.app/'
     },
@@ -91,18 +92,18 @@ const projetos: Projeto[] = [
     {
         nome: 'Maragogi',
         video: 'maragogi',
-        texto: 'Um projeto pessoal feito em Vue.js que mostra detalhes sobre Maragogi - AL',
+        textoKey: 'projeto_maragogi_texto',
         skills: ['Vue.js', 'JavaScript', 'Bootstrap', 'SCSS', 'Git'],
-        categoria: 'Pessoal',
+        categoria: 'pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/maragogi_vue'
     },
 
     {
         nome: 'Pluug-ai Sistema',
         video: 'pluug_ai_sistema',
-        texto: 'O front-end estático do sistema da Pluug-ai feito em HTML5, CSS3, Bootstrap e JavaScript, o qual contribuiu para um sistema completo e funcional posteriormente.',
+        textoKey: 'projeto_pluug_ai_texto',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/pluug.ai_v2',
         demoUrl: 'https://pluug-ai-v2.vercel.app/'
     },
@@ -110,9 +111,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Turbo Digital',
         video: 'turbo_digital',
-        texto: 'O site do Turbo Digital, feito em React, Next.js e Tailwind, onde ensina como se posicionar, criar conteúdo e vender com estratégia!',
+        textoKey: 'projeto_turbo_digital_texto',
         skills: ['React.js', 'TypeScript', 'Next.js', 'Tailwind', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/turbo_digital',
         demoUrl: 'https://ruizmidias.com.br/mentoria-turbo-digital/'
     },
@@ -121,18 +122,18 @@ const projetos: Projeto[] = [
     {
         nome: 'Itália Tour',
         video: 'italia_tour',
-        texto: 'Projeto pessoal desenvolvido em Vue.js e Node.js com TypeScript, focado em praticar rotas, formulários e integração com back-end para simular o agendamento de passeios.',
+        textoKey: 'projeto_italia_tour_texto',
         skills: ['Vue.js', 'TypeScript', 'NodeJS', 'Bootstrap', 'SCSS', 'Git'],
-        categoria: 'Pessoal',
+        categoria: 'pessoal',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/italia_tour'
     },
 
     {
         nome: 'Umuarama',
         video: 'umuarama',
-        texto: 'Um projeto feito em HTML5, CSS3, Bootstrap e JavaScript, que mostra detalhes sobre Umuarama',
+        textoKey: 'projeto_umuarama_texto',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/umuarama',
         demoUrl: 'https://umuarama.vercel.app/'
     },
@@ -140,9 +141,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Eder Notícias',
         video: 'eder_noticias',
-        texto: 'Um portal de notícias feito em HTML5, CSS3, Bootstrap e JavaScript',
+        textoKey: 'projeto_eder_noticias_texto',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/eder-luiz-noticias',
         demoUrl: 'https://eder-luiz-noticias.vercel.app/'
     },
@@ -150,9 +151,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Notifish',
         video: 'notifish',
-        texto: 'Um sistema feito em HTML5, CSS3, Bootstrap e JavaScript, o qual facilita o processo de comunicação tomando o papel de um mediador entre você e o WhatsApp',
+        textoKey: 'projeto_notifish_texto',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/notifish',
         demoUrl: 'https://notifish.vercel.app/'
     },
@@ -160,9 +161,9 @@ const projetos: Projeto[] = [
     {
         nome: 'Atmos Powered',
         video: 'atmos',
-        texto: 'Website da Atmos Powered implementado em HTML, CSS, Boostrap e JavaScript',
+        textoKey: 'projeto_atmos_texto',
         skills: ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Git'],
-        categoria: 'Profissional',
+        categoria: 'profissional',
         githubFrontendUrl: 'https://github.com/mateusmaranhao12/atmos',
         demoUrl: 'https://atmos-rosy.vercel.app/'
     }
@@ -174,17 +175,19 @@ const grupos = projetos.reduce<Record<Categoria, Projeto[]>>(
         (acc[p.categoria] ||= []).push(p)
         return acc
     },
-    { Profissional: [], Acadêmico: [], Pessoal: [] }
+    { profissional: [], academico: [], pessoal: [] }
 )
 
-const ordem: Categoria[] = ['Profissional', 'Acadêmico', 'Pessoal']
+const ordem: Categoria[] = ['profissional', 'academico', 'pessoal']
 
-export default function Projetos() {
+export default function Projetos({ lang }: { lang?: Lang }) {
     const { isDark } = useTheme();
+    const currentLang = lang ?? "pt";
+    const t = translations[currentLang as Lang] as any;
     return (
         <SectionWrapper id="projetos">
             <div className="w-full min-h-screen">
-                <SectionTitle>Projetos</SectionTitle>
+                <SectionTitle>{t.projetos_titulo}</SectionTitle>
 
                 <div className="mt-6 space-y-12">
                     {ordem.map((cat) => {
@@ -200,9 +203,9 @@ export default function Projetos() {
                                     viewport={{ once: true, amount: 0.3 }}
                                     transition={{ duration: 0.7, ease: "easeInOut" }}
                                 >
-                                    {cat === 'Profissional' && 'Projetos em que trabalhei'}
-                                    {cat === 'Acadêmico' && 'Projetos acadêmicos'}
-                                    {cat === 'Pessoal' && 'Projetos pessoais'}
+                                    {cat === 'profissional' && t.projetos_categoria_profissional}
+                                    {cat === 'academico' && t.projetos_categoria_academico}
+                                    {cat === 'pessoal' && t.projetos_categoria_pessoal}
                                 </motion.h3>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
@@ -211,7 +214,8 @@ export default function Projetos() {
                                             key={`${cat}-${index}-${projeto.nome}`}
                                             nome={projeto.nome}
                                             video={projeto.video}
-                                            texto={projeto.texto}
+                                            texto={t[projeto.textoKey]}
+                                            lang={currentLang}
                                             skills={projeto.skills}
                                             githubFrontendUrl={projeto.githubFrontendUrl}
                                             githubBackendUrl={projeto.githubBackendUrl}

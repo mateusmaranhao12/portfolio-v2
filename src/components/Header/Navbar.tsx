@@ -4,25 +4,45 @@ import { MouseEvent, useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import DownloadCVButton from "../Common/DownloadButton";
 import ThemeIcon from "../theme/ThemeIcon";
+import LanguageSelect from "../Common/LanguageSelect";
 import { useTheme } from "../theme/theme";
+import { Lang, translations } from "@/app/translate/tradutor";
 
-export default function Navbar() {
+type NavbarProps = {
+  lang?: Lang;
+  setLang?: (l: Lang) => void;
+};
+
+export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarProps) {
+
+  const [internalLang, setInternalLang] = useState<Lang>("pt");
+
+  const currentLang = langProp ?? internalLang;
+  const setLang = setLangProp ?? setInternalLang;
+  const t = translations[currentLang];
+
+  //estado para controle do menu mobile e seção ativa
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
+
+  //tema selecionado
   const { isDark } = useTheme();
   const dark = isDark ?? false;
 
+  //itens do menu de navegação
   const menuItems = [
-    { label: "Sobre", href: "sobre" },
-    { label: "Habilidades", href: "habilidades" },
-    { label: "Experiência", href: "experiencia" },
-    { label: "Projetos", href: "projetos" },
-    { label: "Certificados", href: "certificados" },
-    { label: "Contato", href: "contato" },
+    { label: t.sobre, href: "sobre" },
+    { label: t.habilidades, href: "habilidades" },
+    { label: t.experiencia, href: "experiencia" },
+    { label: t.projetos, href: "projetos" },
+    { label: t.certificados, href: "certificados" },
+    { label: t.contato, href: "contato" },
   ];
 
+  //altura da navbar para cálculo de scroll suave
   const NAV_HEIGHT = 72;
 
+  //função para lidar com o clique nos links do menu, realizando scroll suave para a seção correspondente
   function handleSmoothScroll(e: MouseEvent<HTMLAnchorElement>, id: string) {
     e.preventDefault();
     const el = document.getElementById(id);
@@ -39,6 +59,7 @@ export default function Navbar() {
     setIsOpen(false);
   }
 
+  //efeito para observar as seções do site e atualizar a seção ativa no menu conforme o usuário rola a página
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -71,9 +92,10 @@ export default function Navbar() {
           Mateus Maranhão
         </motion.h1>
 
-        {/* Botao mobile + ThemeIcon ao lado */}
+        {/* Botao mobile + ThemeIcon ao lado + LanguageSelect */}
         <div className="hidden max-[1024px]:flex items-center gap-2">
-          <ThemeIcon />
+          <ThemeIcon lang={currentLang} />
+          <LanguageSelect value={currentLang} onChange={(l) => setLang(l)} />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
             onClick={() => setIsOpen(!isOpen)}
@@ -106,7 +128,9 @@ export default function Navbar() {
                 onClick={(e) => handleSmoothScroll(e, item.href)}
                 className={`relative font-medium transition-colors duration-200 ${
                   activeSection === item.href
-                    ? dark ? "text-yellow-500 cursor-text" : "text-purple-500 cursor-text"
+                    ? dark
+                      ? "text-yellow-500 cursor-text"
+                      : "text-purple-500 cursor-text"
                     : dark
                       ? "text-gray-300 hover:text-yellow-300"
                       : "text-gray-700 hover:text-purple-500"
@@ -120,8 +144,9 @@ export default function Navbar() {
         </motion.ul>
 
         <div className="hidden min-[1025px]:flex items-center gap-4">
-          <DownloadCVButton />
-          <ThemeIcon />
+          <DownloadCVButton label={t.download} />
+          <LanguageSelect value={currentLang} onChange={(l) => setLang(l)} />
+          <ThemeIcon lang={currentLang} />
         </div>
       </div>
 
@@ -149,7 +174,9 @@ export default function Navbar() {
                   href={`#${item.href}`}
                   onClick={() => setIsOpen(false)}
                   className={`relative font-medium transition-colors duration-200 ${
-                    dark ? "text-gray-300 hover:text-yellow-300" : "text-gray-700 hover:text-purple-500"
+                    dark
+                      ? "text-gray-300 hover:text-yellow-300"
+                      : "text-gray-700 hover:text-purple-500"
                   }`}
                 >
                   {item.label}
@@ -161,7 +188,7 @@ export default function Navbar() {
 
           {/* Botão de baixar currículo no mobile*/}
           <div className="mt-2 flex gap-4">
-            <DownloadCVButton />
+            <DownloadCVButton label={t.download} />
           </div>
         </motion.div>
       )}
