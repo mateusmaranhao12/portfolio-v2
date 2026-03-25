@@ -6,28 +6,7 @@ import DownloadCVButton from "../Common/DownloadButton";
 import ThemeIcon from "../theme/ThemeIcon";
 import LanguageSelect from "../Common/LanguageSelect";
 import { useTheme } from "../theme/theme";
-import { Lang } from "@/app/translate/tradutor";
-
-//traduções para os itens do menu, adaptando-se ao idioma selecionado
-const translations = {
-  pt: {
-    sobre: "Sobre",
-    habilidades: "Habilidades",
-    experiencia: "Experiência",
-    projetos: "Projetos",
-    certificados: "Certificados",
-    contato: "Contato",
-  },
-
-  en: {
-    sobre: "About",
-    habilidades: "Skills",
-    experiencia: "Experience",
-    projetos: "Projects",
-    certificados: "Certificates",
-    contato: "Contact",
-  },
-};
+import { Lang, translations } from "@/app/translate/tradutor";
 
 export default function Navbar() {
 
@@ -107,7 +86,7 @@ export default function Navbar() {
 
         {/* Botao mobile + ThemeIcon ao lado + LanguageSelect */}
         <div className="hidden max-[1024px]:flex items-center gap-2">
-          <ThemeIcon />
+          <ThemeIcon lang={lang} />
           <LanguageSelect onChange={(l) => setLang(l)} />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
@@ -157,9 +136,9 @@ export default function Navbar() {
         </motion.ul>
 
         <div className="hidden min-[1025px]:flex items-center gap-4">
-          <DownloadCVButton />
+          <DownloadCVButton label={t.download} />
           <LanguageSelect onChange={(l) => setLang(l)} />
-          <ThemeIcon />
+          <ThemeIcon lang={lang} />
         </div>
       </div>
 
@@ -201,7 +180,7 @@ export default function Navbar() {
 
           {/* Botão de baixar currículo no mobile*/}
           <div className="mt-2 flex gap-4">
-            <DownloadCVButton />
+            <DownloadCVButton label={t.download} />
           </div>
         </motion.div>
       )}

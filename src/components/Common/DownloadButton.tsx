@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { FaDownload } from "react-icons/fa";
 import { useTheme } from "../theme/theme";
 
-export default function DownloadCVButton() {
-  const { isDark, toggleTheme } = useTheme();
+export default function DownloadCVButton({ label }: { label?: string }) {
+  const { isDark } = useTheme();
 
   if (isDark === null) return null;
 
@@ -19,7 +19,7 @@ export default function DownloadCVButton() {
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <FaDownload className="mr-2" />
-      Download CV
+      {label || "Download CV"}
     </motion.a>
   );
 }

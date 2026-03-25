@@ -37,3 +37,35 @@ export function getLanguageMenuClasses(isDark: boolean | null): string {
 export function getLanguageOptionClasses(isDark: boolean | null): string {
 	return `w-full text-left px-3 py-2 hover:bg-opacity-10 ${isDark ? "hover:bg-white/10" : "hover:bg-gray-100"}`;
 }
+
+// traduções compartilhadas da aplicação
+export const translations = {
+  pt: {
+    sobre: "Sobre",
+    habilidades: "Habilidades",
+    experiencia: "Experiência",
+    projetos: "Projetos",
+    certificados: "Certificados",
+    contato: "Contato",
+    download: "Baixar CV",
+    // theme labels
+    theme_light: "Tema claro",
+    theme_dark: "Tema escuro",
+    activate_light: "Ativar tema claro",
+    activate_dark: "Ativar tema escuro",
+  },
+  en: {
+    sobre: "About",
+    habilidades: "Skills",
+    experiencia: "Experience",
+    projetos: "Projects",
+    certificados: "Certificates",
+    contato: "Contact",
+    download: "Download CV",
+    // theme labels
+    theme_light: "Light theme",
+    theme_dark: "Dark theme",
+    activate_light: "Activate light theme",
+    activate_dark: "Activate dark theme",
+  },
+} as const;
