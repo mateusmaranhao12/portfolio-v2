@@ -6,12 +6,20 @@ import DownloadCVButton from "../Common/DownloadButton";
 import ThemeIcon from "../theme/ThemeIcon";
 import LanguageSelect from "../Common/LanguageSelect";
 import { useTheme } from "../theme/theme";
-import { Lang, translations } from "@/app/translate/tradutor";
+import { Lang, translations, getInitialLang } from "@/app/translate/tradutor";
 
-export default function Navbar() {
+type NavbarProps = {
+  lang?: Lang;
+  setLang?: (l: Lang) => void;
+};
 
-  const [lang, setLang] = useState<Lang>("pt");
-  const t = translations[lang];
+export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarProps) {
+
+  const [internalLang, setInternalLang] = useState<Lang>(() => getInitialLang());
+
+  const currentLang = langProp ?? internalLang;
+  const setLang = setLangProp ?? setInternalLang;
+  const t = translations[currentLang];
 
   //estado para controle do menu mobile e seção ativa
   const [isOpen, setIsOpen] = useState(false);
@@ -86,8 +94,8 @@ export default function Navbar() {
 
         {/* Botao mobile + ThemeIcon ao lado + LanguageSelect */}
         <div className="hidden max-[1024px]:flex items-center gap-2">
-          <ThemeIcon lang={lang} />
-          <LanguageSelect onChange={(l) => setLang(l)} />
+          <ThemeIcon lang={currentLang} />
+          <LanguageSelect value={currentLang} onChange={(l) => setLang(l)} />
           <button
             className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
             onClick={() => setIsOpen(!isOpen)}
@@ -137,8 +145,8 @@ export default function Navbar() {
 
         <div className="hidden min-[1025px]:flex items-center gap-4">
           <DownloadCVButton label={t.download} />
-          <LanguageSelect onChange={(l) => setLang(l)} />
-          <ThemeIcon lang={lang} />
+          <LanguageSelect value={currentLang} onChange={(l) => setLang(l)} />
+          <ThemeIcon lang={currentLang} />
         </div>
       </div>
 

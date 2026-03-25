@@ -13,8 +13,10 @@ import {
 
 export default function LanguageSelect({
   onChange,
+  value,
 }: {
   onChange?: (lang: Lang) => void;
+  value?: Lang;
 }) {
 
   //tema selecionado
@@ -22,7 +24,7 @@ export default function LanguageSelect({
 
   //estado do idioma selecionado e controle de abertura do menu
   // iniciar com um valor estável para evitar mismatches durante SSR
-  const [lang, setLang] = useState<Lang>("pt");
+  const [lang, setLang] = useState<Lang>(() => getInitialLang());
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const [hydrated, setHydrated] = useState(false);
@@ -43,6 +45,13 @@ export default function LanguageSelect({
     persistLang(lang);
     onChange?.(lang);
   }, [lang, onChange, hydrated]);
+
+  // sincroniza quando o valor controlado mudar
+  useEffect(() => {
+    if (!value) return;
+    if (value === lang) return;
+    setLang(value);
+  }, [value]);
 
   //efeito para fechar o menu ao clicar fora do componente
   useEffect(() => {

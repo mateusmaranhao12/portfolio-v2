@@ -3,22 +3,25 @@ import TextBlock from "@/components/Common/TextBlock";
 import ProfileSection from "@/components/Me/ProfileSection";
 import TituloPrincipal from "@/components/Me/TituloPrincipal";
 import Descricao from "@/components/Sobre/Descricao";
+import { translations, getInitialLang, Lang } from "@/app/translate/tradutor";
 
-export default function Me() {
+export default function Me({ lang }: { lang?: Lang }) {
 
-    const paragrafos =
-        [
-            `Desenvolvedor de sistemas e sites responsivos e funcionais.`,
-            `Focado em construir soluções digitais com qualidade, usabilidade e boas práticas.`
-        ]
+  const currentLang = lang ?? getInitialLang();
+  const t = translations[currentLang as Lang] as any;
 
-    return (
-        <SectionMeWrapper>
-            <ProfileSection />
-            <TextBlock>
-                <TituloPrincipal />
-                <Descricao paragrafos={paragrafos} />
-            </TextBlock>
-        </SectionMeWrapper>
-    );
+  const paragrafos = [
+    `${t.me_paragrafo_1}`,
+    `${t.me_paragrafo_2}`,
+  ];
+
+  return (
+    <SectionMeWrapper>
+      <ProfileSection />
+      <TextBlock>
+        <TituloPrincipal lang={currentLang} />
+        <Descricao paragrafos={paragrafos} />
+      </TextBlock>
+    </SectionMeWrapper>
+  );
 }

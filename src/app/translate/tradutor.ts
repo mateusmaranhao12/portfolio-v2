@@ -21,7 +21,6 @@ export function getInitialLang(): Lang {
 export function persistLang(lang: Lang): void {
 	try {
 		localStorage.setItem(LANG_STORAGE_KEY, lang);
-        console.log(`Idioma persistido: ${lang}`);
 	} catch {}
 }
 
@@ -41,6 +40,7 @@ export function getLanguageOptionClasses(isDark: boolean | null): string {
 // traduções compartilhadas da aplicação
 export const translations = {
   pt: {
+	//navbar
     sobre: "Sobre",
     habilidades: "Habilidades",
     experiencia: "Experiência",
@@ -48,13 +48,25 @@ export const translations = {
     certificados: "Certificados",
     contato: "Contato",
     download: "Baixar CV",
+
     // theme labels
     theme_light: "Tema claro",
     theme_dark: "Tema escuro",
     activate_light: "Ativar tema claro",
     activate_dark: "Ativar tema escuro",
+
+	//section me
+	me_paragrafo_1: "Desenvolvedor de sistemas e sites responsivos e funcionais.",
+	me_paragrafo_2: "Focado em construir soluções digitais com qualidade, usabilidade e boas práticas.",
+    // title
+    title_part1: "Desenvolvedor",
+    title_part2: "Full-Stack",
+    
+	// qual parte destacar: 'first' ou 'second'
+    title_highlight: "first",
   },
   en: {
+	//navbar
     sobre: "About",
     habilidades: "Skills",
     experiencia: "Experience",
@@ -62,10 +74,20 @@ export const translations = {
     certificados: "Certificates",
     contato: "Contact",
     download: "Download CV",
+
     // theme labels
     theme_light: "Light theme",
     theme_dark: "Dark theme",
     activate_light: "Activate light theme",
     activate_dark: "Activate dark theme",
+
+    //section me
+    me_paragrafo_1: "Developer of responsive and functional systems and websites.",
+    me_paragrafo_2: "Focused on building digital solutions with quality, usability, and best practices.",
+    // title
+    title_part1: "Full-Stack",
+    title_part2: "Developer",
+    // which part to highlight: 'first' or 'second'
+    title_highlight: "second",
   },
 } as const;
