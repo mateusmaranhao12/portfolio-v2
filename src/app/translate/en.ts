@@ -6,7 +6,7 @@ export const en = {
 	projetos: "Projects",
 	certificados: "Certificates",
 	contato: "Contact",
-	download: "Download CV",
+	download: "Download Resume",
 
 	// theme labels
 	theme_light: "Light theme",

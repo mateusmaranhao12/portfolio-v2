@@ -6,7 +6,7 @@ export const pt = {
 	projetos: "Projetos",
 	certificados: "Certificados",
 	contato: "Contato",
-	download: "Baixar CV",
+	download: "Baixar Currículo",
 
 	// theme labels
 	theme_light: "Tema claro",
