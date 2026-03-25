@@ -29,7 +29,7 @@ export default function Home() {
       <Sobre lang={lang} />
       <Habilidades lang={lang} />
       <Experiencia lang={lang} />
-      <Projetos />
+      <Projetos lang={lang} />
       <Certificados />
       <Contato />
       <Footer />

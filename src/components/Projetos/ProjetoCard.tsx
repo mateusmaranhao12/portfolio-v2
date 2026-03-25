@@ -4,12 +4,14 @@ import { motion } from "framer-motion";
 import { FaGithub, FaGlobe, FaLock, FaServer } from "react-icons/fa";
 import { Button } from "../Common/Button";
 import { useTheme } from "@/components/theme/theme";
+import { Lang, translations } from "@/app/translate/tradutor";
 
 type ProjetoCardProps = {
   nome: string;
   video: string;
   texto: string;
   skills?: string[];
+  lang?: Lang;
   githubFrontendUrl?: string;
   githubBackendUrl?: string;
   repoPrivado?: boolean;
@@ -35,6 +37,7 @@ export default function ProjetoCard({
   video,
   texto,
   skills = [],
+  lang,
   githubFrontendUrl,
   githubBackendUrl,
   repoPrivado,
@@ -42,7 +45,9 @@ export default function ProjetoCard({
   demoUrl,
 }: ProjetoCardProps) {
   const { isDark } = useTheme();
-  const allSkills = getAllSkills(isDark ?? false);
+  const currentLang = lang ?? "pt";
+  const t = translations[currentLang as Lang] as any;
+  const allSkills = getAllSkills(isDark ?? false, currentLang);
 
   const skillObjs: Skill[] = skills
     .map((s) => allSkills.find((sk) => sk.nome === s))
@@ -118,7 +123,7 @@ export default function ProjetoCard({
       >
         {mostrarBtnFront && (
           <Button
-            label="Ver no GitHub"
+            label={t.projeto_btn_ver_github}
             href={githubFrontendUrl}
             icon={<FaGithub className="text-2xl" />}
             variant="black"
@@ -128,7 +133,7 @@ export default function ProjetoCard({
 
         {mostrarBtnBack && (
           <Button
-            label="Ver no GitHub (Back-end)"
+            label={t.projeto_btn_ver_github_backend}
             href={githubBackendUrl}
             icon={<FaServer />}
             variant="black"
@@ -138,7 +143,7 @@ export default function ProjetoCard({
 
         {demoUrl && (
           <Button
-            label="Demo"
+            label={t.projeto_btn_demo}
             href={demoUrl}
             icon={<FaGlobe />}
             variant="demo"
@@ -148,7 +153,7 @@ export default function ProjetoCard({
 
         {mostrarSeloBackPrivado && (
           <Button
-            label="Back-end privado"
+            label={t.projeto_btn_backend_privado}
             icon={<FaLock />}
             disabled
             isDark={isDark ?? false}
@@ -157,7 +162,7 @@ export default function ProjetoCard({
 
         {mostrarSeloRepoPrivado && (
           <Button
-            label="Código privado"
+            label={t.projeto_btn_codigo_privado}
             icon={<FaLock />}
             disabled
             isDark={isDark ?? false}

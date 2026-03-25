@@ -95,25 +95,68 @@ export const translations = {
     nivel_basico: "Básico",
     detalhe_leitura_tecnica: "Leitura técnica",
 
-	//habilidades
-	habilidades_titulo: "Habilidades",
-	banco_de_dados: "Banco de dados",
-	ferramentas: "Ferramentas",
+    //habilidades
+    habilidades_titulo: "Habilidades",
+    banco_de_dados: "Banco de dados",
+    ferramentas: "Ferramentas",
 
-	//Experiência
-	experiencia_titulo: "Experiência",
-	experiencia_cargo_1: "Desenvolvedor Júnior",
-	experiencia_empresa_1: "Líder Mão de Obra LTDA",
-	experiencia_periodo_1: "Jan 2026 - Presente",
-	experiencia_descricao_1: "Alocado em secretaria da Prefeitura Municipal de Aracaju por meio da Líder Locação de Mão de Obra Ltda, atuo como Desenvolvedor Full-Stack utilizando tecnologias como Vue.js, Tailwind CSS, PHP e MySQL. Uma das minhas atuações inclui na participação do desenvolvimento de um sistema completo de gestão de senhas/tickets para o evento municipal \"Tamo Junto\", incluindo geração de senhas, painéis de atendimento, filas em tempo real e integrações para mais de 80 serviços.",
-	experiencia_cargo_2: "Desenvolvedor Free-lancer",
-	experiencia_empresa_2: "Workana",
-	experiencia_periodo_2: "Ago 2024 - Dez 2025",
-	experiencia_descricao_2: "Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.",
-	experiencia_cargo_3: "Estagiário na área de TI",
-	experiencia_empresa_3: "Imprensa Oficial de Sergipe",
-	experiencia_periodo_3: "Mai 2023 - Mai 2024",
-	experiencia_descricao_3: "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
+    //Experiência
+    experiencia_titulo: "Experiência",
+    experiencia_cargo_1: "Desenvolvedor Júnior",
+    experiencia_empresa_1: "Líder Mão de Obra LTDA",
+    experiencia_periodo_1: "Jan 2026 - Presente",
+    experiencia_descricao_1:
+      'Alocado em secretaria da Prefeitura Municipal de Aracaju por meio da Líder Locação de Mão de Obra Ltda, atuo como Desenvolvedor Full-Stack utilizando tecnologias como Vue.js, Tailwind CSS, PHP e MySQL. Uma das minhas atuações inclui na participação do desenvolvimento de um sistema completo de gestão de senhas/tickets para o evento municipal "Tamo Junto", incluindo geração de senhas, painéis de atendimento, filas em tempo real e integrações para mais de 80 serviços.',
+    experiencia_cargo_2: "Desenvolvedor Free-lancer",
+    experiencia_empresa_2: "Workana",
+    experiencia_periodo_2: "Ago 2024 - Dez 2025",
+    experiencia_descricao_2:
+      "Atuação como desenvolvedor freelancer na plataforma Workana, criei várias landing pages utilizando HTML5, CSS3 e Bootstrap, até sistemas mais complexos e funcionais utilizando VueJS, PHP e MySQL. Também sites modernos e componentizados utilizando ReactJS, NextJS e Tailwind CSS.",
+    experiencia_cargo_3: "Estagiário na área de TI",
+    experiencia_empresa_3: "Imprensa Oficial de Sergipe",
+    experiencia_periodo_3: "Mai 2023 - Mai 2024",
+    experiencia_descricao_3:
+      "Realização de atividades relacionadas a área, como Digitalização do Diário Oficial e Binarilização do Acervo. Desenvolvimento de um software para transformar imagens dos diários escaneados em textos, e para poder realizar pesquisas nesses diários através do próprio software.",
+
+    //Projetos
+    projetos_titulo: "Projetos",
+    projetos_categoria_profissional: "Projetos em que trabalhei",
+    projetos_categoria_academico: "Projetos acadêmicos",
+    projetos_categoria_pessoal: "Projetos pessoais",
+    projeto_saude_mais_texto:
+      "O sistema Saude+ foi desenvolvido como parte prática do meu Trabalho de Conclusão de Curso em Ciências da Computação pela Universidade Tiradentes. Feito em Vue.js, Tailwind CSS, TypeScript, PHP e MySQL, permite que pacientes agendem consultas de forma simples e eficiente, oferecendo recursos para médicos e pacientes reagendarem ou desmarcarem atendimentos em poucos segundos.",
+    projeto_spotify_clone_texto:
+      "Projeto pessoal desenvolvido em Vue.js e PHP para praticar autenticação de usuários e gerenciamento de playlists, com foco em CRUD e integração front-end/back-end.",
+    projeto_github_profile_texto:
+      "Um sistema desenvolvido no curso de React.js e Next.js, juntamente com a API do GitHub, que permite ao usuário pesquisar perfis no GitHub e visualizar alguns de seus projetos.",
+    projeto_ecommerce_texto:
+      "Um sistema desenvolvido no curso de React.js e Next.js, que permite adicionar e remover produtos do carrinho, calcular o valor total e simular a finalização da compra.",
+    projeto_bioohub_texto:
+      "Um sistema robusto feito em Vue.js, PHP e MySQL que permite ao usuário construir uma biografia completa, podendo adicionar redes sociais, títulos, textos, imagens e vídeos do YouTube.",
+    projeto_inova_option_texto:
+      "O site do Inova Option, feito em Vue.js, SCSS e Bootstrap, onde o cliente pode negociar ações, forex e criptomoedas. O sistema conta com animações de transição suaves e boa componentização.",
+    projeto_maragogi_texto:
+      "Um projeto pessoal feito em Vue.js que mostra detalhes sobre Maragogi - AL.",
+    projeto_pluug_ai_texto:
+      "Front-end estático do sistema da Pluug-ai, feito em HTML5, CSS3, Bootstrap e JavaScript, que contribuiu para um sistema completo e funcional posteriormente.",
+    projeto_turbo_digital_texto:
+      "Site do Turbo Digital, feito em React, Next.js e Tailwind, que ensina como se posicionar, criar conteúdo e vender com estratégia.",
+    projeto_italia_tour_texto:
+      "Projeto pessoal desenvolvido em Vue.js e Node.js com TypeScript, focado em praticar rotas, formulários e integração com back-end para simular o agendamento de passeios.",
+    projeto_umuarama_texto:
+      "Projeto feito em HTML5, CSS3, Bootstrap e JavaScript, que mostra detalhes sobre Umuarama.",
+    projeto_eder_noticias_texto:
+      "Um portal de notícias feito em HTML5, CSS3, Bootstrap e JavaScript.",
+    projeto_notifish_texto:
+      "Um sistema feito em HTML5, CSS3, Bootstrap e JavaScript, que facilita o processo de comunicação atuando como mediador entre você e o WhatsApp.",
+    projeto_atmos_texto:
+      "Website da Atmos Powered implementado em HTML, CSS, Bootstrap e JavaScript.",
+    // botões de projetos
+    projeto_btn_ver_github: "Ver no GitHub",
+    projeto_btn_ver_github_backend: "Ver no GitHub (Back-end)",
+    projeto_btn_demo: "Demo",
+    projeto_btn_backend_privado: "Back-end privado",
+    projeto_btn_codigo_privado: "Código privado",
   },
 
   en: {
@@ -173,25 +216,67 @@ export const translations = {
     nivel_basico: "Basic",
     detalhe_leitura_tecnica: "Technical reading",
 
-	//skills	
-	habilidades_titulo: "Skills",
-	banco_de_dados: "Databases",
-	ferramentas: "Tools",
+    //skills
+    habilidades_titulo: "Skills",
+    banco_de_dados: "Databases",
+    ferramentas: "Tools",
 
-	//Experience
-	experiencia_titulo: "Experience",
-	experiencia_cargo_1: "Junior Developer",
-	experiencia_empresa_1: "Líder Mão de Obra LTDA",
-	experiencia_periodo_1: "Jan 2026 - Present",
-	experiencia_descricao_1: "Allocated in the secretariat of the Aracaju City Hall through Líder Locação de Mão de Obra Ltda, I work as a Full-Stack Developer using technologies such as Vue.js, Tailwind CSS, PHP, and MySQL. One of my roles includes participating in the development of a complete password/ticket management system for the municipal event \"Tamo Junto\", including password generation, service panels, real-time queues, and integrations for over 80 services.",
-	experiencia_cargo_2: "Freelance Developer",
-	experiencia_empresa_2: "Workana",
-	experiencia_periodo_2: "Aug 2024 - Dec 2025",
-	experiencia_descricao_2: "As a freelance developer on the Workana platform, I created various landing pages using HTML5, CSS3, and Bootstrap, as well as more complex and functional systems using VueJS, PHP, and MySQL. I also developed modern and componentized websites using ReactJS, NextJS, and Tailwind CSS.",
-	experiencia_cargo_3: "IT Intern",
-	experiencia_empresa_3: "Imprensa Oficial de Sergipe",
-	experiencia_periodo_3: "May 2023 - May 2024",
-	experiencia_descricao_3: "Performed activities related to the field, such as digitizing the Official Gazette and binarizing the archive. Developed software to convert scanned images of the gazettes into text, enabling searches within these gazettes through the software itself.",
+    //Experience
+    experiencia_titulo: "Experience",
+    experiencia_cargo_1: "Junior Developer",
+    experiencia_empresa_1: "Líder Mão de Obra LTDA",
+    experiencia_periodo_1: "Jan 2026 - Present",
+    experiencia_descricao_1:
+      'Allocated in the secretariat of the Aracaju City Hall through Líder Locação de Mão de Obra Ltda, I work as a Full-Stack Developer using technologies such as Vue.js, Tailwind CSS, PHP, and MySQL. One of my roles includes participating in the development of a complete password/ticket management system for the municipal event "Tamo Junto", including password generation, service panels, real-time queues, and integrations for over 80 services.',
+    experiencia_cargo_2: "Freelance Developer",
+    experiencia_empresa_2: "Workana",
+    experiencia_periodo_2: "Aug 2024 - Dec 2025",
+    experiencia_descricao_2:
+      "As a freelance developer on the Workana platform, I created various landing pages using HTML5, CSS3, and Bootstrap, as well as more complex and functional systems using VueJS, PHP, and MySQL. I also developed modern and componentized websites using ReactJS, NextJS, and Tailwind CSS.",
+    experiencia_cargo_3: "IT Intern",
+    experiencia_empresa_3: "Imprensa Oficial de Sergipe",
+    experiencia_periodo_3: "May 2023 - May 2024",
+    experiencia_descricao_3:
+      "Performed activities related to the field, such as digitizing the Official Gazette and binarizing the archive. Developed software to convert scanned images of the gazettes into text, enabling searches within these gazettes through the software itself.",
 
+    //Projects
+    projetos_titulo: "Projects",
+    projetos_categoria_profissional: "Projects I worked on",
+    projetos_categoria_academico: "Academic projects",
+    projetos_categoria_pessoal: "Personal projects",
+    projeto_saude_mais_texto:
+      "The Saude+ system was developed as the practical part of my Computer Science final project at Universidade Tiradentes. Built with Vue.js, Tailwind CSS, TypeScript, PHP, and MySQL, it allows patients to schedule appointments simply and efficiently, while offering features for doctors and patients to reschedule or cancel appointments in seconds.",
+    projeto_spotify_clone_texto:
+      "Personal project developed with Vue.js and PHP to practice user authentication and playlist management, focused on CRUD operations and front-end/back-end integration.",
+    projeto_github_profile_texto:
+      "A system developed during a React.js and Next.js course, integrated with the GitHub API, allowing users to search GitHub profiles and view some of their projects.",
+    projeto_ecommerce_texto:
+      "A system developed during a React.js and Next.js course, allowing users to add and remove products from the cart, calculate the total amount, and simulate checkout.",
+    projeto_bioohub_texto:
+      "A robust system built with Vue.js, PHP, and MySQL that lets users build a complete biography with social links, titles, text, images, and YouTube videos.",
+    projeto_inova_option_texto:
+      "The Inova Option website, built with Vue.js, SCSS, and Bootstrap, where users can trade stocks, forex, and cryptocurrencies. The system includes smooth transition animations and well-structured componentization.",
+    projeto_maragogi_texto:
+      "A personal project built with Vue.js that showcases details about Maragogi - AL.",
+    projeto_pluug_ai_texto:
+      "Static front-end of the Pluug-ai system, built with HTML5, CSS3, Bootstrap, and JavaScript, which later contributed to a complete and functional system.",
+    projeto_turbo_digital_texto:
+      "Turbo Digital website, built with React, Next.js, and Tailwind, teaching how to position yourself, create content, and sell strategically.",
+    projeto_italia_tour_texto:
+      "Personal project developed with Vue.js and Node.js using TypeScript, focused on practicing routes, forms, and back-end integration to simulate tour bookings.",
+    projeto_umuarama_texto:
+      "Project built with HTML5, CSS3, Bootstrap, and JavaScript, showcasing details about Umuarama.",
+    projeto_eder_noticias_texto:
+      "A news portal built with HTML5, CSS3, Bootstrap, and JavaScript.",
+    projeto_notifish_texto:
+      "A system built with HTML5, CSS3, Bootstrap, and JavaScript that streamlines communication by acting as a mediator between you and WhatsApp.",
+    projeto_atmos_texto:
+      "Atmos Powered website implemented with HTML, CSS, Bootstrap, and JavaScript.",
+    // project buttons
+    projeto_btn_ver_github: "View on GitHub",
+    projeto_btn_ver_github_backend: "View on GitHub (Back-end)",
+    projeto_btn_demo: "Demo",
+    projeto_btn_backend_privado: "Private back-end",
+    projeto_btn_codigo_privado: "Private code",
   },
 } as const;
