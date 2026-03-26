@@ -73,7 +73,7 @@ export default function Contato({ lang }: { lang?: Lang }) {
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10 mb-20 items-start">
           <div className="lg:col-span-7">
-            <FormContato />
+            <FormContato lang={currentLang} />
           </div>
           <div className="grid grid-cols-1 gap-6 lg:col-span-5">
             {contatos.map((contato, index) => (

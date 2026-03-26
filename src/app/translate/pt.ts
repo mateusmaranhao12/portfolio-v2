@@ -148,6 +148,13 @@ export const pt = {
 	contato_linkedin_texto: "Conecte-se comigo no LinkedIn agora mesmo!",
 	contato_github_texto:
 		"Venha conferir meus projetos e contribuições no GitHub!",
+	form_contato_nome: "Nome",
+	form_contato_sobrenome: "Sobrenome",
+	form_contato_mensagem: "Sua Mensagem",
+	form_placeholder_nome: "Digite seu nome",
+	form_placeholder_sobrenome: "Digite seu sobrenome",
+	form_placeholder_mensagem: "Escreva sua mensagem aqui...",
+	form_contato_enviar: "Enviar Mensagem",
 
 	//footer
 	footer_direitos_reservados: "Todos os direitos reservados.",
