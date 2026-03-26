@@ -5,7 +5,7 @@ type ButtonProps = {
   href?: string;
   icon?: ReactNode;
   disabled?: boolean;
-  variant?: "default" | "default_dark" | "black" | "demo";
+  variant?: "default" | "black" | "demo";
   isDark?: boolean;
   type?: "button" | "submit" | "reset";
   size?: "sm" | "md" | "lg";
@@ -21,7 +21,7 @@ export function Button({
   type = "button",
   size = "md",
 }: ButtonProps) {
-  const base = "rounded-lg flex items-center justify-center transition";
+  const base = "rounded-lg flex items-center justify-center transition cursor-pointer select-none";
 
   const sizes = {
     sm: "px-2.5 py-1.5 text-xs font-bold gap-1.5",
@@ -30,10 +30,9 @@ export function Button({
   };
 
   const variants = {
-    default:
-      "bg-purple-500 text-white hover:bg-purple-500 border border-purple-400",
-    default_dark:
-      "bg-yellow-500 text-black hover:bg-yellow-400 border border-yellow-500",
+    default: isDark
+      ? "bg-yellow-500 text-black hover:bg-yellow-400 border border-yellow-500"
+      : "bg-purple-500 text-white hover:bg-purple-400 border border-purple-500",
     black: isDark
       ? "text-white bg-black hover:bg-white/10"
       : "text-black bg-gray-200 hover:bg-black/10",
