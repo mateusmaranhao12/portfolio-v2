@@ -162,8 +162,8 @@ export const pt = {
   //toast
   toast_sucesso_titulo: "Sucesso",
   toast_erro_titulo: "Erro",
-  toast_sucesso_mensagem: "Mensagem enviada com sucesso",
-  toast_erro_mensagem: "Erro ao enviar mensagem",
+  toast_mensagem_sucesso: "Mensagem enviada com sucesso",
+  toast_mensagem_erro: "Erro ao enviar mensagem",
 
   //enviando mensagem
   botao_enviando: "Enviando..."
