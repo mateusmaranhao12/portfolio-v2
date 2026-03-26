@@ -1,3 +1,5 @@
+import { form } from "framer-motion/client";
+
 export const en = {
 	//navbar
 	sobre: "About",
@@ -138,7 +140,7 @@ export const en = {
 
 	//contacts
 	contato_titulo: "Contact",
-	contato_texto: "Feel free to get in touch with me through the links below!",
+	contato_texto: "Feel free to get in touch with me through the form or the links below!",
 	contato_email: "E-mail",
 	contato_whatsapp: "WhatsApp",
 	contato_linkedin: "LinkedIn",
@@ -147,7 +149,25 @@ export const en = {
 	contato_whatsapp_texto: "Get in touch with me directly via WhatsApp",
 	contato_linkedin_texto: "Connect with me on LinkedIn now!",
 	contato_github_texto: "Check out my projects and contributions on GitHub!",
+	form_contato_nome: "First Name",
+	form_contato_sobrenome: "Last Name",
+	form_contato_mensagem: "Your Message",
+	form_placeholder_nome: "Enter your first name",
+	form_placeholder_sobrenome: "Enter your last name",
+	form_placeholder_mensagem: "Write your message here...",
+
+	form_contato_enviar: "Send Message",
 
 	//footer
 	footer_direitos_reservados: "All rights reserved.",
+
+	//toast
+	toast_sucesso_titulo: "Success",
+	toast_erro_titulo: "Error",
+	toast_mensagem_sucesso: "Message sent successfully! I will get in touch with you as soon as possible.",
+	toast_mensagem_erro: "Error sending message. Please try again.",
+
+	//sending message
+	botao_enviando: "Sending..."
+
 } as const;
