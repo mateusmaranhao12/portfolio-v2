@@ -5,8 +5,10 @@ type ButtonProps = {
   href?: string;
   icon?: ReactNode;
   disabled?: boolean;
-  variant?: "default" | "black" | "demo";
+  variant?: "default" | "default_dark" | "black" | "demo";
   isDark?: boolean;
+  type?: "button" | "submit" | "reset";
+  size?: "sm" | "md" | "lg";
 };
 
 export function Button({
@@ -16,13 +18,22 @@ export function Button({
   disabled,
   variant = "black",
   isDark = false,
+  type = "button",
+  size = "md",
 }: ButtonProps) {
-  const base =
-    "px-3 py-2 rounded-lg text-xs md:text-sm flex items-center gap-2 transition";
+  const base = "rounded-lg flex items-center justify-center transition";
+
+  const sizes = {
+    sm: "px-2.5 py-1.5 text-xs font-bold gap-1.5",
+    md: "px-3 py-2 text-xs md:text-sm font-bold gap-2",
+    lg: "px-5 py-3 text-sm md:text-base font-bold gap-2.5",
+  };
 
   const variants = {
     default:
-      "bg-yellow-400 text-black hover:bg-yellow-500 border border-yellow-400",
+      "bg-purple-500 text-white hover:bg-purple-500 border border-purple-400",
+    default_dark:
+      "bg-yellow-500 text-black hover:bg-yellow-400 border border-yellow-500",
     black: isDark
       ? "text-white bg-black hover:bg-white/10"
       : "text-black bg-gray-200 hover:bg-black/10",
@@ -35,25 +46,35 @@ export function Button({
   };
 
   const classes = disabled ? variants.disabled : variants[variant];
+  const sizeClasses = sizes[size];
 
   if (disabled) {
     return (
-      <span className={`${base} ${classes}`} aria-disabled>
+      <span className={`${base} ${sizeClasses} ${classes}`} aria-disabled>
         {icon}
         {label}
       </span>
     );
   }
 
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className={`${base} ${sizeClasses} ${classes}`}
+      >
+        {icon}
+        {label}
+      </a>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className={`${base} ${classes}`}
-    >
+    <button type={type} className={`${base} ${sizeClasses} ${classes}`}>
       {icon}
       {label}
-    </a>
+    </button>
   );
 }

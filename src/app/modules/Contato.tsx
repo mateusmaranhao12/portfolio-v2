@@ -6,6 +6,7 @@ import ContatoItem from "@/components/Contato/ContatoItem";
 import { motion } from "framer-motion";
 import { useTheme } from "@/components/theme/theme";
 import { translations, Lang } from "@/app/translate/tradutor";
+import FormContato from "@/components/Contato/FormContato";
 
 export default function Contato({ lang }: { lang?: Lang }) {
   const { isDark } = useTheme();
@@ -28,7 +29,10 @@ export default function Contato({ lang }: { lang?: Lang }) {
       nome: `${t.contato_email}`,
       href: "mailto:mateusnm2003@gmail.com",
       icon: (
-        <FaEnvelope size={28} className={isDark ? "text-red-400" : "text-red-600"} />
+        <FaEnvelope
+          size={28}
+          className={isDark ? "text-red-400" : "text-red-600"}
+        />
       ),
       texto: `${t.contato_email_texto}`,
     },
@@ -36,7 +40,10 @@ export default function Contato({ lang }: { lang?: Lang }) {
       nome: `${t.contato_linkedin}`,
       href: "https://www.linkedin.com/in/mateusnmaranhao/",
       icon: (
-        <FaLinkedin size={28} className={isDark ? "text-blue-400" : "text-blue-600"} />
+        <FaLinkedin
+          size={28}
+          className={isDark ? "text-blue-400" : "text-blue-600"}
+        />
       ),
       texto: `${t.contato_linkedin_texto}`,
     },
@@ -63,19 +70,23 @@ export default function Contato({ lang }: { lang?: Lang }) {
           className={`text-start mt-2 ${isDark ? "text-slate-300" : "text-slate-800"}`}
         >
           {t.contato_texto}
-
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-20">
-          {contatos.map((contato, index) => (
-            <ContatoItem
-              key={index}
-              nome={contato.nome}
-              href={contato.href}
-              icon={contato.icon}
-              texto={contato.texto}
-              isDark={isDark ?? false}
-            />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-10 mb-20 items-start">
+          <div className="lg:col-span-7">
+            <FormContato />
+          </div>
+          <div className="grid grid-cols-1 gap-6 lg:col-span-5">
+            {contatos.map((contato, index) => (
+              <ContatoItem
+                key={index}
+                nome={contato.nome}
+                href={contato.href}
+                icon={contato.icon}
+                texto={contato.texto}
+                isDark={isDark ?? false}
+              />
+            ))}
+          </div>
         </div>
       </motion.div>
     </SectionWrapper>

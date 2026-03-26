@@ -138,7 +138,7 @@ export const en = {
 
 	//contacts
 	contato_titulo: "Contact",
-	contato_texto: "Feel free to get in touch with me through the links below!",
+	contato_texto: "Feel free to get in touch with me through the form or the links below!",
 	contato_email: "E-mail",
 	contato_whatsapp: "WhatsApp",
 	contato_linkedin: "LinkedIn",

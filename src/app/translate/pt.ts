@@ -138,7 +138,7 @@ export const pt = {
 	//contatos
 	contato_titulo: "Contato",
 	contato_texto:
-		"Fique à vontade para entrar em contato comigo através dos links abaixo!",
+		"Fique à vontade para entrar em contato comigo através do formulário ou dos links abaixo!",
 	contato_email: "E-mail",
 	contato_whatsapp: "WhatsApp",
 	contato_linkedin: "LinkedIn",
