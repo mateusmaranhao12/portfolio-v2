@@ -136,7 +136,7 @@ function Toast({
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 24, scale: 0.98, transition: { duration: 0.18 } }}
       transition={{ type: "spring", stiffness: 700, damping: 40 }}
-      className={`flex items-start gap-3 p-3 border rounded-lg shadow-sm ${bg} ${text}`}
+      className={`flex items-start md:items-center gap-3 p-3 border rounded-lg shadow-sm ${bg} ${text}`}
     >
       <div
         className={`shrink-0 rounded-full w-8 h-8 flex items-center justify-center bg-white/10`}
