@@ -37,8 +37,8 @@ export function Button({
       ? "text-white bg-black hover:bg-white/10"
       : "text-black bg-gray-200 hover:bg-black/10",
     disabled: isDark
-      ? "border border-white/15 text-white/60 cursor-not-allowed bg-transparent"
-      : "border border-black/15 text-black/60 cursor-not-allowed bg-transparent",
+      ? "border border-white/15 text-white/60 cursor-text bg-transparent"
+      : "border border-black/15 text-black/60 cursor-text bg-transparent",
     demo: isDark
       ? "border border-yellow-500 text-yellow-500 bg-transparent hover:bg-yellow-500 hover:text-black"
       : "border border-yellow-600 text-yellow-600 bg-transparent hover:bg-yellow-600 hover:text-black",

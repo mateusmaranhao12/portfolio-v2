@@ -5,6 +5,7 @@ type TextAreaProps = {
   rows?: number;
   required?: boolean;
   isDark?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
 export default function TextArea({
@@ -14,6 +15,7 @@ export default function TextArea({
   rows = 5,
   required = false,
   isDark = false,
+  onChange,
 }: TextAreaProps) {
   return (
     <label className="flex flex-col gap-2 w-full">
@@ -34,6 +36,7 @@ export default function TextArea({
             ? "bg-purple-950 border-purple-900/30 text-white placeholder:text-slate-400 focus:border-yellow-500"
             : "bg-white border-slate-300 text-slate-900 placeholder:text-slate-500 focus:border-purple-500"
         }`}
+        onChange={onChange}
       />
     </label>
   );

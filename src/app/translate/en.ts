@@ -167,5 +167,7 @@ export const en = {
 	toast_mensagem_sucesso: "Message sent successfully!",
 	toast_mensagem_erro: "Error sending message. Please try again.",
 
+	//sending message
+	botao_enviando: "Sending..."
 
 } as const;

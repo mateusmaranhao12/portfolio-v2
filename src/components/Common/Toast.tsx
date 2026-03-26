@@ -150,7 +150,7 @@ function Toast({
 
       <button
         onClick={onClose}
-        className={`ml-2 opacity-80 hover:opacity-100 ${isDark ? "text-slate-300" : "text-slate-600"}`}
+        className={`ml-2 opacity-80 hover:opacity-100 ${isDark ? "text-slate-300" : "text-slate-200"}`}
         aria-label="Close notification"
       >
         <svg

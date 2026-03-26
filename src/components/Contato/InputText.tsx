@@ -1,3 +1,5 @@
+import React from "react";
+
 type InputTextProps = {
   label: string;
   name: string;
@@ -5,6 +7,7 @@ type InputTextProps = {
   placeholder?: string;
   required?: boolean;
   isDark?: boolean;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function InputText({
@@ -14,6 +17,7 @@ export default function InputText({
   placeholder,
   required = false,
   isDark = false,
+  onChange,
 }: InputTextProps) {
   return (
     <label className="flex flex-col gap-2 w-full">
@@ -29,6 +33,7 @@ export default function InputText({
         type={type}
         required={required}
         placeholder={placeholder}
+        onChange={onChange}
         className={`w-full rounded-lg px-4 py-3 outline-none border transition ${
           isDark
             ? "bg-purple-950 border-purple-900/30 text-white placeholder:text-slate-400 focus:border-yellow-500"

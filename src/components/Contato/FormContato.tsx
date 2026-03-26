@@ -8,6 +8,7 @@ import { Button } from "../Common/Button";
 import { translations, Lang } from "@/app/translate/tradutor";
 import sendForm from "@/composables/formContato";
 import { useToast } from "@/components/Common/Toast";
+import React from "react";
 
 export default function FormContato({ lang }: { lang?: Lang }) {
   const { isDark } = useTheme();
@@ -24,6 +25,7 @@ export default function FormContato({ lang }: { lang?: Lang }) {
     const data = Object.fromEntries(formData.entries()) as any;
 
     try {
+      setIsSending(true);
       await sendForm({ nome: data.nome, sobrenome: data.sobrenome, mensagem: data.mensagem });
       showSuccess(t.toast_mensagem_sucesso);
       form.reset();
@@ -31,7 +33,22 @@ export default function FormContato({ lang }: { lang?: Lang }) {
       console.error(err);
       showError(t.toast_mensagem_erro);
     }
+    finally {
+      setIsSending(false);
+    }
   }
+
+  //se um dos campos nao estiverem preenchidos, desabilitar o botao de envio
+  const [isFormValid, setIsFormValid] = React.useState(false);
+  const [isSending, setIsSending] = React.useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const form = e.currentTarget.form;
+    if (!form) return;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as any;
+    setIsFormValid(data.nome && data.sobrenome && data.mensagem);
+  };
 
   return (
     <FormCard isDark={dark}>
@@ -43,6 +60,7 @@ export default function FormContato({ lang }: { lang?: Lang }) {
             placeholder={t.form_placeholder_nome}
             required
             isDark={dark}
+            onChange={handleInputChange}
           />
           <InputText
             label={t.form_contato_sobrenome}
@@ -50,6 +68,7 @@ export default function FormContato({ lang }: { lang?: Lang }) {
             placeholder={t.form_placeholder_sobrenome}
             required
             isDark={dark}
+            onChange={handleInputChange}
           />
         </div>
 
@@ -60,13 +79,16 @@ export default function FormContato({ lang }: { lang?: Lang }) {
           rows={6}
           required
           isDark={dark}
+          onChange={handleInputChange}
+
         />
 
         <Button
-          label={t.form_contato_enviar}
+          label={isSending ? (t.botao_enviando as string) : (t.form_contato_enviar as string)}
           type="submit"
           variant="default"
           isDark={dark}
+          disabled={!isFormValid || isSending}
         />
       </form>
     </FormCard>
