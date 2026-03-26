@@ -164,7 +164,7 @@ export const en = {
 	//toast
 	toast_sucesso_titulo: "Success",
 	toast_erro_titulo: "Error",
-	toast_mensagem_sucesso: "Message sent successfully!",
+	toast_mensagem_sucesso: "Message sent successfully! I will get in touch with you as soon as possible.",
 	toast_mensagem_erro: "Error sending message. Please try again.",
 
 	//sending message

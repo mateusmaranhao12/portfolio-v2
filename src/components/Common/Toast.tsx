@@ -7,6 +7,7 @@ import React, {
   useCallback,
   useEffect,
 } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { useTheme } from "@/components/theme/theme";
 import { translations, Lang, getInitialLang } from "@/app/translate/tradutor";
@@ -84,15 +85,17 @@ export function ToastProvider({
 
       {/* container */}
       <div className="fixed z-50 right-4 top-4 flex flex-col gap-3 max-w-sm">
-        {toasts.map((t) => (
-          <Toast
-            key={t.id}
-            type={t.type}
-            message={t.message}
-            onClose={() => remove(t.id)}
-            isDark={dark}
-          />
-        ))}
+        <AnimatePresence initial={false}>
+          {toasts.map((t) => (
+            <Toast
+              key={t.id}
+              type={t.type}
+              message={t.message}
+              onClose={() => remove(t.id)}
+              isDark={dark}
+            />
+          ))}
+        </AnimatePresence>
       </div>
     </ToastContext.Provider>
   );
@@ -127,8 +130,12 @@ function Toast({
   const t = translations[currentLang as Lang] as any;
 
   return (
-    <div
+    <motion.div
       role="status"
+      initial={{ opacity: 0, x: 24, scale: 0.98 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      exit={{ opacity: 0, x: 24, scale: 0.98, transition: { duration: 0.18 } }}
+      transition={{ type: "spring", stiffness: 700, damping: 40 }}
       className={`flex items-start gap-3 p-3 border rounded-lg shadow-sm ${bg} ${text}`}
     >
       <div
@@ -166,7 +173,7 @@ function Toast({
           />
         </svg>
       </button>
-    </div>
+    </motion.div>
   );
 }
 
