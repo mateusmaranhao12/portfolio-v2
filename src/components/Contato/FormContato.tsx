@@ -5,53 +5,31 @@ import FormCard from "@/components/Contato/FormCard";
 import InputText from "@/components/Contato/InputText";
 import TextArea from "@/components/Contato/TextArea";
 import { Button } from "../Common/Button";
-import emailjs from "@emailjs/browser";
 import { translations, Lang } from "@/app/translate/tradutor";
+import sendForm from "@/composables/formContato";
+import { useToast } from "@/components/Common/Toast";
 
 export default function FormContato({ lang }: { lang?: Lang }) {
   const { isDark } = useTheme();
   const dark = isDark ?? false;
   const currentLang = lang ?? "pt";
   const t = translations[currentLang as Lang] as any;
+  const { showSuccess, showError } = useToast();
 
-  // Envio do formulário (usa EmailJS)
+  //Função para lidar com o envio do formulário
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-
     const form = e.currentTarget as HTMLFormElement;
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    console.log("Form Data (pre-send):", data);
-
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+    const data = Object.fromEntries(formData.entries()) as any;
 
     try {
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          nome: data.nome,
-          sobrenome: data.sobrenome,
-          mensagem: data.mensagem,
-        },
-        publicKey,
-      );
-
-      console.log("Email enviado com sucesso (mock)");
+      await sendForm({ nome: data.nome, sobrenome: data.sobrenome, mensagem: data.mensagem });
+      showSuccess(t.toast_mensagem_sucesso);
       form.reset();
     } catch (err) {
-      console.error("Erro ao enviar email (mock):", err);
-      console.log(
-        "serviceId:",
-        serviceId,
-        "templateId:",
-        templateId,
-        "publicKey:",
-        publicKey,
-      );
+      console.error(err);
+      showError(t.toast_mensagem_erro);
     }
   }
 

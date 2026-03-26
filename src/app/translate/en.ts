@@ -160,4 +160,12 @@ export const en = {
 
 	//footer
 	footer_direitos_reservados: "All rights reserved.",
+
+	//toast
+	toast_sucesso_titulo: "Success",
+	toast_erro_titulo: "Error",
+	toast_mensagem_sucesso: "Message sent successfully!",
+	toast_mensagem_erro: "Error sending message. Please try again.",
+
+
 } as const;
