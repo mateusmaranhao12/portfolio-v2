@@ -16,7 +16,7 @@ export default function Sobre({ lang }: { lang?: Lang }) {
   return (
     <SectionWrapper
       id="sobre"
-      className={isDark ? "bg-purple-950" : "bg-slate-100"}
+      className={isDark ? "dark-bg-body-2" : "light-bg-body-2"}
     >
       {/* Texto */}
       <div className="w-full space-y-6">

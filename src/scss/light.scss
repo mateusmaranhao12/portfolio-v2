@@ -7,6 +7,10 @@
   color: #333;
 }
 
+.light-bg-body-2 {
+  background-color: #f3f4f6;
+}
+
 //navbar
 .bg-navbar-light {
   background-color: #fff;
@@ -25,6 +29,15 @@
 
   &:hover {
     color: #a855f7;
+  }
+}
+
+.btn-download-light {
+  background-color: #a855f7;
+  color: #fff;
+
+  &:hover {
+    background-color: #c084fc;
   }
 }
 

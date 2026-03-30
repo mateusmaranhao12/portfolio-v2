@@ -19,6 +19,10 @@
   color: #fff;
 }
 
+.dark-bg-body-2 {
+  background-color: #0b001a;
+}
+
 //navbar
 .bg-navbar-dark {
   background-color: #0b001a;
@@ -38,6 +42,15 @@
 
 .menu-items-active-dark {
   color: #eab308;
+}
+
+.btn-download-dark {
+  background-color: #eab308;
+  color: #0b001a;
+
+  &:hover {
+    background-color: #fbbf24;
+  }
 }
 
 //titulo me
