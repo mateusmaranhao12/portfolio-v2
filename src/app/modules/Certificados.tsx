@@ -40,7 +40,7 @@ export default function Certificados({ lang }: { lang?: Lang }) {
   return (
     <SectionWrapper
       id="certificados"
-      className={isDark ? "bg-purple-950" : "bg-slate-100"}
+      className={isDark ? "dark-certificado-bg" : "light-certificado-bg"}
     >
       <div className="w-full">
         <SectionTitle>{t.certificados_titulo}</SectionTitle>

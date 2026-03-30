@@ -189,3 +189,22 @@
 .dark-projeto-card-skill {
   color: #ffffff;
 }
+
+//certificados
+.dark-certificado-bg {
+  background-color: rgba(88, 28, 135, 0.1);
+  border-color: rgba(88, 28, 135, 0.2);
+  border-left-color: #eab308;
+
+  &:hover {
+    box-shadow: 0 0 15px #ffffff22;
+  }
+}
+
+.dark-certificado-titulo {
+  color: #eab308;
+}
+
+.dark-certificado-descricao {
+  color: #cbd5e1;
+}

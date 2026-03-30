@@ -24,7 +24,7 @@ export default function CertificadoItem({
     <motion.div
       variants={itemVariants}
       transition={{ duration: 0.6, ease: "easeInOut" }}
-      className={`border rounded-xl p-4 backdrop-blur-sm transition ${isDark ? "bg-purple-800/10 border-purple-800/20 hover:shadow-[0_0_15px_#ffffff22]" : "bg-white border-slate-200 hover:shadow-[0_0_15px_#00000022]"}`}
+      className={`border rounded-xl p-4 backdrop-blur-sm transition ${isDark ? "dark-certificado-bg" : "light-certificado-bg"}`}
     >
       <div className="w-full overflow-hidden rounded-lg mb-3">
         <Image
@@ -36,12 +36,12 @@ export default function CertificadoItem({
         />
       </div>
       <p
-        className={`text-start text-xl font-bold ${isDark ? "text-yellow-500" : "text-purple-500"}`}
+        className={`text-start text-xl font-bold ${isDark ? "dark-certificado-titulo" : "light-certificado-titulo"}`}
       >
         {nome}
       </p>
       <p
-        className={`text-start text-sm font-light ${isDark ? "text-slate-300" : "text-slate-800"}`}
+        className={`text-start text-sm font-light ${isDark ? "dark-certificado-descricao" : "light-certificado-descricao"}`}
       >
         {descricao}
       </p>

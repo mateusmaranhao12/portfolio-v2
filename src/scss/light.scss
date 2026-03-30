@@ -177,3 +177,22 @@
 .light-projeto-card-skill {
   color: #000000;
 }
+
+//certificados
+.light-certificado-bg {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-certificado-titulo {
+  color: #a855f7;
+}
+
+.light-certificado-descricao {
+  color: #1e293b;
+}
