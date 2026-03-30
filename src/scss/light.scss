@@ -124,3 +124,30 @@
 .light-habilidade-card-nome {
   color: #1e293b;
 }
+
+//experiencias
+.light-experiencia-card {
+  background-color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.3);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-experiencia-card-empresa {
+  color: #a855f7;
+}
+
+.light-experiencia-card-cargo {
+  color: #000000;
+}
+
+.light-experiencia-card-periodo {
+  color: #4b5563;
+}
+
+.light-experiencia-card-descricao {
+  color: #1e293b;
+}

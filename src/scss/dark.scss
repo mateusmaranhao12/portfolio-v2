@@ -136,3 +136,30 @@
 .dark-habilidade-card-nome {
   color: #cbd5e1;
 }
+
+//experiencias
+.dark-experiencia-card {
+  background-color: rgba(88, 28, 135, 0.1);
+  border-color: rgba(88, 28, 135, 0.2);
+  border-left-color: #eab308;
+
+  &:hover {
+    box-shadow: 0 0 15px #ffffff22;
+  }
+}
+
+.dark-experiencia-card-empresa {
+  color: #facc15;
+}
+
+.dark-experiencia-card-cargo {
+  color: #ffffff;
+}
+
+.dark-experiencia-card-periodo {
+  color: #9ca3af;
+}
+
+.dark-experiencia-card-descricao {
+  color: #cbd5e1;
+}
