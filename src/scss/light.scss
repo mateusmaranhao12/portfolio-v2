@@ -261,3 +261,22 @@
   background-color: #f1f5f9;
   color: #1e293b;
 }
+
+//seletor de idioma
+.light-language-button {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-color: #d1d5db;
+}
+
+.light-language-menu {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-color: #e5e7eb;
+}
+
+.light-language-option {
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}

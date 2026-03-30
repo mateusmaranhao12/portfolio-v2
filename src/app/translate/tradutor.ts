@@ -26,15 +26,15 @@ export function persistLang(lang: Lang): void {
 
 //funções para obter as classes CSS dos componentes de seleção de idioma, adaptando-se ao tema claro ou escuro
 export function getLanguageButtonClasses(isDark: boolean | null): string {
-  return `text-sm rounded px-2 py-1 flex items-center gap-2 border ${isDark ? "bg-purple-950 text-white border-gray-700" : "bg-white text-gray-800 border-gray-300"}`;
+  return `text-sm rounded px-2 py-1 flex items-center gap-2 border ${isDark ? "dark-language-button" : "light-language-button"}`;
 }
 
 export function getLanguageMenuClasses(isDark: boolean | null): string {
-  return `absolute right-0 mt-2 w-20 rounded shadow z-50 ${isDark ? "bg-purple-950 text-white border border-gray-700" : "bg-white text-gray-800 border border-gray-200"}`;
+  return `absolute right-0 mt-2 w-20 rounded shadow z-50 border ${isDark ? "dark-language-menu" : "light-language-menu"}`;
 }
 
 export function getLanguageOptionClasses(isDark: boolean | null): string {
-  return `w-full text-left px-3 py-2 hover:bg-opacity-10 ${isDark ? "hover:bg-white/10" : "hover:bg-gray-100"}`;
+  return `w-full text-left px-3 py-2 ${isDark ? "dark-language-option" : "light-language-option"}`;
 }
 
 //importação das traduções e exportação para uso em outros módulos
