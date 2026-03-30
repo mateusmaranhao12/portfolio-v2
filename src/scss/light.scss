@@ -196,3 +196,68 @@
 .light-certificado-descricao {
   color: #1e293b;
 }
+
+//contato
+.light-contato-texto {
+  color: #1e293b;
+}
+
+.light-contato-item {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+    background-color: rgba(226, 232, 240, 0.5);
+  }
+}
+
+.light-contato-item-titulo {
+  color: #000000;
+}
+
+.light-contato-item-texto {
+  color: #1e293b;
+}
+
+.light-contato-icon-whatsapp {
+  color: #16a34a;
+}
+
+.light-contato-icon-email {
+  color: #dc2626;
+}
+
+.light-contato-icon-linkedin {
+  color: #2563eb;
+}
+
+.light-contato-icon-github {
+  color: #000000;
+}
+
+.light-contato-field-label {
+  color: #1e293b;
+}
+
+.light-contato-field {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+
+  &::placeholder {
+    color: #64748b;
+  }
+
+  &:focus {
+    border-color: #a855f7;
+  }
+}
+
+//footer
+.light-footer {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
