@@ -17,12 +17,12 @@ export default function IdiomaCard({
 }: IdiomaCardProps) {
   return (
     <li
-      className={`border border-l-3 ${isDark ? "bg-purple-950/10 border-l-yellow-500 border-purple-900/20 hover:shadow-[0_0_15px_#ffffff22]" : "bg-white border-l-purple-500 border-slate-500/20 hover:shadow-[0_0_15px_#00000022]"} rounded-xl p-5 backdrop-blur-sm transition mb-4 mt-4 ${className}`}
+      className={`border border-l-3 ${isDark ? "dark-idioma-card" : "light-idioma-card"} rounded-xl p-5 backdrop-blur-sm transition mb-4 mt-4 ${className}`}
     >
-      <p className={`font-medium ${isDark ? "text-white" : "text-black"}`}>{idioma}</p>
-      <p className={`text-sm mt-2 ${isDark ? "text-purple-200/80" : "text-slate-700/80"}`}>{nivel}</p>
+      <p className={`font-medium ${isDark ? "dark-idioma-card-idioma" : "light-idioma-card-idioma"}`}>{idioma}</p>
+      <p className={`text-sm mt-2 ${isDark ? "dark-idioma-card-nivel" : "light-idioma-card-nivel"}`}>{nivel}</p>
       {detalhe ? (
-        <p className={`text-sm mt-2 ${isDark ? "text-yellow-400" : "text-purple-500"}`}>{detalhe}</p>
+        <p className={`text-sm mt-2 ${isDark ? "dark-idioma-card-detalhe" : "light-idioma-card-detalhe"}`}>{detalhe}</p>
       ) : null}
     </li>
   );

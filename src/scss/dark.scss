@@ -99,3 +99,26 @@
 .dark-formacao-card-meta {
   color: rgba(221, 214, 254, 0.8);
 }
+
+//idiomas
+.dark-idioma-card {
+  background-color: rgba(11, 0, 26, 0.1);
+  border-color: rgba(44, 0, 116, 0.2);
+  border-left-color: #eab308;
+
+  &:hover {
+    box-shadow: 0 0 15px #ffffff22;
+  }
+}
+
+.dark-idioma-card-idioma {
+  color: #ffffff;
+}
+
+.dark-idioma-card-nivel {
+  color: rgba(221, 214, 254, 0.8);
+}
+
+.dark-idioma-card-detalhe {
+  color: #facc15;
+}

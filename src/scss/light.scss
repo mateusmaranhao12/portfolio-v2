@@ -58,7 +58,7 @@
 //section title
 .light-text-section-title-light {
   color: #000000;
-    border-color: #a855f7;
+  border-color: #a855f7;
 }
 
 //formacao academica
@@ -86,4 +86,27 @@
 
 .light-formacao-card-meta {
   color: rgba(51, 65, 85, 0.8);
+}
+
+//idiomas
+.light-idioma-card {
+  background-color: #ffffff;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-idioma-card-idioma {
+  color: #000000;
+}
+
+.light-idioma-card-nivel {
+  color: rgba(51, 65, 85, 0.8);
+}
+
+.light-idioma-card-detalhe {
+  color: #a855f7;
 }
