@@ -151,3 +151,29 @@
 .light-experiencia-card-descricao {
   color: #1e293b;
 }
+
+//projetos
+.light-projetos-category {
+  color: #a855f7;
+}
+
+.light-projeto-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-projeto-card-titulo {
+  color: #a855f7;
+}
+
+.light-projeto-card-texto {
+  color: #1e293b;
+}
+
+.light-projeto-card-skill {
+  color: #000000;
+}

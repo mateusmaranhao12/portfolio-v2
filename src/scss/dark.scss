@@ -163,3 +163,29 @@
 .dark-experiencia-card-descricao {
   color: #cbd5e1;
 }
+
+//projetos
+.dark-projetos-category {
+  color: #facc15;
+}
+
+.dark-projeto-card {
+  background-color: rgba(88, 28, 135, 0.1);
+  border-color: rgba(88, 28, 135, 0.2);
+
+  &:hover {
+    box-shadow: 0 0 15px #ffffff33;
+  }
+}
+
+.dark-projeto-card-titulo {
+  color: #eab308;
+}
+
+.dark-projeto-card-texto {
+  color: #cbd5e1;
+}
+
+.dark-projeto-card-skill {
+  color: #ffffff;
+}
