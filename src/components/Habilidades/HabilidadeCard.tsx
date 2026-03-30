@@ -29,7 +29,8 @@ export default function HabilidadeCard({
       whileHover={{ scale: 1.05 }}
       className={`
                 flex flex-row items-center text-left 
-                ${isDark ? "bg-purple-800/10 backdrop-blur-sm rounded-xl p-4 shadow-[0_0_10px_#ffffff22]" : "bg-white/10 backdrop-blur-sm rounded-xl p-4 shadow-[0_0_10px_#00000022]"}
+            ${isDark ? "dark-habilidade-card" : "light-habilidade-card"}
+            backdrop-blur-sm rounded-xl p-4
                 transition-transform duration-300 group hover:scale-105 
             `}
     >
@@ -42,7 +43,7 @@ export default function HabilidadeCard({
       </motion.div>
 
       <motion.span
-        className={`${isDark ? "text-slate-300" : "text-slate-800"}`}
+        className={`${isDark ? "dark-habilidade-card-nome" : "light-habilidade-card-nome"}`}
         variants={item}
         transition={{ duration: 0.4, delay: 0.1 }}
       >

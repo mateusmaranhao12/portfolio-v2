@@ -61,7 +61,7 @@ export default function ProjetoCard({
   return (
     <motion.div
       className={`h-full flex flex-col border
-            ${isDark ? "bg-purple-800/10 border-purple-800/20 hover:shadow-[0_0_15px_#ffffff33]" : "bg-white border-slate-200 hover:shadow-[0_0_15px_#00000022]"}
+            ${isDark ? "dark-projeto-card" : "light-projeto-card"}
             backdrop-blur-sm p-5 rounded-xl 
             transition duration-300`}
       initial={{ opacity: 0 }}
@@ -80,12 +80,12 @@ export default function ProjetoCard({
       </div>
 
       <h3
-        className={`text-xl font-bold mb-2 ${isDark ? "text-yellow-500" : "text-purple-500"}`}
+        className={`text-xl font-bold mb-2 ${isDark ? "dark-projeto-card-titulo" : "light-projeto-card-titulo"}`}
       >
         {nome}
       </h3>
       <p
-        className={`text-sm leading-relaxed ${isDark ? "text-slate-300" : "text-slate-800"}`}
+        className={`text-sm leading-relaxed ${isDark ? "dark-projeto-card-texto" : "light-projeto-card-texto"}`}
       >
         {texto}
       </p>
@@ -105,7 +105,7 @@ export default function ProjetoCard({
               whileHover={{ scale: 1.05, y: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 18 }}
               title={s.nome}
-              className={`flex items-center mt-2 gap-1 px-2 py-1 text-xs ${isDark ? "text-white" : "text-black"}`}
+              className={`flex items-center mt-2 gap-1 px-2 py-1 text-xs ${isDark ? "dark-projeto-card-skill" : "light-projeto-card-skill"}`}
             >
               {s.icon}
               {/*<span className="hidden sm:inline">{s.nome}</span> */}

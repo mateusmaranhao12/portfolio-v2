@@ -20,7 +20,7 @@ export default function Contato({ lang }: { lang?: Lang }) {
       icon: (
         <FaWhatsapp
           size={28}
-          className={isDark ? "text-green-400" : "text-green-600"}
+          className={isDark ? "dark-contato-icon-whatsapp" : "light-contato-icon-whatsapp"}
         />
       ),
       texto: `${t.contato_whatsapp_texto}`,
@@ -31,7 +31,7 @@ export default function Contato({ lang }: { lang?: Lang }) {
       icon: (
         <FaEnvelope
           size={28}
-          className={isDark ? "text-red-400" : "text-red-600"}
+          className={isDark ? "dark-contato-icon-email" : "light-contato-icon-email"}
         />
       ),
       texto: `${t.contato_email_texto}`,
@@ -42,7 +42,7 @@ export default function Contato({ lang }: { lang?: Lang }) {
       icon: (
         <FaLinkedin
           size={28}
-          className={isDark ? "text-blue-400" : "text-blue-600"}
+          className={isDark ? "dark-contato-icon-linkedin" : "light-contato-icon-linkedin"}
         />
       ),
       texto: `${t.contato_linkedin_texto}`,
@@ -51,7 +51,10 @@ export default function Contato({ lang }: { lang?: Lang }) {
       nome: `${t.contato_github}`,
       href: "https://github.com/mateusmaranhao12",
       icon: (
-        <FaGithub size={28} className={isDark ? "text-white" : "text-black"} />
+        <FaGithub
+          size={28}
+          className={isDark ? "dark-contato-icon-github" : "light-contato-icon-github"}
+        />
       ),
       texto: `${t.contato_github_texto}`,
     },
@@ -67,7 +70,7 @@ export default function Contato({ lang }: { lang?: Lang }) {
       >
         <SectionTitle>{t.contato_titulo}</SectionTitle>
         <p
-          className={`text-start mt-2 ${isDark ? "text-slate-300" : "text-slate-800"}`}
+          className={`text-start mt-2 ${isDark ? "dark-contato-texto" : "light-contato-texto"}`}
         >
           {t.contato_texto}
         </p>

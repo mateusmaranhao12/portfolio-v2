@@ -1,0 +1,347 @@
+//cores principais
+.light-bg-body {
+  background-color: #fff;
+}
+
+.light-text-body {
+  color: #333;
+}
+
+.light-bg-body-2 {
+  background-color: #f3f4f6;
+}
+
+//navbar
+.bg-navbar-light {
+  background-color: #fff;
+}
+
+.text-navbar-light {
+  color: #333;
+}
+
+.menu-items-active-light {
+  color: #a855f7;
+}
+
+.menu-items-light {
+  color: #374151;
+
+  &:hover {
+    color: #a855f7;
+  }
+}
+
+.btn-download-light {
+  background-color: #a855f7;
+  color: #fff;
+
+  &:hover {
+    background-color: #c084fc;
+  }
+}
+
+//titulo me
+.light-text-titulo-me-light {
+  color: #a855f7;
+}
+
+//descricao me
+.light-highlight-descricao-me-light {
+  color: #a855f7;
+}
+
+.light-descricao-me-light {
+  color: #374151;
+}
+
+//section title
+.light-text-section-title-light {
+  color: #000000;
+  border-color: #a855f7;
+}
+
+//formacao academica
+.light-formacao-card {
+  background-color: #ffffff;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-formacao-card-universidade {
+  color: #a855f7;
+}
+
+.light-formacao-card-curso {
+  color: #000000;
+}
+
+.light-formacao-card-formacao {
+  color: #1e293b;
+}
+
+.light-formacao-card-meta {
+  color: rgba(51, 65, 85, 0.8);
+}
+
+//idiomas
+.light-idioma-card {
+  background-color: #ffffff;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-idioma-card-idioma {
+  color: #000000;
+}
+
+.light-idioma-card-nivel {
+  color: rgba(51, 65, 85, 0.8);
+}
+
+.light-idioma-card-detalhe {
+  color: #a855f7;
+}
+
+//habilidades
+.light-skill-category {
+  color: #a855f7;
+}
+
+.light-habilidade-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px #00000022;
+}
+
+.light-habilidade-card-nome {
+  color: #1e293b;
+}
+
+//experiencias
+.light-experiencia-card {
+  background-color: #ffffff;
+  border-color: rgba(148, 163, 184, 0.3);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-experiencia-card-empresa {
+  color: #a855f7;
+}
+
+.light-experiencia-card-cargo {
+  color: #000000;
+}
+
+.light-experiencia-card-periodo {
+  color: #4b5563;
+}
+
+.light-experiencia-card-descricao {
+  color: #1e293b;
+}
+
+//projetos
+.light-projetos-category {
+  color: #a855f7;
+}
+
+.light-projeto-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-projeto-card-titulo {
+  color: #a855f7;
+}
+
+.light-projeto-card-texto {
+  color: #1e293b;
+}
+
+.light-projeto-card-skill {
+  color: #000000;
+}
+
+//certificados
+.light-certificado-bg {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-certificado-titulo {
+  color: #a855f7;
+}
+
+.light-certificado-descricao {
+  color: #1e293b;
+}
+
+//contato
+.light-contato-texto {
+  color: #1e293b;
+}
+
+.light-contato-item {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+    background-color: rgba(226, 232, 240, 0.5);
+  }
+}
+
+.light-contato-item-titulo {
+  color: #000000;
+}
+
+.light-contato-item-texto {
+  color: #1e293b;
+}
+
+.light-contato-icon-whatsapp {
+  color: #16a34a;
+}
+
+.light-contato-icon-email {
+  color: #dc2626;
+}
+
+.light-contato-icon-linkedin {
+  color: #2563eb;
+}
+
+.light-contato-icon-github {
+  color: #000000;
+}
+
+.light-contato-field-label {
+  color: #1e293b;
+}
+
+.light-contato-field {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+
+  &::placeholder {
+    color: #64748b;
+  }
+
+  &:focus {
+    border-color: #a855f7;
+  }
+}
+
+//footer
+.light-footer {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+//seletor de idioma
+.light-language-button {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-color: #d1d5db;
+}
+
+.light-language-menu {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-color: #e5e7eb;
+}
+
+.light-language-option {
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+//toast
+.light-toast-success {
+  background-color: #16a34a;
+  border-color: #16a34a;
+}
+
+.light-toast-error {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.light-toast-text {
+  color: #ffffff;
+}
+
+.light-toast-icon-wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-toast-icon {
+  color: #ffffff;
+}
+
+.light-toast-close {
+  color: #e2e8f0;
+}
+
+//buttons
+.light-button-default {
+  background-color: #a855f7;
+  color: #ffffff;
+  border: 1px solid #a855f7;
+
+  &:hover {
+    background-color: #c084fc;
+  }
+}
+
+.light-button-black {
+  background-color: #e5e7eb;
+  color: #000000;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.light-button-disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: text;
+}
+
+.light-button-demo {
+  background-color: transparent;
+  color: #ca8a04;
+  border: 1px solid #ca8a04;
+
+  &:hover {
+    background-color: #ca8a04;
+    color: #000000;
+  }
+}

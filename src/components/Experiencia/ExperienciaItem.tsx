@@ -19,18 +19,18 @@ export default function ExperienciaItem({
             border border-l-3 rounded-xl p-6 backdrop-blur-sm transition 
             ${
               isDark
-                ? "bg-purple-800/10 text-white border-l-yellow-500 border-purple-800/20 hover:shadow-[0_0_15px_#ffffff22]"
-                : "bg-white text-black border-l-purple-500 border-slate-200 hover:shadow-[0_0_15px_#00000022]"
+                ? "dark-experiencia-card"
+                : "light-experiencia-card"
             }`}
     >
-      <p className={`text-sm tracking-wider font-bold uppercase ${isDark ? "text-yellow-400" : "text-purple-500"}`}>
+      <p className={`text-sm tracking-wider font-bold uppercase ${isDark ? "dark-experiencia-card-empresa" : "light-experiencia-card-empresa"}`}>
         {empresa}
       </p>
-      <h3 className={`md:text-2xl text-xl font-bold mt-1 mb-1 ${isDark ? "text-white" : "text-black"}`}>
+      <h3 className={`md:text-2xl text-xl font-bold mt-1 mb-1 ${isDark ? "dark-experiencia-card-cargo" : "light-experiencia-card-cargo"}`}>
         {cargo}
       </h3>
-      <p className={`text-sm mb-4 ${isDark ? "text-gray-400" : "text-gray-600"}`}>{periodo}</p>
-      <p className={`leading-relaxed text-sm ${isDark ? "text-slate-300" : "text-slate-800"}`}>{descricao}</p>
+      <p className={`text-sm mb-4 ${isDark ? "dark-experiencia-card-periodo" : "light-experiencia-card-periodo"}`}>{periodo}</p>
+      <p className={`leading-relaxed text-sm ${isDark ? "dark-experiencia-card-descricao" : "light-experiencia-card-descricao"}`}>{descricao}</p>
     </div>
   );
 }

@@ -15,11 +15,11 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     try {
       const body = document.body;
       if (isDark) {
-        body.classList.remove("bg-white", "text-gray-800");
-        body.classList.add("bg-purple-980", "text-white");
+        body.classList.remove("light-bg-body", "light-text-body");
+        body.classList.add("dark-bg-body", "dark-text-body");
       } else {
-        body.classList.remove("bg-purple-980", "text-white");
-        body.classList.add("bg-white", "text-gray-800");
+        body.classList.remove("dark-bg-body", "dark-text-body");
+        body.classList.add("light-bg-body", "light-text-body");
       }
     } catch (e) {
       // ignore

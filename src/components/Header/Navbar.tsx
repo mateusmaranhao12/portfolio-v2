@@ -13,8 +13,10 @@ type NavbarProps = {
   setLang?: (l: Lang) => void;
 };
 
-export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarProps) {
-
+export default function Navbar({
+  lang: langProp,
+  setLang: setLangProp,
+}: NavbarProps) {
   const [internalLang, setInternalLang] = useState<Lang>("pt");
 
   const currentLang = langProp ?? internalLang;
@@ -80,7 +82,7 @@ export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarP
 
   return (
     <nav
-      className={`fixed shadow-md px-6 py-4 top-0 left-0 w-full z-50 ${dark ? "bg-purple-950 text-white" : "bg-white text-gray-800"}`}
+      className={`fixed shadow-md px-6 py-4 top-0 left-0 w-full z-50 ${dark ? "bg-navbar-dark text-navbar-dark" : "bg-navbar-light text-navbar-light"}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.h1
@@ -97,7 +99,7 @@ export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarP
           <ThemeIcon lang={currentLang} />
           <LanguageSelect value={currentLang} onChange={(l) => setLang(l)} />
           <button
-            className={`text-2xl ${dark ? "text-white" : "text-gray-800"}`}
+            className={`text-2xl ${dark ? "text-navbar-dark" : "text-navbar-light"}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -129,11 +131,11 @@ export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarP
                 className={`relative font-medium transition-colors duration-200 ${
                   activeSection === item.href
                     ? dark
-                      ? "text-yellow-500 cursor-text"
-                      : "text-purple-500 cursor-text"
+                      ? "menu-items-active-dark cursor-text"
+                      : "menu-items-active-light cursor-text"
                     : dark
-                      ? "text-gray-300 hover:text-yellow-300"
-                      : "text-gray-700 hover:text-purple-500"
+                      ? "menu-items-dark"
+                      : "menu-items-light"
                 }`}
               >
                 {item.label}
@@ -153,7 +155,7 @@ export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarP
       {/* Menu Mobile */}
       {isOpen && (
         <motion.div
-          className={`min-[1025px]:hidden mt-4 flex flex-col gap-4 items-center py-4 rounded ${dark ? "bg-purple-950 text-white" : "bg-white text-gray-800"}`}
+          className={`min-[1025px]:hidden mt-4 flex flex-col gap-4 items-center py-4 rounded ${dark ? "bg-navbar-dark text-navbar-dark" : "bg-navbar-light text-navbar-light"}`}
           initial="hidden"
           animate="visible"
         >
@@ -174,13 +176,13 @@ export default function Navbar({ lang: langProp, setLang: setLangProp }: NavbarP
                   href={`#${item.href}`}
                   onClick={() => setIsOpen(false)}
                   className={`relative font-medium transition-colors duration-200 ${
-                    dark
-                      ? "text-gray-300 hover:text-yellow-300"
-                      : "text-gray-700 hover:text-purple-500"
+                    dark ? "menu-items-dark" : "menu-items-light"
                   }`}
                 >
                   {item.label}
-                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all duration-300 hover:w-full"></span>
+                  <span
+                    className={`absolute left-0 -bottom-1 w-0 h-0.5 transition-all duration-300 hover:w-full ${dark ? "menu-items-dark" : "menu-items-light"}`}
+                  ></span>
                 </a>
               </motion.li>
             ))}

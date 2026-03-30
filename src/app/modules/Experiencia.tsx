@@ -34,7 +34,7 @@ export default function Experiencia({ lang }: { lang?: Lang }) {
   return (
     <SectionWrapper
       id="experiencia"
-      className={isDark ? "bg-purple-950" : "bg-slate-100"}
+      className={isDark ? "dark-bg-body-2" : "light-bg-body-2"}
     >
       <div className="w-full">
         <SectionTitle>{t.experiencia_titulo}</SectionTitle>

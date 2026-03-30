@@ -32,7 +32,7 @@ export default function FormacaoAcademica({ lang }: { lang?: Lang }) {
       transition={{ type: "spring", stiffness: 300, damping: 18, delay: 0.5 }}
     >
       <h3
-        className={`text-xl font-semibold border-l-4 pl-4 ${isDark ? "border-yellow-500 text-white" : "border-purple-500 text-black"} mb-2`}
+        className={`text-xl font-semibold border-l-4 pl-4 ${isDark ? "dark-text-section-title-dark" : "light-text-section-title-light"} mb-2`}
       >
         {t.formacao_titulo}
       </h3>

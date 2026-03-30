@@ -12,7 +12,7 @@ export default function DownloadCVButton({ label }: { label?: string }) {
     <motion.a
       href="/curriculo_mateus_maranhao.pdf"
       download
-      className={`inline-flex items-center px-4 py-2 ${isDark ? "bg-yellow-500 text-black hover:bg-yellow-400" : "bg-purple-500 text-white hover:bg-purple-400"} rounded transition-all font-semibold`}
+      className={`inline-flex items-center px-4 py-2 ${isDark ? "btn-download-dark" : "btn-download-light"} rounded transition-all font-semibold`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.3 }}
