@@ -115,16 +115,19 @@ function Toast({
   lang?: Lang;
 
 }) {
-  // Background and text color depend on toast type; respect dark mode for shades
-  const text = "text-white";
-  const bg =
+  const toneClass =
     type === "success"
       ? isDark
-        ? "bg-green-950 border-green-600"
-        : "bg-green-600 border-green-600"
+        ? "dark-toast-success"
+        : "light-toast-success"
       : isDark
-        ? "bg-red-950 border-red-600"
-        : "bg-red-600 border-red-600";
+        ? "dark-toast-error"
+        : "light-toast-error";
+
+  const textClass = isDark ? "dark-toast-text" : "light-toast-text";
+  const iconWrapClass = isDark ? "dark-toast-icon-wrap" : "light-toast-icon-wrap";
+  const iconClass = isDark ? "dark-toast-icon" : "light-toast-icon";
+  const closeClass = isDark ? "dark-toast-close" : "light-toast-close";
 
   const currentLang = lang ?? getInitialLang();
   const t = translations[currentLang as Lang] as any;
@@ -136,28 +139,26 @@ function Toast({
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 24, scale: 0.98, transition: { duration: 0.18 } }}
       transition={{ type: "spring", stiffness: 700, damping: 40 }}
-      className={`flex items-start md:items-center gap-3 p-3 border rounded-lg shadow-sm ${bg} ${text}`}
+      className={`flex items-start md:items-center gap-3 p-3 border rounded-lg shadow-sm ${toneClass} ${textClass}`}
     >
-      <div
-        className={`shrink-0 rounded-full w-8 h-8 flex items-center justify-center bg-white/10`}
-      >
+      <div className={`shrink-0 rounded-full w-8 h-8 flex items-center justify-center ${iconWrapClass}`}>
         {type === "success" ? (
-          <FaCheckCircle className="w-5 h-5 text-white" />
+          <FaCheckCircle className={`w-5 h-5 ${iconClass}`} />
         ) : (
-          <FaTimesCircle className="w-5 h-5 text-white" />
+          <FaTimesCircle className={`w-5 h-5 ${iconClass}`} />
         )}
       </div>
 
       <div className="flex-1 text-sm leading-tight">
-        <div className={`font-medium ${text}`}>
+        <div className={`font-medium ${textClass}`}>
           {type === "success" ? t.toast_sucesso_titulo : t.toast_erro_titulo}
         </div>
-        <div className={`mt-1 ${text}`}>{message}</div>
+        <div className={`mt-1 ${textClass}`}>{message}</div>
       </div>
 
       <button
         onClick={onClose}
-        className={`ml-2 opacity-80 hover:opacity-100 ${isDark ? "text-slate-300" : "text-slate-200"}`}
+        className={`ml-2 opacity-80 hover:opacity-100 ${closeClass}`}
         aria-label="Close notification"
       >
         <svg

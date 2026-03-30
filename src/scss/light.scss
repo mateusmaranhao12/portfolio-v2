@@ -280,3 +280,30 @@
     background-color: #f3f4f6;
   }
 }
+
+//toast
+.light-toast-success {
+  background-color: #16a34a;
+  border-color: #16a34a;
+}
+
+.light-toast-error {
+  background-color: #dc2626;
+  border-color: #dc2626;
+}
+
+.light-toast-text {
+  color: #ffffff;
+}
+
+.light-toast-icon-wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-toast-icon {
+  color: #ffffff;
+}
+
+.light-toast-close {
+  color: #e2e8f0;
+}

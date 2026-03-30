@@ -280,3 +280,30 @@
     background-color: rgba(255, 255, 255, 0.1);
   }
 }
+
+//toast
+.dark-toast-success {
+  background-color: #052e16;
+  border-color: #16a34a;
+}
+
+.dark-toast-error {
+  background-color: #450a0a;
+  border-color: #dc2626;
+}
+
+.dark-toast-text {
+  color: #ffffff;
+}
+
+.dark-toast-icon-wrap {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-toast-icon {
+  color: #ffffff;
+}
+
+.dark-toast-close {
+  color: #cbd5e1;
+}
