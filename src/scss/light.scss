@@ -1,0 +1,20 @@
+//navbar
+.bg-navbar-light {
+    background-color: #fff;
+}
+
+.text-navbar-light {
+    color: #333;
+}
+
+.menu-items-active-light {
+    color: #a855f7;
+}
+
+.menu-items-light {
+    color: #374151;
+
+    &:hover {
+        color: #a855f7;
+    }
+}

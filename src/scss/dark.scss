@@ -9,3 +9,24 @@
 .bg-purple-980 {
   background-color: #080011;
 }
+
+//navbar
+.bg-navbar-dark {
+  background-color: #0b001a;
+}
+
+.text-navbar-dark {
+  color: #fff;
+}
+
+.menu-items-dark {
+  color: #d1d5db;
+
+  &:hover {
+    color: #fde047;
+  }
+}
+
+.menu-items-active-dark {
+  color: #eab308;
+}
