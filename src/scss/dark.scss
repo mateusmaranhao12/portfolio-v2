@@ -307,3 +307,41 @@
 .dark-toast-close {
   color: #cbd5e1;
 }
+
+//buttons
+.dark-button-default {
+  background-color: #eab308;
+  color: #000000;
+  border: 1px solid #eab308;
+
+  &:hover {
+    background-color: #facc15;
+  }
+}
+
+.dark-button-black {
+  background-color: #000000;
+  color: #ffffff;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.dark-button-disabled {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: text;
+}
+
+.dark-button-demo {
+  background-color: transparent;
+  color: #eab308;
+  border: 1px solid #eab308;
+
+  &:hover {
+    background-color: #eab308;
+    color: #000000;
+  }
+}

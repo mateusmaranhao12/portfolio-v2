@@ -31,17 +31,17 @@ export function Button({
 
   const variants = {
     default: isDark
-      ? "bg-yellow-500 text-black hover:bg-yellow-400 border border-yellow-500"
-      : "bg-purple-500 text-white hover:bg-purple-400 border border-purple-500",
+      ? "dark-button-default"
+      : "light-button-default",
     black: isDark
-      ? "text-white bg-black hover:bg-white/10"
-      : "text-black bg-gray-200 hover:bg-black/10",
+      ? "dark-button-black"
+      : "light-button-black",
     disabled: isDark
-      ? "border border-white/15 text-white/60 cursor-text bg-transparent"
-      : "border border-black/15 text-black/60 cursor-text bg-transparent",
+      ? "dark-button-disabled"
+      : "light-button-disabled",
     demo: isDark
-      ? "border border-yellow-500 text-yellow-500 bg-transparent hover:bg-yellow-500 hover:text-black"
-      : "border border-yellow-600 text-yellow-600 bg-transparent hover:bg-yellow-600 hover:text-black",
+      ? "dark-button-demo"
+      : "light-button-demo",
   };
 
   const classes = disabled ? variants.disabled : variants[variant];

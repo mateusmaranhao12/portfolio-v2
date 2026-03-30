@@ -307,3 +307,41 @@
 .light-toast-close {
   color: #e2e8f0;
 }
+
+//buttons
+.light-button-default {
+  background-color: #a855f7;
+  color: #ffffff;
+  border: 1px solid #a855f7;
+
+  &:hover {
+    background-color: #c084fc;
+  }
+}
+
+.light-button-black {
+  background-color: #e5e7eb;
+  color: #000000;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.light-button-disabled {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: text;
+}
+
+.light-button-demo {
+  background-color: transparent;
+  color: #ca8a04;
+  border: 1px solid #ca8a04;
+
+  &:hover {
+    background-color: #ca8a04;
+    color: #000000;
+  }
+}
