@@ -60,3 +60,30 @@
   color: #000000;
     border-color: #a855f7;
 }
+
+//formacao academica
+.light-formacao-card {
+  background-color: #ffffff;
+  border-color: rgba(100, 116, 139, 0.2);
+  border-left-color: #a855f7;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
+}
+
+.light-formacao-card-universidade {
+  color: #a855f7;
+}
+
+.light-formacao-card-curso {
+  color: #000000;
+}
+
+.light-formacao-card-formacao {
+  color: #1e293b;
+}
+
+.light-formacao-card-meta {
+  color: rgba(51, 65, 85, 0.8);
+}
