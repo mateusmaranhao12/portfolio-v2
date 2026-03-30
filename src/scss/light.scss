@@ -9,21 +9,35 @@
 
 //navbar
 .bg-navbar-light {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .text-navbar-light {
-    color: #333;
+  color: #333;
 }
 
 .menu-items-active-light {
-    color: #a855f7;
+  color: #a855f7;
 }
 
 .menu-items-light {
-    color: #374151;
+  color: #374151;
 
-    &:hover {
-        color: #a855f7;
-    }
+  &:hover {
+    color: #a855f7;
+  }
+}
+
+//titulo me
+.light-text-titulo-me-light {
+  color: #a855f7;
+}
+
+//descricao me
+.light-highlight-descricao-me-light {
+  color: #a855f7;
+}
+
+.light-descricao-me-light {
+  color: #374151;
 }

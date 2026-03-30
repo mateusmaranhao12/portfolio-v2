@@ -14,11 +14,11 @@ export default function Descricao({ paragrafos }: DescricaoProps) {
   return (
     <div className="space-y-6">
       {paragrafos.map((texto, index) => {
-        const processed = texto.replace(/text-yellow-500/g, isDark ? 'text-yellow-500' : 'text-purple-700');
+        const processed = texto.replace(/text-yellow-500/g, isDark ? 'dark-highlight-descricao-me-dark' : 'light-highlight-descricao-me-light');
         return (
           <motion.p
             key={index}
-            className={`text-lg leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-900'}`}
+            className={`text-lg leading-relaxed ${isDark ? 'dark-descricao-me-dark' : 'light-descricao-me-light'}`}
             dangerouslySetInnerHTML={{ __html: processed }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
