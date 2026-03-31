@@ -180,13 +180,9 @@
 
 //certificados
 .dark-certificado-bg {
-  background-color: rgba(88, 28, 135, 0.1);
+  background-color: $dark-bg-body-2;
   border-color: rgba(88, 28, 135, 0.2);
   border-left-color: $dark-highlight;
-
-  &:hover {
-    box-shadow: 0 0 15px #ffffff22;
-  }
 }
 
 .dark-certificado-titulo {
