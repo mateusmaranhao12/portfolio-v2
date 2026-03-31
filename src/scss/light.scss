@@ -1,71 +1,71 @@
 //cores principais
 .light-bg-body {
-  background-color: #fff;
+  background-color: $light-bg-body;
 }
 
 .light-text-body {
-  color: #333;
+  color: $light-text-body;
 }
 
 .light-bg-body-2 {
-  background-color: #f3f4f6;
+  background-color: $light-bg-body-2;
 }
 
 //navbar
 .bg-navbar-light {
-  background-color: #fff;
+  background-color: $light-bg-body;
 }
 
 .text-navbar-light {
-  color: #333;
+  color: $light-text-body;
 }
 
 .menu-items-active-light {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .menu-items-light {
   color: #374151;
 
   &:hover {
-    color: #a855f7;
+    color: $light-text-highlight;
   }
 }
 
 .btn-download-light {
-  background-color: #a855f7;
+  background-color: $light-text-highlight;
   color: #fff;
 
   &:hover {
-    background-color: #c084fc;
+    background-color: darken($light-text-highlight, 10%);
   }
 }
 
 //titulo me
 .light-text-titulo-me-light {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 //descricao me
 .light-highlight-descricao-me-light {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-descricao-me-light {
-  color: #374151;
+  color: $light-text-body;
 }
 
 //section title
 .light-text-section-title-light {
-  color: #000000;
-  border-color: #a855f7;
+  color: $light-title;
+  border-color: $light-text-highlight;
 }
 
 //formacao academica
 .light-formacao-card {
-  background-color: #ffffff;
+  background-color: $light-bg-body;
   border-color: rgba(100, 116, 139, 0.2);
-  border-left-color: #a855f7;
+  border-left-color: $light-text-highlight;
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
@@ -73,15 +73,15 @@
 }
 
 .light-formacao-card-universidade {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-formacao-card-curso {
-  color: #000000;
+  color: $light-title;
 }
 
 .light-formacao-card-formacao {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 .light-formacao-card-meta {
@@ -90,9 +90,9 @@
 
 //idiomas
 .light-idioma-card {
-  background-color: #ffffff;
+  background-color: $light-bg-body;
   border-color: rgba(100, 116, 139, 0.2);
-  border-left-color: #a855f7;
+  border-left-color: $light-text-highlight;
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
@@ -100,7 +100,7 @@
 }
 
 .light-idioma-card-idioma {
-  color: #000000;
+  color: $light-title;
 }
 
 .light-idioma-card-nivel {
@@ -108,12 +108,12 @@
 }
 
 .light-idioma-card-detalhe {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 //habilidades
 .light-skill-category {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-habilidade-card {
@@ -122,14 +122,14 @@
 }
 
 .light-habilidade-card-nome {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 //experiencias
 .light-experiencia-card {
-  background-color: #ffffff;
+  background-color: $light-bg-body;
   border-color: rgba(148, 163, 184, 0.3);
-  border-left-color: #a855f7;
+  border-left-color: $light-text-highlight;
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
@@ -137,29 +137,29 @@
 }
 
 .light-experiencia-card-empresa {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-experiencia-card-cargo {
-  color: #000000;
+  color: $light-title;
 }
 
 .light-experiencia-card-periodo {
-  color: #4b5563;
+  color: $light-small-text;
 }
 
 .light-experiencia-card-descricao {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 //projetos
 .light-projetos-category {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-projeto-card {
-  background-color: #ffffff;
-  border-color: #e2e8f0;
+  background-color: $light-bg-body;
+  border-color: rgba(226, 232, 240, 0.5);
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
@@ -167,22 +167,22 @@
 }
 
 .light-projeto-card-titulo {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-projeto-card-texto {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 .light-projeto-card-skill {
-  color: #000000;
+  color: $light-title;
 }
 
 //certificados
 .light-certificado-bg {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(100, 116, 139, 0.2);
-  border-left-color: #a855f7;
+  border-left-color: $light-text-highlight;
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
@@ -190,36 +190,36 @@
 }
 
 .light-certificado-titulo {
-  color: #a855f7;
+  color: $light-text-highlight;
 }
 
 .light-certificado-descricao {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 //contato
 .light-contato-texto {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 .light-contato-item {
   border-left-width: 3px;
   border-left-style: solid;
   border-color: rgba(100, 116, 139, 0.2);
-  border-left-color: #a855f7;
+  border-left-color: $light-text-highlight;
 
   &:hover {
     box-shadow: 0 0 15px #00000022;
-    background-color: rgba(226, 232, 240, 0.5);
+    background-color: $light-bg-body-2;
   }
 }
 
 .light-contato-item-titulo {
-  color: #000000;
+  color: $light-title;
 }
 
 .light-contato-item-texto {
-  color: #1e293b;
+  color: $light-text-body;
 }
 
 .light-contato-icon-whatsapp {
@@ -243,41 +243,41 @@
 }
 
 .light-contato-field {
-  background-color: #ffffff;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  background-color: $light-bg-body;
+  border-color: rgba(203, 213, 225, 0.5);
+  color: $light-text-body;
 
   &::placeholder {
     color: #64748b;
   }
 
   &:focus {
-    border-color: #a855f7;
+    border-color: $light-text-highlight;
   }
 }
 
 //footer
 .light-footer {
-  background-color: #f1f5f9;
-  color: #1e293b;
+  background-color: $light-bg-body-2;
+  color: $light-text-body;
 }
 
 //seletor de idioma
 .light-language-button {
-  background-color: #ffffff;
-  color: #1f2937;
-  border-color: #d1d5db;
+  background-color: $light-bg-body;
+  color: $light-text-body;
+  border-color: rgba(209, 213, 219, 0.5);
 }
 
 .light-language-menu {
-  background-color: #ffffff;
-  color: #1f2937;
-  border-color: #e5e7eb;
+  background-color: $light-bg-body;
+  color: $light-text-body;
+  border-color: rgba(229, 231, 235, 0.5);
 }
 
 .light-language-option {
   &:hover {
-    background-color: #f3f4f6;
+    background-color: $light-bg-body-2;
   }
 }
 
