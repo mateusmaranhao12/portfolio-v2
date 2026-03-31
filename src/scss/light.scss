@@ -180,7 +180,7 @@
 
 //certificados
 .light-certificado-bg {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $light-bg-body-2;
   border-color: rgba(100, 116, 139, 0.2);
   border-left-color: $light-text-highlight;
 
@@ -200,6 +200,15 @@
 //contato
 .light-contato-texto {
   color: $light-text-body;
+}
+
+.light-contato-card {
+  background-color: $light-bg-body;
+  border-color: #e2e8f0;
+
+  &:hover {
+    box-shadow: 0 0 15px #00000022;
+  }
 }
 
 .light-contato-item {

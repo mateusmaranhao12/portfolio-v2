@@ -12,9 +12,7 @@ export default function FormCard({
   return (
     <div
       className={`border rounded-xl p-5 md:p-6 transition backdrop-blur-sm ${
-        isDark
-          ? "bg-purple-980 border-purple-900/20 hover:shadow-[0_0_15px_#ffffff22]"
-          : "bg-white border-slate-200 hover:shadow-[0_0_15px_#00000022]"
+        isDark ? "dark-contato-card" : "light-contato-card"
       } ${className}`}
     >
       {children}

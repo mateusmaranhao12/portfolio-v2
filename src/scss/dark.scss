@@ -202,6 +202,15 @@
   color: $dark-text-body;
 }
 
+.dark-contato-card {
+  background-color: $dark-bg-body-2;
+  border-color: rgba(44, 0, 116, 0.2);
+
+  &:hover {
+    box-shadow: 0 0 15px #ffffff22;
+  }
+}
+
 .dark-contato-item {
   border-left-width: 3px;
   border-left-style: solid;
@@ -243,7 +252,7 @@
 }
 
 .dark-contato-field {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
   border-color: rgba(44, 0, 116, 0.3);
   color: $dark-text-body;
 
@@ -258,21 +267,21 @@
 
 //footer
 .dark-footer {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
   color: $dark-small-text;
 }
 
 //seletor de idioma
 .dark-language-button {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
   color: $dark-title-body;
-  border-color: #374151;
+  border-color: $dark-small-text;
 }
 
 .dark-language-menu {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
   color: $dark-title-body;
-  border-color: #374151;
+  border-color: $dark-small-text;
 }
 
 .dark-language-option {
