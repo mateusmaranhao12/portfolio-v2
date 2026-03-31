@@ -248,7 +248,7 @@
   color: $light-text-body;
 
   &::placeholder {
-    color: #64748b;
+    color: $light-placeholder;
   }
 
   &:focus {
