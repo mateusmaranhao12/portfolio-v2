@@ -1,347 +1,352 @@
 //cores principais
 .dark-bg-body {
-  background-color: #080011;
+  background-color: $dark-bg-body;
 }
 
 .dark-text-body {
-  color: #fff;
+  color: $dark-title-body;
 }
 
 .dark-bg-body-2 {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
 }
 
 //navbar
 .bg-navbar-dark {
-  background-color: #0b001a;
+  background-color: $dark-bg-body-2;
 }
 
 .text-navbar-dark {
-  color: #fff;
+  color: $dark-text-body;
 }
 
 .menu-items-dark {
-  color: #d1d5db;
+  color: $dark-nav-text;
 
   &:hover {
-    color: #fde047;
+    color: $dark-highlight;
   }
 }
 
 .menu-items-active-dark {
-  color: #eab308;
+  color: $dark-highlight;
 }
 
 .btn-download-dark {
-  background-color: #eab308;
-  color: #0b001a;
+  background-color: $dark-highlight;
+  color: $dark-bg-body-2;
 
   &:hover {
-    background-color: #fbbf24;
+    background-color: darken($dark-highlight, 10%);
   }
 }
 
 //titulo me
 .dark-text-titulo-me-dark {
-  color: #eab308;
+  color: $dark-highlight;
 }
 
 //descricao me
 .dark-highlight-descricao-me-dark {
-  color: #eab308;
+  color: $dark-highlight;
 }
 
 .dark-descricao-me-dark {
-  color: #d1d5db;
+  color: $dark-text-body;
 }
 
 //section title
 .dark-text-section-title-dark {
-  color: #fff;
-  border-color: #eab308;
+  color: $dark-title-body;
+  border-color: $dark-highlight;
 }
 
 //formacao academica
 .dark-formacao-card {
-  background-color: rgba(11, 0, 26, 0.1);
-  border-color: rgba(44, 0, 116, 0.2);
-  border-left-color: #eab308;
+  background-color: $dark-surface-soft;
+  border-color: $dark-border-primary;
+  border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
 .dark-formacao-card-universidade {
-  color: #facc15;
+  color: $dark-highlight;
 }
 
 .dark-formacao-card-curso {
-  color: #ffffff;
+  color: $dark-title-body;
 }
 
 .dark-formacao-card-formacao {
-  color: #e2e8f0;
+  color: $dark-text-body;
 }
 
 .dark-formacao-card-meta {
-  color: rgba(221, 214, 254, 0.8);
+  color: $dark-small-text;
 }
 
 //idiomas
 .dark-idioma-card {
-  background-color: rgba(11, 0, 26, 0.1);
-  border-color: rgba(44, 0, 116, 0.2);
-  border-left-color: #eab308;
+  background-color: $dark-surface-soft;
+  border-color: $dark-border-primary;
+  border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
 .dark-idioma-card-idioma {
-  color: #ffffff;
+  color: $dark-title-body;
 }
 
 .dark-idioma-card-nivel {
-  color: rgba(221, 214, 254, 0.8);
+  color: $dark-small-text;
 }
 
 .dark-idioma-card-detalhe {
-  color: #facc15;
+  color: $dark-highlight;
 }
 
 //habilidades
 .dark-skill-category {
-  color: #facc15;
+  color: $dark-highlight;
 }
 
 .dark-habilidade-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  box-shadow: 0 0 10px #ffffff22;
+  background-color: $dark-surface-accent;
+  box-shadow: 0 0 10px $dark-shadow-soft;
 }
 
 .dark-habilidade-card-nome {
-  color: #cbd5e1;
+  color: $dark-text-body;
 }
 
 //experiencias
 .dark-experiencia-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  border-color: rgba(88, 28, 135, 0.2);
-  border-left-color: #eab308;
+  background-color: $dark-surface-accent;
+  border-color: $dark-border-accent;
+  border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
 .dark-experiencia-card-empresa {
-  color: #facc15;
+  color: $dark-highlight;
 }
 
 .dark-experiencia-card-cargo {
-  color: #ffffff;
+  color: $dark-title-body;
 }
 
 .dark-experiencia-card-periodo {
-  color: #9ca3af;
+  color: $dark-small-text;
 }
 
 .dark-experiencia-card-descricao {
-  color: #cbd5e1;
+  color: $dark-text-body;
 }
 
 //projetos
 .dark-projetos-category {
-  color: #facc15;
+  color: $dark-highlight;
 }
 
 .dark-projeto-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  border-color: rgba(88, 28, 135, 0.2);
+  background-color: $dark-surface-accent;
+  border-color: $dark-border-accent;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff33;
+    box-shadow: 0 0 15px $dark-shadow-strong;
   }
 }
 
 .dark-projeto-card-titulo {
-  color: #eab308;
+  color: $dark-highlight;
 }
 
 .dark-projeto-card-texto {
-  color: #cbd5e1;
+  color: $dark-text-body;
 }
 
 .dark-projeto-card-skill {
-  color: #ffffff;
+  color: $dark-title-body;
 }
 
 //certificados
 .dark-certificado-bg {
-  background-color: rgba(88, 28, 135, 0.1);
-  border-color: rgba(88, 28, 135, 0.2);
-  border-left-color: #eab308;
-
-  &:hover {
-    box-shadow: 0 0 15px #ffffff22;
-  }
+  background-color: $dark-bg-body-2;
+  border-color: $dark-border-accent;
+  border-left-color: $dark-highlight;
 }
 
 .dark-certificado-titulo {
-  color: #eab308;
+  color: $dark-highlight;
 }
 
 .dark-certificado-descricao {
-  color: #cbd5e1;
+  color: $dark-text-body;
 }
 
 //contato
 .dark-contato-texto {
-  color: #cbd5e1;
+  color: $dark-text-body;
+}
+
+.dark-contato-card {
+  background-color: $dark-bg-body-2;
+  border-color: $dark-border-primary;
+
+  &:hover {
+    box-shadow: 0 0 15px $dark-shadow-soft;
+  }
 }
 
 .dark-contato-item {
   border-left-width: 3px;
   border-left-style: solid;
-  border-color: rgba(44, 0, 116, 0.2);
-  border-left-color: #eab308;
+  border-color: $dark-border-primary;
+  border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
-    background-color: rgba(192, 132, 252, 0.2);
+    box-shadow: 0 0 15px $dark-shadow-soft;
+    background-color: $dark-contato-hover-bg;
   }
 }
 
 .dark-contato-item-titulo {
-  color: #ffffff;
+  color: $dark-title-body;
 }
 
 .dark-contato-item-texto {
-  color: #cbd5e1;
+  color: $dark-text-body;
 }
 
 .dark-contato-icon-whatsapp {
-  color: #4ade80;
+  color: $dark-contato-icon-whatsapp;
 }
 
 .dark-contato-icon-email {
-  color: #f87171;
+  color: $dark-contato-icon-email;
 }
 
 .dark-contato-icon-linkedin {
-  color: #60a5fa;
+  color: $dark-contato-icon-linkedin;
 }
 
 .dark-contato-icon-github {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-contato-field-label {
-  color: #e2e8f0;
+  color: $dark-contato-field-label;
 }
 
 .dark-contato-field {
-  background-color: #0b001a;
-  border-color: rgba(44, 0, 116, 0.3);
-  color: #ffffff;
+  background-color: $dark-bg-body;
+  border-color: $dark-border-primary-strong;
+  color: $dark-text-body;
 
   &::placeholder {
-    color: #94a3b8;
+    color: $dark-placeholder;
   }
 
   &:focus {
-    border-color: #eab308;
+    border-color: $dark-highlight;
   }
 }
 
 //footer
 .dark-footer {
-  background-color: #0b001a;
-  color: #94a3b8;
+  background-color: $dark-bg-body-2;
+  color: $dark-small-text;
 }
 
 //seletor de idioma
 .dark-language-button {
-  background-color: #0b001a;
-  color: #ffffff;
-  border-color: #374151;
+  background-color: $dark-bg-body-2;
+  color: $dark-title-body;
+  border-color: $dark-small-text;
 }
 
 .dark-language-menu {
-  background-color: #0b001a;
-  color: #ffffff;
-  border-color: #374151;
+  background-color: $dark-bg-body-2;
+  color: $dark-title-body;
+  border-color: $dark-small-text;
 }
 
 .dark-language-option {
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $dark-overlay-white-10;
   }
 }
 
 //toast
 .dark-toast-success {
-  background-color: #052e16;
-  border-color: #16a34a;
+  background-color: $dark-toast-success-bg;
+  border-color: $dark-toast-success-border;
 }
 
 .dark-toast-error {
-  background-color: #450a0a;
-  border-color: #dc2626;
+  background-color: $dark-toast-error-bg;
+  border-color: $dark-toast-error-border;
 }
 
 .dark-toast-text {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-toast-icon-wrap {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $dark-overlay-white-10;
 }
 
 .dark-toast-icon {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-toast-close {
-  color: #cbd5e1;
+  color: $dark-toast-close;
 }
 
 //buttons
 .dark-button-default {
-  background-color: #eab308;
-  color: #000000;
-  border: 1px solid #eab308;
+  background-color: $dark-highlight;
+  color: $dark-black;
+  border: 1px solid $dark-highlight;
 
   &:hover {
-    background-color: #facc15;
+    background-color: $dark-button-default-hover;
   }
 }
 
 .dark-button-black {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $dark-black;
+  color: $dark-white;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $dark-overlay-white-10;
   }
 }
 
 .dark-button-disabled {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: $dark-button-disabled-text;
+  border: 1px solid $dark-button-disabled-border;
   cursor: text;
 }
 
 .dark-button-demo {
   background-color: transparent;
-  color: #eab308;
-  border: 1px solid #eab308;
+  color: $dark-highlight;
+  border: 1px solid $dark-highlight;
 
   &:hover {
-    background-color: #eab308;
-    color: #000000;
+    background-color: $dark-highlight;
+    color: $dark-black;
   }
 }
