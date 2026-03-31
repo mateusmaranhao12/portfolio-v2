@@ -63,12 +63,12 @@
 
 //formacao academica
 .dark-formacao-card {
-  background-color: rgba(11, 0, 26, 0.1);
-  border-color: rgba(44, 0, 116, 0.2);
+  background-color: $dark-surface-soft;
+  border-color: $dark-border-primary;
   border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
@@ -90,12 +90,12 @@
 
 //idiomas
 .dark-idioma-card {
-  background-color: rgba(11, 0, 26, 0.1);
-  border-color: rgba(44, 0, 116, 0.2);
+  background-color: $dark-surface-soft;
+  border-color: $dark-border-primary;
   border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
@@ -117,8 +117,8 @@
 }
 
 .dark-habilidade-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  box-shadow: 0 0 10px #ffffff22;
+  background-color: $dark-surface-accent;
+  box-shadow: 0 0 10px $dark-shadow-soft;
 }
 
 .dark-habilidade-card-nome {
@@ -127,12 +127,12 @@
 
 //experiencias
 .dark-experiencia-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  border-color: rgba(88, 28, 135, 0.2);
+  background-color: $dark-surface-accent;
+  border-color: $dark-border-accent;
   border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
@@ -158,11 +158,11 @@
 }
 
 .dark-projeto-card {
-  background-color: rgba(88, 28, 135, 0.1);
-  border-color: rgba(88, 28, 135, 0.2);
+  background-color: $dark-surface-accent;
+  border-color: $dark-border-accent;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff33;
+    box-shadow: 0 0 15px $dark-shadow-strong;
   }
 }
 
@@ -181,7 +181,7 @@
 //certificados
 .dark-certificado-bg {
   background-color: $dark-bg-body-2;
-  border-color: rgba(88, 28, 135, 0.2);
+  border-color: $dark-border-accent;
   border-left-color: $dark-highlight;
 }
 
@@ -200,22 +200,22 @@
 
 .dark-contato-card {
   background-color: $dark-bg-body-2;
-  border-color: rgba(44, 0, 116, 0.2);
+  border-color: $dark-border-primary;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
+    box-shadow: 0 0 15px $dark-shadow-soft;
   }
 }
 
 .dark-contato-item {
   border-left-width: 3px;
   border-left-style: solid;
-  border-color: rgba(44, 0, 116, 0.2);
+  border-color: $dark-border-primary;
   border-left-color: $dark-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #ffffff22;
-    background-color: rgba(192, 132, 252, 0.2);
+    box-shadow: 0 0 15px $dark-shadow-soft;
+    background-color: $dark-contato-hover-bg;
   }
 }
 
@@ -228,28 +228,28 @@
 }
 
 .dark-contato-icon-whatsapp {
-  color: #4ade80;
+  color: $dark-contato-icon-whatsapp;
 }
 
 .dark-contato-icon-email {
-  color: #f87171;
+  color: $dark-contato-icon-email;
 }
 
 .dark-contato-icon-linkedin {
-  color: #60a5fa;
+  color: $dark-contato-icon-linkedin;
 }
 
 .dark-contato-icon-github {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-contato-field-label {
-  color: #e2e8f0;
+  color: $dark-contato-field-label;
 }
 
 .dark-contato-field {
-  background-color: $dark-bg-body-2;
-  border-color: rgba(44, 0, 116, 0.3);
+  background-color: $dark-bg-body;
+  border-color: $dark-border-primary-strong;
   color: $dark-text-body;
 
   &::placeholder {
@@ -282,71 +282,71 @@
 
 .dark-language-option {
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $dark-overlay-white-10;
   }
 }
 
 //toast
 .dark-toast-success {
-  background-color: #052e16;
-  border-color: #16a34a;
+  background-color: $dark-toast-success-bg;
+  border-color: $dark-toast-success-border;
 }
 
 .dark-toast-error {
-  background-color: #450a0a;
-  border-color: #dc2626;
+  background-color: $dark-toast-error-bg;
+  border-color: $dark-toast-error-border;
 }
 
 .dark-toast-text {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-toast-icon-wrap {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $dark-overlay-white-10;
 }
 
 .dark-toast-icon {
-  color: #ffffff;
+  color: $dark-white;
 }
 
 .dark-toast-close {
-  color: #cbd5e1;
+  color: $dark-toast-close;
 }
 
 //buttons
 .dark-button-default {
-  background-color: #eab308;
-  color: #000000;
-  border: 1px solid #eab308;
+  background-color: $dark-highlight;
+  color: $dark-black;
+  border: 1px solid $dark-highlight;
 
   &:hover {
-    background-color: #facc15;
+    background-color: $dark-button-default-hover;
   }
 }
 
 .dark-button-black {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $dark-black;
+  color: $dark-white;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $dark-overlay-white-10;
   }
 }
 
 .dark-button-disabled {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: $dark-button-disabled-text;
+  border: 1px solid $dark-button-disabled-border;
   cursor: text;
 }
 
 .dark-button-demo {
   background-color: transparent;
-  color: #eab308;
-  border: 1px solid #eab308;
+  color: $dark-highlight;
+  border: 1px solid $dark-highlight;
 
   &:hover {
-    background-color: #eab308;
-    color: #000000;
+    background-color: $dark-highlight;
+    color: $dark-black;
   }
 }

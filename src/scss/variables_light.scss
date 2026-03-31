@@ -6,3 +6,43 @@ $light-text-highlight: #a855f7;
 $light-title: #000;
 $light-small-text: #4b5563;
 $light-placeholder: #6b7280;
+
+//tokens utilitarios
+$light-white: #ffffff;
+$light-black: #000000;
+
+//texto e superficie
+$light-nav-text: #374151;
+$light-meta-text: rgba(51, 65, 85, 0.8);
+$light-surface-soft: rgba(255, 255, 255, 0.1);
+
+//bordas
+$light-border-primary: rgba(100, 116, 139, 0.2);
+$light-border-secondary: rgba(148, 163, 184, 0.3);
+$light-border-soft: rgba(226, 232, 240, 0.5);
+$light-border-input: rgba(203, 213, 225, 0.5);
+$light-border-language-button: rgba(209, 213, 219, 0.5);
+$light-border-language-menu: rgba(229, 231, 235, 0.5);
+$light-contato-card-border: #e2e8f0;
+
+//sombras e overlays
+$light-shadow-soft: #00000022;
+$light-overlay-black-10: rgba(0, 0, 0, 0.1);
+
+//contato
+$light-contato-icon-whatsapp: #16a34a;
+$light-contato-icon-email: #dc2626;
+$light-contato-icon-linkedin: #2563eb;
+$light-contato-field-label: #1e293b;
+
+//toast
+$light-toast-success: #16a34a;
+$light-toast-error: #dc2626;
+$light-toast-close: #e2e8f0;
+
+//botoes
+$light-button-default-hover: #c084fc;
+$light-button-black-bg: #e5e7eb;
+$light-button-demo: #ca8a04;
+$light-button-disabled-text: rgba(0, 0, 0, 0.6);
+$light-button-disabled-border: rgba(0, 0, 0, 0.15);

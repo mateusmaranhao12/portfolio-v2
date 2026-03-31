@@ -25,7 +25,7 @@
 }
 
 .menu-items-light {
-  color: #374151;
+  color: $light-nav-text;
 
   &:hover {
     color: $light-text-highlight;
@@ -34,7 +34,7 @@
 
 .btn-download-light {
   background-color: $light-text-highlight;
-  color: #fff;
+  color: $light-white;
 
   &:hover {
     background-color: darken($light-text-highlight, 10%);
@@ -64,11 +64,11 @@
 //formacao academica
 .light-formacao-card {
   background-color: $light-bg-body;
-  border-color: rgba(100, 116, 139, 0.2);
+  border-color: $light-border-primary;
   border-left-color: $light-text-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
   }
 }
 
@@ -85,17 +85,17 @@
 }
 
 .light-formacao-card-meta {
-  color: rgba(51, 65, 85, 0.8);
+  color: $light-meta-text;
 }
 
 //idiomas
 .light-idioma-card {
   background-color: $light-bg-body;
-  border-color: rgba(100, 116, 139, 0.2);
+  border-color: $light-border-primary;
   border-left-color: $light-text-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
   }
 }
 
@@ -104,7 +104,7 @@
 }
 
 .light-idioma-card-nivel {
-  color: rgba(51, 65, 85, 0.8);
+  color: $light-meta-text;
 }
 
 .light-idioma-card-detalhe {
@@ -117,8 +117,8 @@
 }
 
 .light-habilidade-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px #00000022;
+  background-color: $light-surface-soft;
+  box-shadow: 0 0 10px $light-shadow-soft;
 }
 
 .light-habilidade-card-nome {
@@ -128,11 +128,11 @@
 //experiencias
 .light-experiencia-card {
   background-color: $light-bg-body;
-  border-color: rgba(148, 163, 184, 0.3);
+  border-color: $light-border-secondary;
   border-left-color: $light-text-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
   }
 }
 
@@ -159,10 +159,10 @@
 
 .light-projeto-card {
   background-color: $light-bg-body;
-  border-color: rgba(226, 232, 240, 0.5);
+  border-color: $light-border-soft;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
   }
 }
 
@@ -181,7 +181,7 @@
 //certificados
 .light-certificado-bg {
   background-color: $light-bg-body-2;
-  border-color: rgba(100, 116, 139, 0.2);
+  border-color: $light-border-primary;
   border-left-color: $light-text-highlight;
 }
 
@@ -200,21 +200,21 @@
 
 .light-contato-card {
   background-color: $light-bg-body;
-  border-color: #e2e8f0;
+  border-color: $light-contato-card-border;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
   }
 }
 
 .light-contato-item {
   border-left-width: 3px;
   border-left-style: solid;
-  border-color: rgba(100, 116, 139, 0.2);
+  border-color: $light-border-primary;
   border-left-color: $light-text-highlight;
 
   &:hover {
-    box-shadow: 0 0 15px #00000022;
+    box-shadow: 0 0 15px $light-shadow-soft;
     background-color: $light-bg-body-2;
   }
 }
@@ -228,28 +228,28 @@
 }
 
 .light-contato-icon-whatsapp {
-  color: #16a34a;
+  color: $light-contato-icon-whatsapp;
 }
 
 .light-contato-icon-email {
-  color: #dc2626;
+  color: $light-contato-icon-email;
 }
 
 .light-contato-icon-linkedin {
-  color: #2563eb;
+  color: $light-contato-icon-linkedin;
 }
 
 .light-contato-icon-github {
-  color: #000000;
+  color: $light-black;
 }
 
 .light-contato-field-label {
-  color: #1e293b;
+  color: $light-contato-field-label;
 }
 
 .light-contato-field {
   background-color: $light-bg-body;
-  border-color: rgba(203, 213, 225, 0.5);
+  border-color: $light-border-input;
   color: $light-text-body;
 
   &::placeholder {
@@ -271,13 +271,13 @@
 .light-language-button {
   background-color: $light-bg-body;
   color: $light-text-body;
-  border-color: rgba(209, 213, 219, 0.5);
+  border-color: $light-border-language-button;
 }
 
 .light-language-menu {
   background-color: $light-bg-body;
   color: $light-text-body;
-  border-color: rgba(229, 231, 235, 0.5);
+  border-color: $light-border-language-menu;
 }
 
 .light-language-option {
@@ -288,65 +288,65 @@
 
 //toast
 .light-toast-success {
-  background-color: #16a34a;
-  border-color: #16a34a;
+  background-color: $light-toast-success;
+  border-color: $light-toast-success;
 }
 
 .light-toast-error {
-  background-color: #dc2626;
-  border-color: #dc2626;
+  background-color: $light-toast-error;
+  border-color: $light-toast-error;
 }
 
 .light-toast-text {
-  color: #ffffff;
+  color: $light-white;
 }
 
 .light-toast-icon-wrap {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: $light-surface-soft;
 }
 
 .light-toast-icon {
-  color: #ffffff;
+  color: $light-white;
 }
 
 .light-toast-close {
-  color: #e2e8f0;
+  color: $light-toast-close;
 }
 
 //buttons
 .light-button-default {
-  background-color: #a855f7;
-  color: #ffffff;
-  border: 1px solid #a855f7;
+  background-color: $light-text-highlight;
+  color: $light-white;
+  border: 1px solid $light-text-highlight;
 
   &:hover {
-    background-color: #c084fc;
+    background-color: $light-button-default-hover;
   }
 }
 
 .light-button-black {
-  background-color: #e5e7eb;
-  color: #000000;
+  background-color: $light-button-black-bg;
+  color: $light-black;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: $light-overlay-black-10;
   }
 }
 
 .light-button-disabled {
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: $light-button-disabled-text;
+  border: 1px solid $light-button-disabled-border;
   cursor: text;
 }
 
 .light-button-demo {
   background-color: transparent;
-  color: #ca8a04;
-  border: 1px solid #ca8a04;
+  color: $light-button-demo;
+  border: 1px solid $light-button-demo;
 
   &:hover {
-    background-color: #ca8a04;
-    color: #000000;
+    background-color: $light-button-demo;
+    color: $light-black;
   }
 }
