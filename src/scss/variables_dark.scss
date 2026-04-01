@@ -1,11 +1,11 @@
 //cores principais
-$dark-bg-body: #080011;
+$dark-bg-body: #0a0a0a;
 $dark-title-body: #fff;
-$dark-bg-body-2: #0b001a;
+$dark-bg-body-2: #111111;
 $dark-nav-text: #d1d5db;
 $dark-highlight: #eab308;
 $dark-text-body: #d1d5db;
-$dark-small-text: rgba(221, 214, 254, 0.8);
+$dark-small-text: rgba(196, 196, 196, 0.8);
 $dark-placeholder: #94a3b8;
 
 //tokens utilitarios
@@ -13,11 +13,11 @@ $dark-white: #ffffff;
 $dark-black: #000000;
 
 //superficies e bordas
-$dark-surface-soft: rgba(11, 0, 26, 0.1);
-$dark-surface-accent: rgba(88, 28, 135, 0.1);
-$dark-border-primary: rgba(44, 0, 116, 0.2);
-$dark-border-primary-strong: rgba(44, 0, 116, 0.3);
-$dark-border-accent: rgba(88, 28, 135, 0.2);
+$dark-surface-soft: rgba(22, 22, 22, 0.1);
+$dark-surface-accent: rgba(126, 126, 126, 0.1);
+$dark-border-primary: rgba(107, 107, 107, 0.2);
+$dark-border-primary-strong: rgba(104, 104, 104, 0.3);
+$dark-border-accent: rgba(115, 102, 124, 0.2);
 
 //sombras e overlays
 $dark-shadow-soft: #ffffff22;
@@ -25,7 +25,7 @@ $dark-shadow-strong: #ffffff33;
 $dark-overlay-white-10: rgba(255, 255, 255, 0.1);
 
 //contato
-$dark-contato-hover-bg: rgba(192, 132, 252, 0.2);
+$dark-contato-hover-bg: rgba(114, 114, 114, 0.2);
 $dark-contato-icon-whatsapp: #4ade80;
 $dark-contato-icon-email: #f87171;
 $dark-contato-icon-linkedin: #60a5fa;
