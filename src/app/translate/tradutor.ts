@@ -40,4 +40,3 @@ export function getLanguageOptionClasses(isDark: boolean | null): string {
 //importação das traduções e exportação para uso em outros módulos
 import { translations } from "./translations";
 export { translations };
-
